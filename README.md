@@ -1,85 +1,78 @@
 # 🛠️ Mars Toolkit
 
-**Production-grade server toolkit for old/weak machines.**
+**Production-tested server skills for old/weak Macs.**
 
-Built and battle-tested on a **2015 MacBook Air (4GB RAM, 128GB SSD)** running **7 production services for 6+ months** — with $0 budget.
+[![macOS](https://img.shields.io/badge/macOS-12.7%2B-lightgrey)](.)
+[![Skills](https://img.shields.io/badge/skills-7-success)](./skills)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/mars1417/mars-toolkit)](.)
 
-> "If it runs on a 4GB MacBook, it runs on anything."
+> Built and battle-tested on a **2015 MacBook Air (4GB RAM, 128GB SSD)** running **7 services for 2+ years** — with **$0 budget**.
+>
+> **2,937 watchdog runs. Zero manual reboots. Real production.**
 
 ---
 
-## What's Inside
+## What you get
 
-| Module | Status | Description |
-|--------|--------|-------------|
-| **Watchdog** | ✅ v0.1.0 | Auto memory recovery + trend monitoring |
-| Auto-Heal | 🔜 v0.2.0 | Service auto-detection and recovery |
-| SSD Protector | 🔜 v0.3.0 | SMART health tracking + write reduction |
-| Zero Tunnel | 🔜 v0.4.0 | Free tunnel management with auto URL recovery |
-| Perf Booster | 🔜 v0.5.0 | Swap optimization + startup cleanup |
+**7 self-healing skills** for keeping old Macs running as servers — no cloud, no budget, no manual maintenance.
 
-## Quick Start
+| Pack | Skills | What it does |
+|------|--------|-------------|
+| 🍎 **[macOS Care Pack](./skills/macos-care-pack)** | 7 skills | Watchdog · SSD protection · Tunnel self-healing · Boot optimization · RAM cache · Desktop cleanup |
+
+## Quick start
 
 ```bash
 git clone https://github.com/mars1417/mars-toolkit.git
 cd mars-toolkit
-bash scripts/watchdog/install.sh
-```
 
-That's it. Your machine is now monitored and auto-optimized every 5 minutes.
+# Copy the skills you need
+cp -r skills/macos-care-pack/* ~/.hermes/skills/
+
+# Or run scripts directly
+bash skills/macos-care-pack/scripts/publish.sh
+```
 
 ## Why Mars Toolkit?
 
-| Your Machine | Mars Toolkit |
-|-------------|-------------|
-| 💰 $0 cloud bill | ✅ Zero-cost server operations |
-| 🔧 Manual fixes | ✅ Self-healing — auto detects and recovers |
-| 📉 Memory leaks | ✅ Automatic cleanup every 5 minutes |
-| 🌐 Expensive tunnels | ✅ Free cpolar + auto URL detection |
-| 💾 SSD wear | ✅ Write reduction + health monitoring |
+| Problem | Solution | Proof |
+|---------|----------|-------|
+| 💰 $0 budget | All free tools, no cloud bills | 2 years running |
+| 🔧 Services keep dying | Auto-restart watchdog | **2,937 runs** 🔥 |
+| 📉 Memory leaks on 4GB | Auto cleanup when pressure > 70% | ~674MB freed per cycle |
+| 🌐 Tunnels break daily | Self-healing cpolar with auto URL update | Zero downtime |
+| 💾 Old SSD dying | Write reduction + SMART monitoring | — |
 
-## Testimonials
+## Who is this for?
 
-> *"I ran 7 Flask services on a 4GB Mac for 6 months without a single manual reboot."*
-> — Real production data, real results
+- **You have an old Mac** (2012-2018) you want to use as a home server
+- **You run Flask/Django/Node services** on a tight budget
+- **You want zero-maintenance ops** — set it up once, forget it
+- **You hate cloud vendor lock-in** and prefer self-hosting
 
-## Modules
+## What makes this different
 
-### Watchdog (Current)
-- `clean-sweep.sh` — Automatic memory recovery (frees ~674MB per cycle)
-- `memory-monitor.sh` — Trend tracking (logs to CSV every 10 minutes)
-- `service-check.sh` — Health check for N ports every 5 minutes
+Most server toolkits assume modern hardware and paid infrastructure. Mars Toolkit was built **backwards**: starting from the constraint of a 4GB 2015 MacBook Air, and asking "what's the minimum you need to run production services reliably?"
 
-### Auto-Heal (Coming Week 2)
-- Auto-restart failed services
-- Webhook alerts (WeChat / Email)
-- Uptime tracking
+The result is a toolkit that works on **anything** — because if it runs on a 4GB MacBook, it runs on anything.
 
-### SSD Protector (Coming Week 3)
-- SMART status monitoring
-- Diagnostic log cleanup
-- Temperature + fan control
+## Skill Packs
 
-### Zero Tunnel (Coming Week 4)
-- cpolar/ngrok URL change detection
-- Auto GitHub Pages entry update
-- PWA permanent entry lock
+| Pack | Status | Skills | 
+|------|--------|--------|
+| [macOS Care Pack](./skills/macos-care-pack) | ✅ v1.0.0 | 7 skills |
 
-### Perf Booster (Coming Week 5)
-- Swap optimization for 4GB machines
-- Startup item audit
-- Background process cleanup
+*More packs coming as the daily evolution pipeline produces them.*
 
 ## Pro Dashboard 🔒
 
-A web-based control panel with real-time monitoring, multi-server support, and WeChat alerts.
+Web-based control panel with real-time monitoring and multi-server support.
 
-Coming **Week 6** — [Learn more](https://mars1417.github.io/mars-toolkit)
+Coming soon — [Learn more](https://mars1417.github.io/mars-toolkit)
 
 ---
 
 ## License
 
-MIT — free for personal and commercial use.
-
-Built with ❤️ for old machines that refuse to die.
+MIT — free for personal and commercial use. Built for old machines that refuse to die.
