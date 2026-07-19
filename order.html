@@ -170,22 +170,22 @@ function submitOrder() {
     return;
   }
   
-  // 发送订单到服务器（跨域POST，静默发送，失败不影响用户体验）
+  // 发送订单到服务器
   const orderData = {product: product, wechat: wechat, email: email, txn: txn || ''};
   
-  // Try multiple endpoints (gateway proxy, cpolar direct)
-  fetch('/api/mars/order', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(orderData)
-  }).catch(function(){ /* silently fail - order still works */ });
-  
-  // Also try the gateway if available
-  fetch(window.location.origin + '/api/mars/order', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(orderData)
-  }).catch(function(){ /* silent */ });
+  // 从lebacenter入口页获取当前网关URL
+  fetch('https://mars1417.github.io/lebacenter/')
+    .then(r => r.text())
+    .then(html => {
+      var match = html.match(/href="(https:\/\/[^"]+\.cpolar\.top[^"]*)"/);
+      if (match) {
+        fetch(match[1] + '/api/mars/order', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(orderData)
+        }).catch(function(){});
+      }
+    }).catch(function(){});
   
   // Show success
   document.querySelector('.form-box').innerHTML = 
@@ -195,9 +195,6 @@ function submitOrder() {
     '<p style="color:#999">我们会尽快为你开通Pro权限</p>' +
     '<p style="color:#666;font-size:14px;margin-top:12px">请留意微信消息和邮箱</p>' +
     '</div>';
-  
-  // Track this order
-  fetch('https://api.github.com/repos/mars1417/mars-toolkit/traffic/views').catch(function(){});
 }
 
 // Track page visit
