@@ -57,19 +57,35 @@ Most server toolkits assume modern hardware and paid infrastructure. Mars Toolki
 
 The result is a toolkit that works on **anything** — because if it runs on a 4GB MacBook, it runs on anything.
 
-## Skill Packs
+---
+
+## 🆓 Free · macOS Care Pack
 
 | Pack | Status | Skills | 
 |------|--------|--------|
-| [macOS Care Pack](./skills/macos-care-pack) | ✅ v1.0.0 | 7 skills |
+| [macOS Care Pack](./skills/macos-care-pack) | ✅ v1.0.0 | 7 skills — Watchdog, SSD protection, tunnel healing, boot optimization, RAM cache, desktop cleanup |
 
-*More packs coming as the daily evolution pipeline produces them.*
+MIT license. Clone and go.
 
-## Pro Dashboard 🔒
+---
 
-Web-based control panel with real-time monitoring and multi-server support.
+## 💎 Pro · Cloud Ladder Tunnel Bundle
 
-Coming soon — [Learn more](https://mars1417.github.io/mars-toolkit)
+> ⏳ **Coming this Wednesday** — Early bird pricing
+
+A stable public URL from your old Mac. No domain, no VPS, no monthly fees.
+
+| What | Problem it solves |
+|------|------------------|
+| 🔄 **VPN Auto-Pilot** | V2Box auto-rotate — never manually refresh a VPN node again. 3-hour cycles, observatory picks the fastest, auto-reconnect on drop |
+| 🛡️ **Tunnel Guardian** | cpolar self-healing — detects tunnel URL changes, auto-fixes your public link, never breaks your running services |
+| 🌐 **Stable Public URL** | Both combined = one URL that **stays alive** even with free-tier cpolar and unstable VPN nodes |
+
+**One-time · ¥29.9 · Mac users worldwide**
+
+*Standalone packs available: VPN Auto-Pilot ¥9.9 · Tunnel Guardian ¥9.9*
+
+Watch for the release announcement this Wednesday. Free users get the macOS Care Pack today; Pro users get their services online.
 
 ---
 
