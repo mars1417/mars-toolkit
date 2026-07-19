@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mars Toolkit — Turn Old Machines Into Servers</title>
+<title>Mars Toolkit — 老旧设备服务器化方案</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;line-height:1.6}
 .container{max-width:960px;margin:0 auto;padding:40px 20px}
-header{text-align:center;padding:80px 0 40px}
+.lang-bar{text-align:right;padding:10px 20px;font-size:14px}
+.lang-bar a{color:#f5576c;text-decoration:none;margin:0 8px}
+.lang-bar .active{color:#fff;font-weight:700}
+header{text-align:center;padding:60px 0 30px}
 h1{font-size:48px;font-weight:800;background:linear-gradient(135deg,#f093fb,#f5576c,#ffecd2);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
 .subtitle{font-size:20px;color:#999;margin-bottom:8px}
-.badge{display:inline-block;background:rgba(245,87,108,0.15);color:#f5576c;
-  padding:4px 16px;border-radius:20px;font-size:14px;margin-top:12px}
-.tagline{font-size:18px;color:#aaa;border-left:3px solid #f5576c;padding-left:16px;margin:40px 0;font-style:italic}
+.badge{display:inline-block;background:rgba(245,87,108,0.15);color:#f5576c;padding:4px 16px;border-radius:20px;font-size:14px;margin-top:12px}
+.tagline{font-size:18px;color:#aaa;border-left:3px solid #f5576c;padding-left:16px;margin:30px 0;font-style:italic}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:40px 0}
 .card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
   border-radius:16px;padding:24px;transition:transform .2s}
@@ -30,73 +32,139 @@ h1{font-size:48px;font-weight:800;background:linear-gradient(135deg,#f093fb,#f55
 .btn-primary:hover{background:#d9445a;transform:translateY(-2px)}
 .btn-outline{border:1px solid rgba(255,255,255,0.2);color:#e8e8f0}
 .btn-outline:hover{background:rgba(255,255,255,0.05)}
-.stats{display:flex;justify-content:center;gap:40px;margin:40px 0;text-align:center}
+.stats{display:flex;justify-content:center;gap:40px;margin:30px 0;text-align:center}
 .stat-value{font-size:36px;font-weight:700;color:#f5576c}
 .stat-label{font-size:14px;color:#666;margin-top:4px}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:40px 0}
+.plan{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;padding:24px;text-align:center}
+.plan.featured{border-color:#f5576c;background:rgba(245,87,108,0.05)}
+.plan h3{font-size:20px;margin-bottom:8px}
+.plan .price{font-size:32px;font-weight:700;color:#f5576c;margin:16px 0}
+.plan .price span{font-size:14px;color:#666;font-weight:400}
+.plan ul{list-style:none;margin:16px 0;color:#999;font-size:14px}
+.plan ul li{padding:6px 0}
+.plan ul li::before{content:"✓ ";color:#34c759}
+.coming-soon{text-align:center;padding:40px;background:rgba(245,87,108,0.05);border-radius:16px;margin:40px 0;border:1px dashed rgba(245,87,108,0.3)}
+.coming-soon h2{color:#f5576c;margin-bottom:8px}
 footer{text-align:center;padding:40px 0;color:#555;font-size:14px}
 </style>
 </head>
 <body>
+<div class="lang-bar">
+  <a href="/mars-toolkit/" class="active">🇨🇳 中文</a>
+  <a href="/mars-toolkit/en/">🇬🇧 English</a>
+</div>
 <div class="container">
 <header>
   <h1>🛠️ Mars Toolkit</h1>
-  <p class="subtitle">Production-grade server toolkit for old/weak machines</p>
-  <span class="badge">✅ 6+ months in production on a 4GB MacBook Air</span>
+  <p class="subtitle">老旧设备的服务器化方案</p>
+  <span class="badge">✅ 已在一台4GB MacBook Air上稳定运行6个月+</span>
 </header>
 
 <div class="tagline">
-  "I ran 7 production services on a 2015 4GB MacBook Air for 6 months with $0 budget."
+  "用一台2015款的4GB MacBook Air，跑了7个生产服务6个月，零预算。"
 </div>
 
 <div class="stats">
-  <div><div class="stat-value">$0</div><div class="stat-label">Cloud bill</div></div>
-  <div><div class="stat-value">6+</div><div class="stat-label">Months running</div></div>
-  <div><div class="stat-value">7</div><div class="stat-label">Services</div></div>
-  <div><div class="stat-value">4GB</div><div class="stat-label">RAM limit</div></div>
+  <div><div class="stat-value">¥0</div><div class="stat-label">云服务费用</div></div>
+  <div><div class="stat-value">6+</div><div class="stat-label">连续运行月数</div></div>
+  <div><div class="stat-value">7</div><div class="stat-label">生产服务</div></div>
+  <div><div class="stat-value">4GB</div><div class="stat-label">内存限制</div></div>
 </div>
 
 <div style="text-align:center;margin:30px 0">
-  <a class="btn btn-primary" href="https://github.com/mars1417/mars-toolkit">📦 Download Free</a>
-  <a class="btn btn-outline" href="#pro">🔒 Pro Dashboard</a>
+  <a class="btn btn-primary" href="https://github.com/mars1417/mars-toolkit">📦 免费下载</a>
+  <a class="btn btn-outline" href="#pricing">💎 Pro版详情</a>
 </div>
 
-<h2 style="margin-top:60px;font-size:24px">📋 Modules</h2>
+<h2 style="margin-top:50px;font-size:24px">📋 模块清单</h2>
 <div class="cards">
   <div class="card">
     <span class="status status-live">✅ v0.1.0</span>
-    <h3>Watchdog</h3>
-    <p style="color:#999;font-size:14px">Auto memory recovery (~674MB/cycle) + trend monitoring. Runs every 5 minutes.</p>
+    <h3>Watchdog 看门狗</h3>
+    <p style="color:#999;font-size:14px">内存自动回收（每轮~674MB）+ 趋势监控。每5分钟执行一次。</p>
   </div>
   <div class="card">
-    <span class="status status-soon">🔜 Week 2</span>
-    <h3>Auto-Heal</h3>
-    <p style="color:#999;font-size:14px">Service auto-detection and recovery. Never manually restart again.</p>
+    <span class="status status-soon">🔜 第2周</span>
+    <h3>Auto-Heal 自愈</h3>
+    <p style="color:#999;font-size:14px">服务自动检测+恢复。再也不用手动重启。</p>
   </div>
   <div class="card">
-    <span class="status status-soon">🔜 Week 3</span>
-    <h3>SSD Protector</h3>
-    <p style="color:#999;font-size:14px">SMART health tracking + write reduction for 10-year-old SSDs.</p>
+    <span class="status status-soon">🔜 第3周</span>
+    <h3>SSD Protection 硬盘保护</h3>
+    <p style="color:#999;font-size:14px">SMART健康监测 + 写入量减少。10年老SSD专用。</p>
   </div>
   <div class="card">
-    <span class="status status-soon">🔜 Week 4</span>
-    <h3>Zero Tunnel</h3>
-    <p style="color:#999;font-size:14px">Free tunnel management with auto URL recovery. No more dead links.</p>
+    <span class="status status-soon">🔜 第4周</span>
+    <h3>Zero Tunnel 内网穿透</h3>
+    <p style="color:#999;font-size:14px">免费隧道管理+自动URL恢复。再也不用担心链接失效。</p>
   </div>
   <div class="card">
-    <span class="status status-soon">🔜 Week 5</span>
-    <h3>Perf Booster</h3>
-    <p style="color:#999;font-size:14px">Swap optimization + startup cleanup for 4GB machines.</p>
+    <span class="status status-soon">🔜 第5周</span>
+    <h3>Perf Booster 性能优化</h3>
+    <p style="color:#999;font-size:14px">Swap优化 + 启动项清理。专为4GB内存机器设计。</p>
   </div>
   <div class="card" id="pro">
-    <span class="status status-soon">🔜 Week 6</span>
-    <h3>🔒 Pro Dashboard</h3>
-    <p style="color:#999;font-size:14px">Web control panel: real-time monitoring, multi-server, WeChat alerts. One-time purchase.</p>
+    <span class="status status-soon">🔜 第6周</span>
+    <h3>🔒 Pro Dashboard 专业面板</h3>
+    <p style="color:#999;font-size:14px">Web控制面板：实时监控、多服务器管理、微信告警。一次购买，永久使用。</p>
+  </div>
+</div>
+
+<h2 id="pricing" style="margin-top:50px;font-size:24px">💎 定价</h2>
+<div class="pricing">
+  <div class="plan">
+    <h3>Free</h3>
+    <div class="price">¥0<span></span></div>
+    <ul>
+      <li>所有开源脚本</li>
+      <li>GitHub下载</li>
+      <li>社区支持</li>
+      <li>MIT协议</li>
+    </ul>
+    <a class="btn btn-outline" href="https://github.com/mars1417/mars-toolkit">下载</a>
+  </div>
+  <div class="plan featured">
+    <h3>Pro Lite</h3>
+    <div class="price">¥49<span> 一次性</span></div>
+    <ul>
+      <li>Web Dashboard访问</li>
+      <li>基础监控面板</li>
+      <li>微信告警通知</li>
+      <li>30天更新</li>
+    </ul>
+    <a class="btn btn-primary" href="#payment">购买</a>
+  </div>
+  <div class="plan featured">
+    <h3>Pro Plus</h3>
+    <div class="price">¥99<span> 一次性</span></div>
+    <ul>
+      <li>全部Pro功能</li>
+      <li>多服务器管理</li>
+      <li>历史趋势报告</li>
+      <li>优先支持+终身更新</li>
+    </ul>
+    <a class="btn btn-primary" href="#payment">购买</a>
+  </div>
+</div>
+
+<div class="coming-soon" id="payment">
+  <h2>📱 付款方式</h2>
+  <p style="color:#999;margin:12px 0">目前使用微信/支付宝收款码（待上传）</p>
+  <p style="color:#666;font-size:14px">Pro Dashboard预计第6周（8月23日）上线，届时开放购买。</p>
+  <p style="color:#666;font-size:14px;margin-top:8px">你可以先免费试用所有脚本，满意后再付费。</p>
+  <div style="margin-top:20px">
+    <div style="display:inline-block;background:rgba(255,255,255,0.05);border-radius:12px;padding:20px">
+      <p style="color:#999;font-size:14px">📸 微信/支付宝收款码</p>
+      <p style="color:#666;font-size:12px;margin-top:8px">（由用户提供后嵌入）</p>
+    </div>
   </div>
 </div>
 
 <footer>
-  <p>MIT License · Built with ❤️ for old machines that refuse to die</p>
-  <p style="margin-top:8px"><a href="https://github.com/mars1417/mars-toolkit" style="color:#f5576c">GitHub</a></p>
+  <p>MIT License · 为不愿退役的老旧设备而建</p>
+  <p style="margin-top:8px"><a href="https://github.com/mars1417/mars-toolkit" style="color:#f5576c">GitHub仓库</a></p>
 </footer>
 </div>
 </body>
