@@ -1,0 +1,89 @@
+# How I Ran 7 Production Services on a 4GB MacBook Air for 6 Months
+
+**Published: July 19, 2026**
+
+---
+
+This is the story of how I turned a 2015 MacBook Air (MacBookAir7,2) into a production server running 7 services 24/7 for over 6 months — with a $0 budget.
+
+## The Hardware
+
+- **Model**: MacBook Air 2015 (MacBookAir7,2)
+- **CPU**: Intel i5-5250U (dual-core, 1.6GHz)
+- **RAM**: 4GB (yes, four gigabytes)
+- **SSD**: 128GB (10 years old, 93% health remaining)
+- **OS**: macOS 12.7.6
+
+## The Services
+
+Running simultaneously, 24/7:
+
+| # | Service | Port | Purpose |
+|---|---------|------|---------|
+| 1 | Check-in System | 19999 | Student attendance |
+| 2 | CRM | 8501 | After-school center management |
+| 3 | Gateway | 18888 | Reverse proxy + message routing |
+| 4 | Album Server | 19998 | Photo management |
+| 5 | Hermes Agent | — | AI agent + cron scheduler |
+| 6 | cpolar Tunnel | — | Public internet access (free tier) |
+| 7 | V2Box Proxy | — | Network rotation |
+
+## The Challenge
+
+4GB RAM is brutal for server workloads. When I started:
+- Available memory: **~200MB**
+- Swap usage: **~400MB and growing**
+- System: constantly swapping, UI lag, services crashing
+
+## What I Built
+
+### 1. Clean Sweep (Auto Memory Recovery)
+
+A script that runs every 5 minutes:
+- Closes memory-heavy apps (WPS, Stocks, Warp)
+- Manages Chrome windows (close tabs, keep process)
+- Runs `purge` to free inactive pages
+- **Result**: frees ~674MB per cycle, keeps available memory at 1.7-1.9GB
+
+### 2. Memory Trend Monitor
+
+Tracks memory stats to CSV every 10 minutes. After 6 months, I have:
+- 25,000+ data points
+- Clear patterns of when memory pressure spikes
+- Proof that the system is stable over months
+
+### 3. Service Watchdog
+
+Checks 5 ports every 5 minutes. If a service is down:
+- Auto-restarts within 30 seconds
+- Logs the incident
+- No manual intervention needed
+
+### 4. SSD Life Protection
+
+- Disabled analyticsd and ReportCrash (major write sources)
+- Created diagnostic log cleanup (daily automated)
+- Smart swap management (keep it under 210MB)
+- **Result**: 10-year-old SSD at 93% health — almost no degradation
+
+## The Results
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Available RAM | ~200MB | **~1,735MB** |
+| Swap usage | ~400MB | **~210MB** |
+| Service uptime | Days | **Months** |
+| Manual reboots | Weekly | **Zero** |
+| SSD wear (annual) | ~5% | **~2%** |
+
+## The Lesson
+
+You don't need a cloud server or expensive hardware to run production services. What you need is good tooling.
+
+**Mars Toolkit** is the collection of scripts I built during this journey. They're now open source:
+
+→ [github.com/mars1417/mars-toolkit](https://github.com/mars1417/mars-toolkit)
+
+---
+
+*Next week: Auto-Heal — how I built a self-healing system that never needs reboots.*
