@@ -57,8 +57,8 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
 <div class="container">
 <div class="lang-switch"><a href="/mars-toolkit/order-en.html">🇬🇧 English</a></div>
 
-<h1>🌊 出海云 · Cloudflare优选节点</h1>
-<p class="subtitle">选产品 · 扫码付 · 自动开通</p>
+<h1>🐄 老旧Mac变废为宝 · 出海云商店</h1>
+<p class="subtitle">选产品 · 扫码付 · 自动开通 · 实机验证</p>
 
 <div class="steps">
   <span class="step active" id="step1-label"><span class="step-num">1</span> 选择产品</span>
@@ -71,6 +71,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
 <!-- Step 1: Select -->
 <div id="step1-content">
 <div class="products">
+  <div class="product featured" onclick="selectProduct('agent-basic')" id="prod-agent-basic" style="border-color:rgba(52,199,89,0.25);background:rgba(52,199,89,0.04)">
+    <span class="tag tag-live">🔥 今日上新</span>
+    <h3>🤖 Agent引擎 · 轻量版</h3>
+    <div class="price">¥5 <span>/月</span></div>
+    <ul><li>2M tokens/月 · DeepSeek V4 Flash</li><li>OpenAI兼容API · 旧Mac变AI大脑</li><li>专属API Key · 配Hermes/Codex</li><li>微信付款 · 有售后</li></ul>
+  </div>
+  <div class="product featured" onclick="selectProduct('agent-standard')" id="prod-agent-standard" style="border-color:rgba(71,133,168,0.2);background:rgba(71,133,168,0.03)">
+    <span class="tag tag-live">🔥 热卖</span>
+    <h3>🤖 Agent引擎 · 标准版</h3>
+    <div class="price">¥15 <span>/月</span></div>
+    <ul><li>8M tokens/月 · 4倍容量</li><li>用量管理页面</li><li>支持多Agent工具</li><li>微信售后指导</li></ul>
+  </div>
+  <div class="product featured" onclick="selectProduct('agent-pro')" id="prod-agent-pro" style="border-color:rgba(255,215,0,0.2);background:rgba(255,215,0,0.03)">
+    <span class="tag tag-live">⭐ 推荐</span>
+    <h3>🤖 Agent引擎 · 专业版</h3>
+    <div class="price">¥30 <span>/月</span></div>
+    <ul><li>20M tokens/月 · 重度无忧</li><li>3个独立子Key · 团队可用</li><li>用量报表 · 余额预警</li><li>优先技术支持</li></ul>
+  </div>
   <div class="product featured" onclick="selectProduct('ocean-month')" id="prod-ocean-month" style="border-color:rgba(255,215,0,0.2);background:rgba(255,215,0,0.03)">
     <span class="tag tag-live">🔥 热卖</span>
     <h3>🌊 出海云 · 月付</h3>
@@ -154,6 +172,9 @@ let selected = null;
   var auto = params.get('product');
   if(auto === 'ocean-month') { selectProduct('ocean-month'); }
   else if(auto === 'ocean-year') { selectProduct('ocean-year'); }
+  else if(auto === 'agent-basic') { selectProduct('agent-basic'); }
+  else if(auto === 'agent-standard') { selectProduct('agent-standard'); }
+  else if(auto === 'agent-pro') { selectProduct('agent-pro'); }
   else if(auto === 'vpn') { selectProduct('vpn'); }
   else if(auto === 'tunnel') { selectProduct('tunnel'); }
   else if(auto === 'bundle') { selectProduct('bundle'); }
@@ -163,6 +184,9 @@ let selected = null;
 
 
 const PRODUCTS = {
+  'agent-basic': {name: '🤖 Agent引擎 · 轻量版', price: '¥5/月', priceVal: 5},
+  'agent-standard': {name: '🤖 Agent引擎 · 标准版', price: '¥15/月', priceVal: 15},
+  'agent-pro': {name: '🤖 Agent引擎 · 专业版', price: '¥30/月', priceVal: 30},
   'ocean-month': {name: '🌊 出海云 · 月付', price: '¥9.9/月', priceVal: 9.9},
   'ocean-year': {name: '🌊 出海云 · 包年', price: '¥150/年', priceVal: 150},
   vpn: {name: '🔄 VPN Auto-Pilot', price: '¥9.9', priceVal: 9.9},
