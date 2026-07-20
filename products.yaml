@@ -1,0 +1,117 @@
+# 出海云产品清单 - 源数据文件
+# 每次更新产品时改这个文件，然后运行 gen_handbook.py 自动更新手册
+# 周三/周五更新日必改
+
+products:
+  # ========== 订阅制 ==========
+  - name: "出海云·月付"
+    emoji: "🌊"
+    price: "¥9.9/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "一杯奶茶钱，50 条优选节点，不限流量"
+    description: "50 条优选节点，每月自动续期。适合轻度翻墙用户、不想花大价钱买机场的、免费节点总失效的"
+    pitch: "¥9.9 一个月，一杯奶茶钱。50 条节点自动更新，比那些便宜的共享机场稳太多了。"
+    specs:
+      - ["节点数", "50 条优选节点"]
+      - ["更新频率", "自动更新，始终可用"]
+      - ["速度", "实测 YouTube 4K 流畅"]
+      - ["选节点", "自动选最低延迟节点"]
+      - ["设备限制", "不限设备数"]
+    target: ["留学生", "外贸/跨境电商", "学生党"]
+
+  - name: "出海云·包年"
+    emoji: "🌊"
+    price: "¥150/年"
+    category: "subscription"
+    status: "已上线"
+    tagline: "包年送工具，折合 ¥12.5/月，比月付省 37%"
+    description: "送 VPN Auto-Pilot（价值 ¥9.9），折合 ¥12.5/月"
+    pitch: "打算长期用的直接上年付。送的 Auto-Pilot 工具单买也要 ¥9.9，等于节点才 ¥140/年，一个月 ¥11.6。"
+    specs: []
+    target: ["留学生", "外贸/跨境电商", "普通用户"]
+    bonus: "VPN Auto-Pilot（价值 ¥9.9）"
+
+  # ========== 免费工具 ==========
+  - name: "macOS Care Pack"
+    emoji: "🍎"
+    price: "¥0 免费"
+    category: "free"
+    status: "已上线"
+    tagline: "Mac 优化工具包，免费下载，买了就赚"
+    description: "Mac 用久了卡顿、磁盘空间不够。一键优化系统缓存、释放内存。适合所有 Mac 用户。"
+    pitch: "免费的东西谁不爱？关键是真的能用。零成本，不拿白不拿。"
+    specs: []
+    target: ["普通 Mac 用户"]
+
+  # ========== 买断工具 ==========
+  - name: "VPN Auto-Pilot"
+    emoji: "🔄"
+    price: "¥9.9"
+    category: "tool"
+    status: "已上线"
+    tagline: "V2Box 的自动驾驶，¥9.9 一劳永逸"
+    description: "V2Box 节点过期后需手动换订阅。Auto-Pilot 帮你自动轮换、自动连最快节点、断线自动重连。"
+    pitch: "¥9.9 买一次，以后再也不用手动换节点了。自动选最快的、断了自动重连，省心。"
+    specs: []
+    target: ["已用 V2Box 但懒得手动维护的"]
+
+  - name: "Tunnel Guardian"
+    emoji: "🛡️"
+    price: "¥9.9"
+    category: "tool"
+    status: "已上线"
+    tagline: "内网穿透不再掉线，¥9.9 买个安心"
+    description: "cpolar 隧道重启 URL 就变了，所有服务全断。Guardian 自动检测变化并修复。"
+    pitch: "用过 cpolar 的都懂——服务跑得好好的，一重启隧道链接变了全崩。¥9.9 买个省心。"
+    specs: []
+    target: ["用 cpolar 做内网穿透的技术用户"]
+
+  - name: "Cloud Ladder Pro Bundle"
+    emoji: "🌐"
+    price: "¥29.9"
+    category: "bundle"
+    status: "已上线"
+    tagline: "两个工具打包买，省 ¥0.9，一次配齐"
+    description: "包含 VPN Auto-Pilot（¥9.9）+ Tunnel Guardian（¥9.9）合体包"
+    pitch: ""
+    specs: []
+    target: ["技术宅"]
+
+  # ========== 预售 ==========
+  - name: "Pro Lite"
+    emoji: "💎"
+    price: "¥49.9"
+    category: "preorder"
+    status: "7月底"
+    tagline: "更高阶的工具套装"
+    description: ""
+    pitch: ""
+    specs: []
+    target: []
+
+  - name: "Pro Max"
+    emoji: "👑"
+    price: "¥99"
+    category: "preorder"
+    status: "8月"
+    tagline: "旗舰级全能工具包"
+    description: ""
+    pitch: ""
+    specs: []
+    target: []
+
+# 组合推荐
+bundles:
+  - name: "入门（仅上网）"
+    items: "出海云月付 ¥9.9"
+    total: "¥9.9"
+  - name: "标准（上网+自动）"
+    items: "出海云包年 + Auto-Pilot（送）"
+    total: "¥150"
+  - name: "全都要（上网+隧道+自动）"
+    items: "出海云包年 + Guardian + Care Pack"
+    total: "¥159.9"
+  - name: "技术宅全家桶"
+    items: "Auto-Pilot + Guardian + Care Pack"
+    total: "¥19.8"
