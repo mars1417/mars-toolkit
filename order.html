@@ -208,14 +208,14 @@ function submitOrder() {
   var wechat = document.getElementById('order-wechat').value;
   var email = document.getElementById('order-email').value;
   var txn = document.getElementById('order-txn').value;
-  
+
   if (!wechat || !email) {
     alert('请填写微信昵称和邮箱');
     return;
   }
-  
+
   var orderData = {product: product, wechat: wechat, email: email, txn: txn || ''};
-  
+
   // 发送到CRM订单API
   fetch('https://624a60f5.r18.vip.cpolar.cn/api/mars/order', {
     method: 'POST',
@@ -223,24 +223,17 @@ function submitOrder() {
     body: JSON.stringify(orderData)
   }).then(function(r){ return r.json(); }).then(function(d){
     console.log('订单已提交 #' + d.order_id);
+    // 如果有订阅链接，存到localStorage传给成功页
+    if (d.sub_url) {
+      localStorage.setItem('ocean-sub-url', d.sub_url);
+      localStorage.setItem('ocean-token', d.token);
+      localStorage.setItem('ocean-product', product);
+    }
+    window.location.href = '/mars-toolkit/order-success.html';
   }).catch(function(e){
     console.log('订单提交(静默): ', e);
-    // fallback: 从lebacenter入口解析网关URL
-    fetch('https://mars1417.github.io/lebacenter/')
-      .then(function(r){ return r.text(); })
-      .then(function(html){
-        var match = html.match(/href="(https:\/\/[^"]+\.cpolar\.[a-z]+[^"]*)"/);
-        if (match) {
-          fetch(match[1] + '/api/mars/order', {
-            method: 'POST', headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(orderData)
-          }).catch(function(){});
-        }
-      }).catch(function(){});
+    window.location.href = '/mars-toolkit/order-success.html';
   });
-  
-  // 跳转到成功页
-  window.location.href = '/mars-toolkit/order-success.html';
 }
 </script>
 </body>
