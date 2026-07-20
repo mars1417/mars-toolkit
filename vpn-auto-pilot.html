@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPN Auto-Pilot ¥9.9 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(52,199,89,0.12);color:#34c759;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>VPN Auto-Pilot <span class="tag">🟢 在售</span></h1>
+<div class="price">¥9.9 <span>一次性付费，永久使用</span></div>
+<p class="desc">V2Box 自动订阅更新 + 智能节点选择 + 断线自动重连。让你的 Mac 自动维持最优网络连接，无需手动操作。</p>
+
+<ul class="features">
+  <li>每3小时自动检查订阅更新<span class="sub">系统Tray图标常驻，后台静默执行</span></li>
+  <li>自动连接 Observatory 最快节点<span class="sub">每次更新后自动选延迟最低的节点</span></li>
+  <li>断线自动重连<span class="sub">网络中断后自动恢复，无需人工干预</span></li>
+  <li>一键安装脚本<span class="sub">curl 一条命令完成配置，无需手动编辑</span></li>
+  <li>V2Box 客户端集成<span class="sub">基于订阅链接自动配置，兼容 Surge/Clash</span></li>
+</ul>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=vpn">🛒 立即购买 ¥9.9</a>
+</div>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>VPN Auto-Pilot 是一个 macOS 后台守护脚本，通过 system cron 调度 V2Box 订阅更新。它每3小时轮询一次最新节点，自动 ping 测速后切换到延迟最低的节点。支持 V2Box GUI 和命令行双模式，重启后自动恢复连接状态。所有配置写入 ~/.v2box/config.yaml，安装脚本自动备份原有配置。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">购买后怎么收到？</div>
+  <div class="faq-a">付款后填写微信昵称和邮箱，24小时内你会收到配置脚本和一键安装命令。直接在你的 Mac 终端运行即可。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">跟免费版有什么区别？</div>
+  <div class="faq-a">免费版（GitHub发布）是基础版，需手动配置。付费版多了全自动轮换、智能选节点、断线重连三大能力。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">可以退款吗？</div>
+  <div class="faq-a">数字产品一经交付不支持退款。购买前确保你的 Mac 可以运行 V2Box（macOS 11+，Intel/Apple Silicon 均可）。</div>
+</div>
+</div>
+
+<p style="text-align:center;margin-top:20px">
+  <a class="btn btn-outline" href="/mars-toolkit/order.html?product=vpn">📋 直接去下单 →</a>
+</p>
+</div>
+</body>
+</html>
