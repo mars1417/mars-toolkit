@@ -146,6 +146,8 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
 </div>
 
 <script>
+let selected = null;
+
 // 从URL参数自动选择产品
 (function(){
   var params = new URLSearchParams(window.location.search);
@@ -159,7 +161,6 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
 
-let selected = null;
 
 const PRODUCTS = {
   'ocean-month': {name: '🌊 出海云 · 月付', price: '¥9.9/月', priceVal: 9.9},
