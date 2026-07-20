@@ -91,9 +91,30 @@ footer a:hover{color:#4785a8}
 </head>
 <body>
 <div class="lang-bar">
-  <a href="/mars-toolkit/" class="active">🇨🇳 中文</a>
-  <a href="/mars-toolkit/en/">🇬🇧 English</a>
+  <a href="/mars-toolkit/" class="active" data-lang="zh">🇨🇳 中文</a>
+  <a href="/mars-toolkit/en/" data-lang="en">🇬🇧 English</a>
 </div>
+<script>
+// 语言偏好记忆
+(function(){
+  var prefer = localStorage.getItem('mars-toolkit-lang');
+  var path = window.location.pathname;
+  // 如果偏好是英文，但当前是中文页 → 跳转
+  if(prefer === 'en' && !path.includes('/en/')) {
+    window.location.href = '/mars-toolkit/en/';
+  }
+  // 如果偏好是中文，但当前是英文页 → 跳转
+  if(prefer === 'zh' && path.includes('/en/')) {
+    window.location.href = '/mars-toolkit/';
+  }
+  // 点击语言链接时保存偏好
+  document.querySelectorAll('[data-lang]').forEach(function(a){
+    a.addEventListener('click', function(){
+      localStorage.setItem('mars-toolkit-lang', this.getAttribute('data-lang'));
+    });
+  });
+})();
+</script>
 <div class="container">
 
 <header>

@@ -72,9 +72,26 @@ footer a:hover{color:#4785a8}
 </head>
 <body>
 <div class="lang-bar">
-  <a href="/mars-toolkit/">🇨🇳 中文</a>
-  <a href="/mars-toolkit/en/" class="active">🇬🇧 English</a>
+  <a href="/mars-toolkit/" data-lang="zh">🇨🇳 中文</a>
+  <a href="/mars-toolkit/en/" class="active" data-lang="en">🇬🇧 English</a>
 </div>
+<script>
+(function(){
+  var prefer = localStorage.getItem('mars-toolkit-lang');
+  var path = window.location.pathname;
+  if(prefer === 'en' && !path.includes('/en/')) {
+    window.location.href = '/mars-toolkit/en/';
+  }
+  if(prefer === 'zh' && path.includes('/en/')) {
+    window.location.href = '/mars-toolkit/';
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(a){
+    a.addEventListener('click', function(){
+      localStorage.setItem('mars-toolkit-lang', this.getAttribute('data-lang'));
+    });
+  });
+})();
+</script>
 <div class="container">
 
 <header>
