@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>订单提交成功 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:560px;margin:0 auto;padding:40px 24px;text-align:center}
+.icon{font-size:64px;margin-bottom:12px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px;color:#34c759}
+.sub{color:rgba(255,255,255,0.4);font-size:16px;margin-bottom:28px;line-height:1.6}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:20px;text-align:left}
+.card h3{font-size:15px;font-weight:700;color:#4785a8;margin-bottom:12px}
+.card p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:8px}
+.card .highlight{color:#fff;font-weight:600}
+.timeline{text-align:left;margin:20px 0;padding:0}
+.timeline li{list-style:none;padding:12px 0 12px 32px;position:relative;border-left:2px solid rgba(71,133,168,0.2);margin-left:8px;font-size:14px;color:rgba(255,255,255,0.5)}
+.timeline li::before{content:'';position:absolute;left:-6px;top:16px;width:10px;height:10px;border-radius:50%;background:#4785a8}
+.timeline li.done{color:rgba(255,255,255,0.6)}
+.timeline li.done::before{background:#34c759}
+.timeline li.now{color:#fff;font-weight:600}
+.timeline li.now::before{background:#ffd700;box-shadow:0 0 8px rgba(255,215,0,0.4)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;margin:8px 4px}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="icon">🎉</div>
+<h1>订单已提交成功！</h1>
+<p class="sub">感谢你的购买 🫡<br>我会在 <strong class="highlight">24小时内</strong> 为你开通并发送开通信息</p>
+
+<div class="card">
+<h3>📥 你会收到什么</h3>
+<p>1️⃣ 配置脚本下载链接 — 在你的 Mac 终端运行</p>
+<p>2️⃣ 一键安装命令 — 复制粘贴即可完成</p>
+<p>3️⃣ 使用说明文档 — 详细配置指南</p>
+</div>
+
+<ul class="timeline">
+  <li class="done">✅ 订单已提交</li>
+  <li class="done">✅ 已存入订单系统</li>
+  <li class="now">⏳ 等待开通（24小时内）</li>
+  <li>📬 收到开通邮件 + 微信通知</li>
+  <li>🚀 开始使用</li>
+</ul>
+
+<div class="card" style="border-color:rgba(255,159,67,0.1)">
+<h3>❓ 还没收到？</h3>
+<p>如果超过24小时未收到开通信息，请检查：</p>
+<p>• 邮箱是否填写正确（包括垃圾邮件箱）</p>
+<p>• 微信昵称是否匹配付款时的昵称</p>
+<p>• 或直接在微信上联系我</p>
+</div>
+
+<div style="margin-top:24px">
+  <a class="btn btn-primary" href="/mars-toolkit/">🏠 返回首页</a>
+  <a class="btn btn-outline" href="/mars-toolkit/order.html">📋 再买一个</a>
+</div>
+</div>
+</body>
+</html>

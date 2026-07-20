@@ -220,15 +220,8 @@ function submitOrder() {
       }).catch(function(){});
   });
   
-  // 显示成功
-  var formBox = document.querySelector('.form-box');
-  formBox.innerHTML =
-    '<div style="text-align:center;padding:20px">' +
-    '<div style="font-size:48px;margin-bottom:12px">🎉</div>' +
-    '<h3 style="color:#34c759;margin-bottom:6px;font-size:20px">订单已提交！</h3>' +
-    '<p style="color:rgba(255,255,255,0.4)">我们会尽快为你开通</p>' +
-    '<p style="color:rgba(255,255,255,0.2);font-size:13px;margin-top:8px">请留意微信消息和邮箱</p>' +
-    '</div>';
+  // 跳转到成功页
+  window.location.href = '/mars-toolkit/order-success.html';
 }
 </script>
 </body>

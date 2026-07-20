@@ -87,12 +87,40 @@ h1 .brand-highlight{background:linear-gradient(135deg,#4785a8,#6da8a0);-webkit-b
 footer{text-align:center;padding:40px 0;color:rgba(255,255,255,0.15);font-size:12px;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
 footer a{color:rgba(71,133,168,0.5);text-decoration:none}
 footer a:hover{color:#4785a8}
+
+/* 导航 */
+.nav-bar{text-align:center;padding:8px 0 16px;border-bottom:1px solid rgba(255,255,255,0.03);margin-bottom:0}
+.nav-bar a{display:inline-block;color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;padding:6px 14px;margin:2px 2px;border-radius:8px;transition:all .2s}
+.nav-bar a:hover{color:#fff;background:rgba(71,133,168,0.1)}
+.nav-bar a.active{color:#4785a8;background:rgba(71,133,168,0.08)}
+
+/* 了解更多链接 */
+.card-link{display:inline-block;margin-top:8px;font-size:12px;color:#4785a8;text-decoration:none;font-weight:600}
+.card-link:hover{text-decoration:underline}
+
+/* 产品名可点击 */
+.plan-name a{color:#fff;text-decoration:none}
+.plan-name a:hover{color:#4785a8}
+
+/* 购买流程导航 */
+.flow-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0}
+.flow-links a{color:rgba(71,133,168,0.7);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid rgba(71,133,168,0.1)}
+.flow-links a:hover{background:rgba(71,133,168,0.05);border-color:rgba(71,133,168,0.2)}
 </style>
 </head>
 <body>
 <div class="lang-bar">
   <a href="/mars-toolkit/" class="active" data-lang="zh">🇨🇳 中文</a>
   <a href="/mars-toolkit/en/" data-lang="en">🇬🇧 English</a>
+</div>
+<!-- 导航 -->
+<div class="nav-bar">
+  <a href="/mars-toolkit/">🏠 首页</a>
+  <a href="#pricing">💎 产品</a>
+  <a href="/mars-toolkit/vpn-auto-pilot.html">🔄 VPN Auto-Pilot</a>
+  <a href="/mars-toolkit/tunnel-guardian.html">🛡 Tunnel Guardian</a>
+  <a href="/mars-toolkit/cloud-ladder-bundle.html">📦 Cloud Ladder Bundle</a>
+  <a href="/mars-toolkit/order.html">🛒 下单</a>
 </div>
 <script>
 // 语言偏好记忆
@@ -209,7 +237,7 @@ footer a:hover{color:#4785a8}
   </div>
 
   <div class="plan-card">
-    <div class="plan-name">VPN Auto-Pilot</div>
+    <div class="plan-name"><a href="/mars-toolkit/vpn-auto-pilot.html">VPN Auto-Pilot</a></div>
     <div class="plan-price">¥9.9 <span class="unit">一次性</span></div>
     <div class="plan-desc">V2Box自动订阅轮换 · 独立购买</div>
     <ul class="plan-features">
@@ -218,11 +246,12 @@ footer a:hover{color:#4785a8}
       <li>断线自动重连</li>
       <li>一键配置脚本</li>
     </ul>
-    <a class="btn btn-primary" href="/mars-toolkit/order.html?product=vpn">🛒 立即购买 ¥9.9</a>
+    <a class="btn btn-primary" href="/mars-toolkit/vpn-auto-pilot.html" style="margin-bottom:6px">📖 了解详情</a>
+    <br><a class="card-link" href="/mars-toolkit/order.html?product=vpn">🛒 立即购买 ¥9.9 →</a>
   </div>
 
   <div class="plan-card">
-    <div class="plan-name">Tunnel Guardian</div>
+    <div class="plan-name"><a href="/mars-toolkit/tunnel-guardian.html">Tunnel Guardian</a></div>
     <div class="plan-price">¥9.9 <span class="unit">一次性</span></div>
     <div class="plan-desc">cpolar隧道自愈 · 独立购买</div>
     <ul class="plan-features">
@@ -231,11 +260,11 @@ footer a:hover{color:#4785a8}
       <li>GP Pages自动同步</li>
       <li>无需公网IP</li>
     </ul>
-    <span class="btn btn-outline" style="opacity:0.5;cursor:default">⏳ 周三上架</span>
+    <a class="btn btn-outline" href="/mars-toolkit/tunnel-guardian.html">📖 了解详情</a>
   </div>
 
   <div class="plan-card featured best">
-    <div class="plan-name">Cloud Ladder Bundle 🌐</div>
+    <div class="plan-name"><a href="/mars-toolkit/cloud-ladder-bundle.html">Cloud Ladder Bundle 🌐</a></div>
     <div class="plan-price">¥29.9 <span class="unit">一次性</span> <span class="orig">¥39.8</span></div>
     <div class="plan-desc">VPN + Tunnel 合体 · 最超值</div>
     <ul class="plan-features">
@@ -244,7 +273,7 @@ footer a:hover{color:#4785a8}
       <li>一键安装配置模板</li>
       <li>优先更新 + 文档</li>
     </ul>
-    <span class="btn btn-gold" style="cursor:default">⏳ 周三开售</span>
+    <a class="btn btn-gold" href="/mars-toolkit/cloud-ladder-bundle.html">📖 了解详情</a>
   </div>
 
   <div class="plan-card">
@@ -297,6 +326,13 @@ footer a:hover{color:#4785a8}
     </div>
   </div>
   <a class="btn btn-outline" href="/mars-toolkit/order.html" style="margin-top:16px">📋 查看完整购买流程 →</a>
+  <div class="flow-links">
+    <a href="/mars-toolkit/order.html">🛒 下单</a>
+    <a href="/mars-toolkit/order-success.html">✅ 订单状态</a>
+    <a href="/mars-toolkit/vpn-auto-pilot.html">🔄 VPN Auto-Pilot</a>
+    <a href="/mars-toolkit/tunnel-guardian.html">🛡 Tunnel Guardian</a>
+    <a href="/mars-toolkit/cloud-ladder-bundle.html">📦 Cloud Ladder Bundle</a>
+  </div>
   <p style="color:rgba(255,255,255,0.2);font-size:12px;margin-top:12px">💡 第一次使用？先用免费版体验，满意再升级</p>
 </div>
 
