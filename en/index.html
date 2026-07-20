@@ -3,44 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mars Toolkit — Turn Old Machines Into Servers</title>
+<title>Mars Toolkit — Self-Healing macOS Operations</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;line-height:1.6}
-.container{max-width:960px;margin:0 auto;padding:40px 20px}
-.lang-bar{text-align:right;padding:10px 20px;font-size:14px}
-.lang-bar a{color:#f5576c;text-decoration:none;margin:0 8px}
-.lang-bar .active{color:#fff;font-weight:700}
-header{text-align:center;padding:60px 0 30px}
-h1{font-size:48px;font-weight:800;background:linear-gradient(135deg,#f093fb,#f5576c,#ffecd2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
-.subtitle{font-size:20px;color:#999}
-.badge{display:inline-block;background:rgba(245,87,108,0.15);color:#f5576c;padding:4px 16px;border-radius:20px;font-size:14px;margin-top:12px}
-.tagline{font-size:18px;color:#aaa;border-left:3px solid #f5576c;padding-left:16px;margin:30px 0;font-style:italic}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:40px 0}
-.card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;transition:transform .2s}
-.card:hover{transform:translateY(-4px)}
-.card h3{color:#f5576c;margin-bottom:8px}
-.card .status{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;margin-bottom:8px}
-.status-live{background:rgba(52,199,89,0.15);color:#34c759}
-.status-soon{background:rgba(255,149,0,0.15);color:#ff9500}
-.btn{display:inline-block;padding:12px 32px;border-radius:12px;text-decoration:none;font-weight:600;transition:all .2s;margin:4px}
-.btn-primary{background:#f5576c;color:#fff}
-.btn-primary:hover{background:#d9445a;transform:translateY(-2px)}
-.btn-outline{border:1px solid rgba(255,255,255,0.2);color:#e8e8f0}
-.btn-outline:hover{background:rgba(255,255,255,0.05)}
-.stats{display:flex;justify-content:center;gap:40px;margin:30px 0;text-align:center}
-.stat-value{font-size:36px;font-weight:700;color:#f5576c}
-.stat-label{font-size:14px;color:#666}
-.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:40px 0}
-.plan{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center}
-.plan.featured{border-color:#f5576c;background:rgba(245,87,108,0.05)}
-.plan .price{font-size:32px;font-weight:700;color:#f5576c;margin:16px 0}
-.plan .price span{font-size:14px;color:#666;font-weight:400}
-.plan ul{list-style:none;margin:16px 0;color:#999;font-size:14px}
-.plan ul li{padding:6px 0}
-.plan ul li::before{content:"✓ ";color:#34c759}
-.coming-soon{text-align:center;padding:40px;background:rgba(245,87,108,0.05);border-radius:16px;margin:40px 0;border:1px dashed rgba(245,87,108,0.3)}
-footer{text-align:center;padding:40px 0;color:#555;font-size:14px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:linear-gradient(160deg,#0d0d1a 0%,#1a1a2e 50%,#0f1a30 100%);color:#e8e8f0;line-height:1.6;min-height:100vh}
+.container{max-width:960px;margin:0 auto;padding:40px 24px}
+.lang-bar{text-align:right;padding:10px 24px;font-size:13px;color:rgba(255,255,255,0.3)}
+.lang-bar a{color:rgba(71,133,168,0.7);text-decoration:none;margin:0 6px;transition:color .2s}
+.lang-bar a:hover,.lang-bar .active{color:#4785a8}
+header{text-align:center;padding:50px 0 24px}
+h1{font-size:44px;font-weight:800;letter-spacing:1px;margin-bottom:12px}
+h1 .brand-highlight{background:linear-gradient(135deg,#4785a8,#6da8a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{font-size:18px;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(52,199,89,0.1);border:1px solid rgba(52,199,89,0.15);color:#34c759;padding:4px 16px;border-radius:999px;font-size:13px}
+.badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#34c759;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(52,199,89,0.4)}50%{opacity:0.8;box-shadow:0 0 0 6px rgba(52,199,89,0)}}
+.tagline{font-size:16px;color:rgba(255,255,255,0.35);text-align:center;border-top:1px solid rgba(255,255,255,0.04);padding-top:20px;margin:20px 0 24px;font-style:italic}
+.stats-row{display:flex;justify-content:center;gap:20px;margin:0 0 30px;flex-wrap:wrap}
+.stat-item{text-align:center;padding:12px 20px;min-width:100px}
+.stat-value{font-size:32px;font-weight:700;color:#fff}
+.stat-value .blue{color:#4785a8}
+.stat-value .gold{color:#ffd700}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.35);margin-top:2px;letter-spacing:1px}
+.btn-wrap{text-align:center;margin:24px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;transition:all .25s cubic-bezier(0.34,1.56,0.64,1);margin:4px 6px}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-gold{background:linear-gradient(135deg,#ffd700,#ff9f43);color:#0d0d1a}
+.btn-gold:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(255,215,0,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7)}
+.btn-outline:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.25)}
+.section-title{font-size:20px;font-weight:700;margin:44px 0 20px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.04);letter-spacing:1px}
+.section-title .highlight{background:linear-gradient(135deg,#4785a8,#6da8a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin:20px 0}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:22px;transition:all .25s ease}
+.card:hover{transform:translateY(-3px);background:rgba(255,255,255,0.05);border-color:rgba(71,133,168,0.15)}
+.card-icon{font-size:26px;margin-bottom:10px}
+.card h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+.card p{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6}
+.card .tag{display:inline-block;padding:2px 10px;border-radius:8px;font-size:11px;font-weight:600;margin-bottom:10px}
+.tag-live{background:rgba(52,199,89,0.12);color:#34c759}
+.tag-soon{background:rgba(255,159,67,0.12);color:#ff9f43}
+.tag-paid{background:rgba(180,120,255,0.12);color:#b478ff}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}
+.plan-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:28px 22px;text-align:center;transition:all .25s ease;position:relative}
+.plan-card:hover{transform:translateY(-3px)}
+.plan-card.featured{border-color:rgba(180,120,255,0.15);background:rgba(180,120,255,0.04)}
+.plan-card.best::after{content:'★ BEST';position:absolute;top:12px;right:12px;font-size:9px;font-weight:700;color:#b478ff;background:rgba(180,120,255,0.12);padding:3px 8px;border-radius:4px;letter-spacing:1px}
+.plan-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px}
+.plan-price{font-size:30px;font-weight:800;color:#fff;margin:12px 0 6px}
+.plan-price .unit{font-size:13px;font-weight:400;color:rgba(255,255,255,0.3)}
+.plan-price .orig{font-size:13px;color:rgba(255,255,255,0.2);text-decoration:line-through;margin-left:6px;font-weight:400}
+.plan-desc{font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:14px}
+.plan-features{list-style:none;margin:14px 0;font-size:13px;color:rgba(255,255,255,0.5);text-align:left;padding:0 8px}
+.plan-features li{padding:5px 0;display:flex;align-items:center;gap:6px}
+.plan-features li::before{content:'✓';color:#34c759;font-weight:700}
+.order-flow{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:32px 24px;margin:20px 0;text-align:center}
+.order-steps{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;text-align:left;max-width:600px;margin:16px auto}
+.order-step{flex:1;min-width:160px;padding:12px}
+.order-step-num{font-size:12px;font-weight:700;color:#4785a8;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.order-step-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.order-step-desc{font-size:12px;color:rgba(255,255,255,0.35)}
+footer{text-align:center;padding:40px 0;color:rgba(255,255,255,0.15);font-size:12px;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+footer a{color:rgba(71,133,168,0.5);text-decoration:none}
+footer a:hover{color:#4785a8}
 </style>
 </head>
 <body>
@@ -49,58 +76,96 @@ footer{text-align:center;padding:40px 0;color:#555;font-size:14px}
   <a href="/mars-toolkit/en/" class="active">🇬🇧 English</a>
 </div>
 <div class="container">
+
 <header>
-  <h1>🛠️ Mars Toolkit</h1>
-  <p class="subtitle">Production-grade server toolkit for old/weak machines</p>
-  <span class="badge">✅ 6+ months in production on a 4GB MacBook Air</span>
+  <h1>🛠 <span class="brand-highlight">Mars Toolkit</span></h1>
+  <p class="subtitle">Turn trash into treasure — Self-healing macOS ops</p>
+  <span class="badge">2+ years on a 4GB 2015 MacBook Air · 7 services · $0 budget</span>
 </header>
-<div class="tagline">"I ran 7 production services on a 2015 4GB MacBook Air for 6 months with $0 budget."</div>
-<div class="stats">
-  <div><div class="stat-value">$0</div><div class="stat-label">Cloud bill</div></div>
-  <div><div class="stat-value">6+</div><div class="stat-label">Months running</div></div>
-  <div><div class="stat-value">7</div><div class="stat-label">Services</div></div>
-  <div><div class="stat-value">4GB</div><div class="stat-label">RAM limit</div></div>
+
+<div class="tagline">
+  "2015 MacBook Air · 4GB RAM · 7 production services · Zero budget · Zero crashes"
 </div>
-<div style="text-align:center;margin:30px 0">
-  <a class="btn btn-primary" href="https://github.com/mars1417/mars-toolkit">📦 Download Free</a>
+
+<div class="stats-row">
+  <div class="stat-item"><div class="stat-value">$0</div><div class="stat-label">Monthly Cost</div></div>
+  <div class="stat-item"><div class="stat-value">2.9K<span class="blue">+</span></div><div class="stat-label">Auto Runs</div></div>
+  <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">Self-Healing Skills</div></div>
+  <div class="stat-item"><div class="stat-value">4<span class="gold">GB</span></div><div class="stat-label">Min RAM</div></div>
+</div>
+
+<div class="btn-wrap">
+  <a class="btn btn-primary" href="https://github.com/mars1417/mars-toolkit" target="_blank">📦 Free Download</a>
   <a class="btn btn-outline" href="#pricing">💎 Pro Version</a>
 </div>
 
-<h2 style="margin-top:50px">📋 Modules</h2>
-<div class="cards">
-  <div class="card"><span class="status status-live">✅ v0.1.0</span><h3>Watchdog</h3><p style="color:#999;font-size:14px">Auto memory recovery (~674MB/cycle) + trend monitoring. Runs every 5 minutes.</p></div>
-  <div class="card"><span class="status status-soon">🔜 Week 2</span><h3>Auto-Heal</h3><p style="color:#999;font-size:14px">Service auto-detection and recovery. Never manually restart again.</p></div>
-  <div class="card"><span class="status status-soon">🔜 Week 3</span><h3>SSD Protector</h3><p style="color:#999;font-size:14px">SMART health tracking + write reduction for aging SSDs.</p></div>
-  <div class="card"><span class="status status-soon">🔜 Week 4</span><h3>Zero Tunnel</h3><p style="color:#999;font-size:14px">Free tunnel management with auto URL recovery. No more dead links.</p></div>
-  <div class="card"><span class="status status-soon">🔜 Week 5</span><h3>Perf Booster</h3><p style="color:#999;font-size:14px">Swap optimization + startup cleanup for 4GB machines.</p></div>
-  <div class="card"><span class="status status-soon">🔜 Week 6</span><h3>🔒 Pro Dashboard</h3><p style="color:#999;font-size:14px">Web control panel: real-time monitoring, multi-server, WeChat alerts.</p></div>
+<h2 class="section-title"><span class="highlight">🍎 macOS Care Pack</span> · Free & Open Source · 7 skills, all live</h2>
+<div class="grid">
+  <div class="card"><div class="card-icon">🛡</div><span class="tag tag-live">v2.4.0</span><h3>macOS Caretaker</h3><p>Auto memory reclamation (~674MB/cycle) + 3-service watchdog + thermal control.</p></div>
+  <div class="card"><div class="card-icon">💾</div><span class="tag tag-live">v3.0</span><h3>SSD Protection</h3><p>SMART health monitoring + write reduction + RAM cache. Built for 10-year-old SSDs.</p></div>
+  <div class="card"><div class="card-icon">🌐</div><span class="tag tag-live">v4.1.0</span><h3>cpolar Tunnel Healing</h3><p>Free tunnel management + auto URL recovery + 3-layer defense.</p></div>
+  <div class="card"><div class="card-icon">🔌</div><span class="tag tag-live">v3.0.0</span><h3>Intranet Penetration</h3><p>cpolar/natapp/Cloudflare coverage + DNS hijacking detection.</p></div>
+  <div class="card"><div class="card-icon">⚡</div><span class="tag tag-live">✅</span><h3>Performance Booster</h3><p>Startup optimization + Swap tuning. Designed for 4GB machines.</p></div>
+  <div class="card"><div class="card-icon">🧹</div><span class="tag tag-live">✅</span><h3>Desktop Cleanup</h3><p>Auto-classify and archive desktop files. Keep your workspace clean.</p></div>
+  <div class="card"><div class="card-icon">🚀</div><span class="tag tag-live">✅</span><h3>RAM Disk Cache</h3><p>Migrate browser cache to RAM. Reduce SSD writes + speed up.</p></div>
+  <div class="card"><div class="card-icon">🍎</div><span class="tag tag-live">✅</span><h3>Startup Optimizer</h3><p>Manage Login Items and Launch Agents. Faster boot.</p></div>
 </div>
 
-<h2 id="pricing" style="margin-top:50px">💎 Pricing</h2>
-<div class="pricing">
-  <div class="plan"><h3>Free ⭐</h3><div class="price">$0</div><ul><li>All open-source scripts</li><li>GitHub releases</li><li>Community support</li><li>MIT License</li></ul><a class="btn btn-outline" href="https://github.com/mars1417/mars-toolkit">📦 Download</a></div>
-  <div class="plan featured"><h3>Pro Lite</h3><div class="price">$7<span> one-time</span></div><ul><li>Web Dashboard access</li><li>Basic monitoring</li><li>WeChat + Email alerts</li><li>30-day updates</li></ul><a class="btn btn-primary" href="/mars-toolkit/order.html">💎 Buy Now</a></div>
-  <div class="plan featured"><h3>Pro Plus 👑</h3><div class="price">$14<span> one-time</span></div><ul><li>All Pro features</li><li>Multi-server support</li><li>Trend reports</li><li>Lifetime updates + priority support</li></ul><a class="btn btn-primary" href="/mars-toolkit/order.html" style="background:linear-gradient(135deg,#f093fb,#f5576c)">👑 Buy Now</a></div>
+<h2 id="pricing" class="section-title"><span class="highlight">💎 Pricing</span></h2>
+<div class="pricing-grid">
+  <div class="plan-card">
+    <div class="plan-name">macOS Care Pack</div>
+    <div class="plan-price">$0 <span class="unit">Free</span></div>
+    <div class="plan-desc">Open source · MIT · GitHub</div>
+    <ul class="plan-features"><li>All 8 self-healing skills</li><li>Free GitHub download</li><li>Community support</li><li>MIT license</li></ul>
+    <a class="btn btn-outline" href="https://github.com/mars1417/mars-toolkit" target="_blank">📦 Free Download</a>
+  </div>
+  <div class="plan-card">
+    <div class="plan-name">VPN Auto-Pilot</div>
+    <div class="plan-price">$4.9 <span class="unit">one-time</span></div>
+    <div class="plan-desc">V2Box auto-rotation · Standalone</div>
+    <ul class="plan-features"><li>3-hour subscription refresh</li><li>Fastest node auto-select</li><li>Auto-reconnect</li><li>One-click setup</li></ul>
+    <span class="btn btn-outline" style="opacity:0.5;cursor:default">⏳ Wednesday</span>
+  </div>
+  <div class="plan-card">
+    <div class="plan-name">Tunnel Guardian</div>
+    <div class="plan-price">$4.9 <span class="unit">one-time</span></div>
+    <div class="plan-desc">cpolar self-healing · Standalone</div>
+    <ul class="plan-features"><li>Auto URL change detection</li><li>Health check + 3-layer defense</li><li>GP Pages auto-sync</li><li>No public IP needed</li></ul>
+    <span class="btn btn-outline" style="opacity:0.5;cursor:default">⏳ Wednesday</span>
+  </div>
+  <div class="plan-card featured best">
+    <div class="plan-name">Cloud Ladder Bundle 🌐</div>
+    <div class="plan-price">$12.9 <span class="unit">one-time</span> <span class="orig">$18</span></div>
+    <div class="plan-desc">VPN + Tunnel bundle · Best value</div>
+    <ul class="plan-features"><li>VPN Auto-Pilot full</li><li>Tunnel Guardian full</li><li>One-click config template</li><li>Priority updates</li></ul>
+    <span class="btn btn-gold" style="cursor:default">⏳ Wednesday Launch</span>
+  </div>
 </div>
 
-<div style="text-align:center;padding:40px;background:rgba(245,87,108,0.05);border-radius:16px;margin:40px 0;border:1px dashed rgba(245,87,108,0.3)">
-  <h2 style="color:#f5576c;margin-bottom:12px">📱 How to Buy</h2>
-  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;text-align:left;max-width:600px;margin:0 auto">
-    <div style="flex:1;min-width:180px"><p style="font-size:16px;font-weight:600;margin-bottom:8px">Step 1: Choose Plan</p><p style="color:#999;font-size:14px">Click "Buy Now" above<br>Pick Lite or Plus</p></div>
-    <div style="flex:1;min-width:180px"><p style="font-size:16px;font-weight:600;margin-bottom:8px">Step 2: Scan & Pay</p><p style="color:#999;font-size:14px">Open WeChat scanner<br>Pay the exact amount</p></div>
-    <div style="flex:1;min-width:180px"><p style="font-size:16px;font-weight:600;margin-bottom:8px">Step 3: Submit Order</p><p style="color:#999;font-size:14px">Fill in WeChat name + email<br>Access within 24 hours</p></div>
+<p style="text-align:center;color:rgba(255,255,255,0.2);font-size:13px;margin:8px 0">* Free version available now · Paid version launches Wednesday · Early bird pricing</p>
+
+<div class="order-flow">
+  <h3 style="font-size:18px;font-weight:700;margin-bottom:8px">📱 How to Buy</h3>
+  <div class="order-steps">
+    <div class="order-step"><div class="order-step-num">Step 1</div><div class="order-step-title">Choose Your Plan</div><div class="order-step-desc">Bundle or standalone product</div></div>
+    <div class="order-step"><div class="order-step-num">Step 2</div><div class="order-step-title">Scan & Pay</div><div class="order-step-desc">WeChat Pay scan the QR code</div></div>
+    <div class="order-step"><div class="order-step-num">Step 3</div><div class="order-step-title">Auto Delivery</div><div class="order-step-desc">Download link + config script sent automatically</div></div>
   </div>
-  <p style="color:#666;font-size:14px;margin-top:20px">💡 First time? Try the free version first. Upgrade when you need Pro.</p>
-  <div style="margin-top:20px">
-    <img src="/mars-toolkit/assets/qr-wechat.jpg" alt="WeChat Pay" style="width:160px;height:160px;border-radius:12px;border:2px solid rgba(255,255,255,0.1)">
-    <p style="color:#999;font-size:12px;margin-top:8px">Scan with WeChat to pay</p>
-  </div>
+</div>
+
+<h2 class="section-title"><span class="highlight">📅 Coming Soon</span></h2>
+<div class="grid">
+  <div class="card" style="border-color:rgba(255,215,0,0.08)"><span class="tag tag-soon">This Wed</span><h3>💎 Cloud Ladder Pro Bundle</h3><p>VPN + Tunnel bundle · $12.9 early bird</p></div>
+  <div class="card" style="border-color:rgba(180,120,255,0.08)"><span class="tag tag-soon">Late July</span><h3>🔒 Pro Dashboard</h3><p>Web control panel: real-time monitoring, alerts, multi-server</p></div>
+  <div class="card" style="border-color:rgba(71,133,168,0.08)"><span class="tag tag-soon">August</span><h3>👑 Pro Max</h3><p>Full features + custom domain + support</p></div>
 </div>
 
 <footer>
   <p>MIT License · Built for machines that refuse to die</p>
-  <p style="margin-top:8px"><a href="https://github.com/mars1417/mars-toolkit" style="color:#f5576c">GitHub</a></p>
+  <p style="margin-top:6px"><a href="https://github.com/mars1417/mars-toolkit" target="_blank">GitHub</a> · Built with ❤️ for old Macs</p>
 </footer>
+
 </div>
-<script>fetch(window.location.origin + "/api/mars/order",{method:"POST",headers:{"Content-Type":"application/json"},body:"{\"visit\":\"home\"}",mode:"no-cors"}).catch(function(){})</script></body>
+</body>
 </html>
