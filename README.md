@@ -1,11 +1,14 @@
-# 🌊 出海云 · 老旧Mac变废为宝计划
+# 🐄 出海云 · 老旧Mac变废为宝计划
 
 > **让每一台旧Mac都能再战5年。**  
-> 不用换新电脑，不用重装系统，装上这套工具，你的老旧Mac能当服务器、跑AI Agent、内网穿透，比新买时还流畅。
+> 不用换新电脑，不用重装系统。装上出海云的工具，你的老旧Mac能当服务器、跑AI Agent、内网穿透、科学上网，比新买时还流畅。
 
 [![macOS](https://img.shields.io/badge/macOS-12.7.6-blue)]()
 [![Stars](https://img.shields.io/github/stars/mars1417/mars-toolkit)]()
 [![License](https://img.shields.io/badge/License-MIT-green)]()
+
+🌊 **官网:** https://mars1417.github.io/mars-toolkit/  
+🌐 **English:** https://mars1417.github.io/mars-toolkit/en/
 
 ---
 
@@ -16,7 +19,7 @@
 ```
 型号:    MacBook Air (2017款)
 CPU:    双核Intel Core i5 1.6GHz
-内存:   4GB
+内存:   4GB（乞丐版）
 磁盘:   113GB SSD（已用10年）
 系统:   macOS 12.7.6
 运行:   连续8天13小时不间断（还在跑）
@@ -39,35 +42,39 @@ CPU:    双核Intel Core i5 1.6GHz
 
 ---
 
-## 🛠️ 产品线：让你的旧Mac一步步变强
+## 🛠️ 全部产品线
 
-### 🥇 免费起步（0成本）
+### 🥇 免费起步
 
 | 产品 | 价格 | 能做什么 |
 |:----|:---:|:---------|
 | 🍎 **macOS Care Pack** | **¥0** | 一键清理缓存、释放内存、优化开机、保护SSD。安装完立刻感觉到变快。 |
 
-### 🥈 日常加速（¥9.9）
+### 🥈 科学上网系列
+
+| 产品 | 价格 | 说明 |
+|:----|:---:|:-----|
+| 🌊 **出海云·月付** | **¥9.9/月** | 50条Cloudflare优选VLESS节点，不限流量 |
+| 🌊 **出海云·包年** | **¥150/年** | 折合¥12.5/月，送VPN Auto-Pilot |
+| 🔄 **VPN Auto-Pilot** | **¥9.9 一次性** | V2Box自动订阅轮换+最快节点选择+断线重连 |
+| 🛡️ **Tunnel Guardian** | **¥9.9 一次性** | cpolar隧道自动自愈，URL变更自动修复 |
+| 🌐 **Cloud Ladder Bundle** | **¥29.9** | Auto-Pilot + Guardian 合集打包 |
+
+### 🥉 macOS系统小工具（每日上新）
 
 | 产品 | 价格 | 能做什么 |
 |:----|:---:|:---------|
-| 🔄 **VPN Auto-Pilot** | **¥9.9** | V2Box自动轮换+最快节点选择+断线重连。**让旧Mac科学上网永不掉线** |
-| 🛡️ **Tunnel Guardian** | **¥9.9** | cpolar隧道自动自愈。**让旧Mac变身24小时在线服务器** |
+| 🔒 **盒盖不息** | **¥5 一次性** | 🔥 今日上新。合盖后继续跑服务，不休眠不断连 |
+| 🔋 **电池阈值** | **¥5 一次性** | 🔥 今日上新。充电到80%自动停，延长电池寿命 |
+| 🌀 **温控风扇** | **¥5 一次性** | 🔥 今日上新。智能风扇策略，旧Mac不再发烧 |
 
-### 🥉 变废为宝（¥5起）
+### 💎 AI Agent引擎系列
 
-| 产品 | 价格 | 能做什么 |
-|:----|:---:|:---------|
-| 🌊 **出海云·月付** | **¥9.9/月** | 50条优选节点，不限流量。**旧Mac也能流畅看4K YouTube** |
-| 🤖 **Agent引擎** | **¥5/月** | DeepSeek V4 API代理。**把旧Mac变成AI Agent大脑** |
-| 🌐 **Cloud Ladder Bundle** | **¥29.9** | Auto-Pilot + Guardian合体包 |
-
-### 💎 专业级（预售）
-
-| 产品 | 价格 | 能做什么 |
-|:----|:---:|:---------|
-| 💎 **Pro Lite** | **¥49.9** | Web管理面板+监控告警（7月底） |
-| 👑 **Pro Max** | **¥99** | 全功能+自定义域名+终身更新（8月） |
+| 产品 | 价格 | 容量 |
+|:----|:---:|:-----|
+| 🤖 **Agent引擎·轻量版** | **¥5/月** | 2M tokens/月 · DeepSeek V4 Flash |
+| 🤖 **Agent引擎·标准版** | **¥15/月** | 8M tokens/月 · 适合日常重度使用 |
+| 🤖 **Agent引擎·专业版** | **¥30/月** | 20M tokens/月 · 可生成3个子Key |
 
 ---
 
@@ -110,16 +117,14 @@ CRM管理后台   :8501  → 运营数据实时查询
 
 ---
 
-## 📅 更新路线图
+## 📅 更新计划
 
-**每周三/五定期更新，从不间断。**
+**每天上新3个产品，直到240个单品全部上线。**
 
 | 日期 | 更新内容 |
 |:----|:--------|
-| 7/22 🔥 | **Agent引擎上线** → 旧 Mac 变 AI Agent 大脑 |
-| 7/24 | macOS Care Pack v2 + Pro Lite预告 |
-| 7/29 | 💎 Pro Lite 上线 |
-| 8月 | 持续上新 → 8/28 Pro Max 上线 |
+| 每天10:00 | 3个新品 → GP首页 + README同步更新 |
+| 已有11款 | 持续优化，详见官网 |
 
 ---
 
@@ -132,6 +137,25 @@ curl -sL https://mars1417.github.io/mars-toolkit/install.sh | bash
 # 2. 选择需要的付费产品
 # 官网：https://mars1417.github.io/mars-toolkit/
 ```
+
+---
+
+## 怎么买？
+
+| 产品 | 购买链接 |
+|:----|:--------|
+| 🌊 出海云·月付 ¥9.9/月 | [👉 立即订阅](https://mars1417.github.io/mars-toolkit/order.html?product=ocean-month) |
+| 🌊 出海云·包年 ¥150/年 | [👉 立即订阅](https://mars1417.github.io/mars-toolkit/order.html?product=ocean-year) |
+| 🔄 VPN Auto-Pilot ¥9.9 | [👉 立即购买](https://mars1417.github.io/mars-toolkit/order.html?product=vpn) |
+| 🛡 Tunnel Guardian ¥9.9 | [👉 立即购买](https://mars1417.github.io/mars-toolkit/order.html) |
+| 🤖 Agent引擎·轻量版 ¥5/月 | [👉 立即开通](https://mars1417.github.io/mars-toolkit/order.html?product=agent-basic) |
+| 🤖 Agent引擎·标准版 ¥15/月 | [👉 立即开通](https://mars1417.github.io/mars-toolkit/order.html?product=agent-standard) |
+| 🤖 Agent引擎·专业版 ¥30/月 | [👉 立即开通](https://mars1417.github.io/mars-toolkit/order.html?product=agent-pro) |
+| 🔒 盒盖不息 ¥5 | [👉 立即购买](https://mars1417.github.io/mars-toolkit/order.html?product=lid-keep) |
+| 🔋 电池阈值 ¥5 | [👉 立即购买](https://mars1417.github.io/mars-toolkit/order.html?product=battery-care) |
+| 🌀 温控风扇 ¥5 | [👉 立即购买](https://mars1417.github.io/mars-toolkit/order.html?product=fan-control) |
+
+> 微信扫码付款，下单后自动发货。一次购买，长期使用。
 
 ---
 
