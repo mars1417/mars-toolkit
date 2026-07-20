@@ -142,6 +142,95 @@ products:
     specs: []
     target: []
 
+  # ========== 系统级功能(每日上新队列) ==========
+  - name: "盒盖不息"
+    emoji: "🔒"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "MacBook合盖后继续跑服务，不休眠不断连"
+    description: "笔记本一合盖就休眠？装了这个工具，合盖后服务照跑、下载照下、代码照编译。适合用旧Mac当服务器的用户。"
+    pitch: "合盖就休眠是笔记本的天性，但你的旧Mac是服务器。¥5买一个合盖不息，永远在线。"
+    specs: []
+    target: ["用旧Mac当服务器的用户"]
+
+  - name: "电池阈值"
+    emoji: "🔋"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "充电到80%自动停，低于20%自动充，延长电池寿命"
+    description: "长期插电使用会加速电池老化。这个工具自动管理充电阈值，让电池永远工作在最佳区间。"
+    pitch: "插电用Mac的都知道，电池健康掉得飞快。¥5买个电池管家，让电池多用两年。"
+    specs: []
+    target: ["长期插电使用的Mac用户"]
+
+  - name: "温控风扇"
+    emoji: "🌀"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "智能风扇策略，旧Mac不再发烧"
+    description: "旧Mac散热差、风扇吵？自定义温度阈值，让风扇在需要时全力转，平时安静如初。"
+    pitch: "旧Mac一跑服务就风扇狂转？¥5设置智能温控策略，温度降了、噪音小了、寿命长了。"
+    specs: []
+    target: ["旧Mac用户", "服务器用户"]
+
+  - name: "定时调度"
+    emoji: "⏰"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "定时开关机+按需唤醒，省电又省心"
+    description: "旧Mac不需要24小时开着。设置定时开关机、按需唤醒，用的时候自动开，不用的时候自动关。"
+    pitch: "服务器不需要24小时开着。¥5设置定时开关机，省电、省硬件、省心。"
+    specs: []
+    target: ["服务器用户", "省电用户"]
+
+  - name: "实机看板"
+    emoji: "📊"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "本机运行数据实时展示到网页，随时查看Mac状态"
+    description: "CPU温度、内存压力、磁盘健康、运行天数...所有数据实时展示到网页上，手机也能看。"
+    pitch: "想知道你的旧Mac现在跑得怎么样？¥5装个实机看板，手机打开网页就能看到所有数据。"
+    specs: []
+    target: ["所有用户"]
+
+  - name: "网络唤醒"
+    emoji: "🌐"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "远程唤醒休眠中的Mac，随时随地开机"
+    description: "Mac休眠了但需要远程访问？配置WOL网络唤醒，手机发个指令就能远程开机。"
+    pitch: "人在外面想用家里的Mac？¥5配置网络唤醒，手机一键远程开机。"
+    specs: []
+    target: ["远程办公用户"]
+
+  - name: "电源计划"
+    emoji: "⚡"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "多场景电源方案一键切换，工作/娱乐/省电各一套"
+    description: "工作时高性能、娱乐时平衡、挂机时省电。一键切换电源方案，不用每次手动调。"
+    pitch: "每次调电源设置烦不烦？¥5设置多套电源方案，一键切换。"
+    specs: []
+    target: ["所有Mac用户"]
+
+  - name: "外设管理"
+    emoji: "🔌"
+    price: "¥5"
+    category: "tool"
+    status: "待发布"
+    tagline: "USB/蓝牙设备自动管理，省电又方便"
+    description: "不用的外设自动断开、需要时自动连接。减少电池消耗，延长外设寿命。"
+    pitch: "蓝牙鼠标键盘一直连着费电？¥5设置外设自动管理，用的时候连，不用的时候断。"
+    specs: []
+    target: ["笔记本用户"]
+
 # 组合推荐
 bundles:
   - name: "入门（仅上网）"
