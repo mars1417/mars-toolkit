@@ -184,7 +184,7 @@ function submitOrder() {
   var txn = document.getElementById('order-txn').value;
   if (!wechat || !email) { alert('Please fill in WeChat nickname and email'); return; }
   var data = {product: product, wechat: wechat, email: email, txn: txn || ''};
-  fetch('https://690534e8.r18.vip.cpolar.cn/api/mars/order', {
+  fetch('https://624a60f5.r18.vip.cpolar.cn/api/mars/order', {
     method: 'POST', headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(data)
   }).catch(function(){});
