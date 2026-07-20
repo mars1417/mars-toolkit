@@ -3,6 +3,47 @@
 # 周三/周五更新日必改
 
 products:
+  # ========== AI Agent引擎 ==========
+  - name: "Agent引擎 · 轻量版"
+    emoji: "🤖"
+    price: "¥5/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "DeepSeek V4 Flash API代理 · 旧Mac变AI Agent大脑"
+    description: "2M tokens/月，适合轻度Agent使用。配到Hermes/Codex/OpenCode直接用。"
+    pitch: "¥5/月让旧Mac装上AI大脑。OpenAI兼容API，一行配置就能用。比官方便宜，有售后。"
+    specs:
+      - ["模型", "DeepSeek V4 Flash"]
+      - ["Tokens", "2M/月"]
+      - ["API格式", "OpenAI兼容"]
+      - ["适用工具", "Hermes/Codex/OpenCode/Claude Code"]
+      - ["专属Key", "✅ 独一无二"]
+      - ["用量查看", "✅ 管理页面"]
+    target: ["AI Agent初学者", "轻度使用者"]
+
+  - name: "Agent引擎 · 标准版"
+    emoji: "🤖"
+    price: "¥15/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "8M tokens/月 · 适合日常重度使用"
+    description: "8M tokens/月，4倍轻量版容量。用量管理页面，支持多Agent工具。"
+    pitch: "日常用的最佳选择，8M tokens够跑大多数任务。微信售后指导。"
+    specs: []
+    target: ["日常重度使用者"]
+
+  - name: "Agent引擎 · 专业版"
+    emoji: "🤖"
+    price: "¥30/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "20M tokens/月 · 给旧Mac装上最强AI大脑"
+    description: "20M tokens/月，可生成3个独立子Key。完整用量报表+余额预警。"
+    pitch: "重度用户首选。3个独立Key团队可用，用量报表、余额预警、优先技术支持。"
+    specs: []
+    target: ["重度用户", "小团队"]
+    bonus: "3个独立子Key"
+
   # ========== 订阅制 ==========
   - name: "出海云·月付"
     emoji: "🌊"
