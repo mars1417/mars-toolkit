@@ -162,6 +162,73 @@ footer a:hover{color:#4785a8}
   <div class="stat-item"><div class="stat-value">2<span class="blue">年+</span></div><div class="stat-label">不间断运行</div></div>
 </div>
 
+<!-- 实机数据 -->
+<style>
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:24px 0}
+.data-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:18px}
+.data-card .label{font-size:11px;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.data-card .value{font-size:22px;font-weight:700;color:#fff}
+.data-card .value .green{color:#34c759}
+.data-card .value .blue{color:#4785a8}
+.data-card .value .gold{color:#ffd700}
+.data-card .sub{font-size:12px;color:rgba(255,255,255,0.35);margin-top:1px}
+.data-breakdown{margin:24px 0;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px}
+.data-breakdown h3{font-size:16px;font-weight:700;color:rgba(255,255,255,0.6);margin-bottom:16px}
+.data-breakdown table{width:100%;border-collapse:collapse;font-size:13px}
+.data-breakdown td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.data-breakdown td:first-child{color:rgba(255,255,255,0.3);width:40%}
+.data-breakdown td:last-child{color:rgba(255,255,255,0.7)}
+</style>
+
+<div class="data-grid">
+  <div class="data-card">
+    <div class="label">已连续运行</div>
+    <div class="value">8<span class="green">天</span> 13<span class="blue">小时</span></div>
+    <div class="sub">上次重启: 7月12日</div>
+  </div>
+  <div class="data-card">
+    <div class="label">CPU型号</div>
+    <div class="value">i5-<span class="blue">1.6</span>GHz</div>
+    <div class="sub">双核 · Intel</div>
+  </div>
+  <div class="data-card">
+    <div class="label">内存使用</div>
+    <div class="value"><span class="green">67</span>%</div>
+    <div class="sub">系统空闲 · 还有2GB swap</div>
+  </div>
+  <div class="data-card">
+    <div class="label">电池循环</div>
+    <div class="value"><span class="gold">422</span>次</div>
+    <div class="sub">状态: 建议维修（但依然工作）</div>
+  </div>
+  <div class="data-card">
+    <div class="label">SSD健康</div>
+    <div class="value"><span class="green">✅</span></div>
+    <div class="sub">已验证 · 固态硬盘 · 10年+</div>
+  </div>
+  <div class="data-card">
+    <div class="label">当前进程数</div>
+    <div class="value"><span class="blue">337</span></div>
+    <div class="sub">所有服务全部正常运行</div>
+  </div>
+</div>
+
+<div class="data-breakdown">
+  <h3>📋 这台2017 MacBook Air 正在为你做的事</h3>
+  <table>
+    <tr><td>CRM管理系统</td><td>Flask + SQLite · 订单/用户/产品全自动</td></tr>
+    <tr><td>签到系统</td><td>家长每天打卡 · 5006端口</td></tr>
+    <tr><td>网关代理</td><td>API中转 · 18888端口</td></tr>
+    <tr><td>DeepSeek API代理</td><td>Agent引擎中转站 · 为用户分发AI能力</td></tr>
+    <tr><td>定时任务</td><td>21个cron · 每天自动执行 · 全自动化</td></tr>
+    <tr><td>内网穿透</td><td>cpolar隧道 · 让外网访问这台旧Mac</td></tr>
+    <tr><td>内存看门狗</td><td>自动监控 · 每轮释放~674MB</td></tr>
+    <tr><td>磁盘保护</td><td>减少写入 · 10年SSD依然健康</td></tr>
+    <tr><td>GitHub Pages</td><td>产品官网自动更新 · 周三/五上线</td></tr>
+    <tr><td>余额监控</td><td>DeepSeek余额日报 · 低于预警自动告警</td></tr>
+  </table>
+</div>
+
 <div class="btn-wrap">
   <a class="btn btn-primary" href="https://github.com/mars1417/mars-toolkit" target="_blank">📦 免费下载</a>
   <a class="btn btn-outline" href="#pricing">💎 付费版</a>
@@ -440,4 +507,4 @@ footer a:hover{color:#4785a8}
 </div>
 </body>
 </html>
-<!-- last deploy: Tue Jul 21 04:29:49 CST 2026 -->
+<!-- last deploy: Tue Jul 21 04:34:51 CST 2026 -->
