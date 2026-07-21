@@ -62,9 +62,12 @@ Uptime:  8+ days continuous (still running)
 
 | Product | Price | What it does |
 |:--------|:-----:|:-------------|
-| 🔒 **Lid Open** | **¥5** | Keep services running with lid closed — no sleep, no disconnect |
+| 🔒 **Lid Keep** | **¥5** | Keep services running with lid closed — no sleep, no disconnect |
 | 🔋 **Battery Care** | **¥5** | Stop charging at 80%, extend battery life by 2+ years |
 | 🌀 **Fan Control** | **¥5** | Smart fan strategy — cool when hot, silent when idle |
+| ⏰ **Scheduled Power** | **¥5** | Scheduled on/off + on-demand wake — save power automatically |
+| 📊 **Real Dashboard** | **¥5** | Real-time Mac stats displayed on any web browser |
+| 🌐 **Wake-on-LAN** | **¥5** | Wake your Mac from anywhere via WOL or HTTP |
 
 ### AI Agent Engine
 
