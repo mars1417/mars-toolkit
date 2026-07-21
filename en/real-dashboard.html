@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Dashboard $0.7 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'\u2713';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/en/">← Back to Products</a>
+<h1>Real Dashboard <span class="tag">NEW 🔥</span></h1>
+<div class="price">$0.7 <span>one-time payment, lifetime use</span></div>
+<p class="desc">CPU temperature, memory pressure, disk health, uptime — all your Mac's real-time data displayed in a web dashboard. Open on any device including your phone.</p>
+
+<ul class="features">
+  <li>Real-Time Data Display<span class="sub">CPU temp/load, memory, disk, uptime — all in one view</span></li>
+  <li>Web Access, Phone Ready<span class="sub">Any device on your LAN can access the dashboard via browser</span></li>
+  <li>Auto Refresh<span class="sub">Data updates every 30 seconds for live monitoring</span></li>
+  <li>Zero Configuration<span class="sub">One-command install, open localhost:8080 in browser</span></li>
+  <li>Lightweight & Non-Intrusive<span class="sub">Pure Shell script, no extra dependencies, minimal resource usage</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 Technical Details</h3>
+<p>Real Dashboard is a lightweight HTTP service written entirely in Shell. It collects system data using macOS built-in commands (system_profiler, vm_stat, powermetrics, df, uptime, etc.), stores it as JSON, and displays it through an embedded web page with auto-refresh every 30 seconds. Pure Shell implementation — no Python/Node.js required. Logs saved to ~/.mars-toolkit/logs/real-dashboard.log.</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ FAQ</h3>
+<div class="faq-item">
+  <div class="faq-q">Can I view this on my phone?</div>
+  <div class="faq-a">Yes! As long as your phone and Mac are on the same network, open http://your-mac-ip:8080 in your phone's browser. Combined with a tunnel tool, you can access it from anywhere.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Does it affect system performance?</div>
+  <div class="faq-a">Negligible. The data collection script runs every 30 seconds and takes less than 0.5 seconds per run. The HTTP server uses lightweight nc commands and consumes virtually no CPU or memory.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">What data can I monitor?</div>
+  <div class="faq-a">CPU temperature, CPU load, memory usage (MB and percentage), disk usage, battery cycle count and health status, system uptime, and total process count. Custom extensions available on request.</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order-en.html?product=real-dashboard">🛒 Buy $0.7</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>定时调度 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>定时调度 <span class="tag">今日上新 🔥</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">旧Mac不需要24小时开着。设置定时开关机+按需唤醒，用的时候自动开，不用的时候自动关。省电、省硬件、省心。</p>
+
+<ul class="features">
+  <li>定时关机<span class="sub">设置每天/每周的自动关机时间，不用时自动关机省电</span></li>
+  <li>定时开机<span class="sub">设置自动开机时间，到点自动唤醒，来了直接用</span></li>
+  <li>按需唤醒端口<span class="sub">HTTP请求唤醒，发个请求Mac就自动开机</span></li>
+  <li>纯本地运行<span class="sub">基于macOS内置pmset，不依赖第三方服务</span></li>
+  <li>配置灵活<span class="sub">编辑配置文件即可修改，一行命令生效</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>定时调度基于 macOS 内置的 pmset 电源管理命令，通过 launchd 守护进程实现定时开关机管理。用户编辑配置文件设置关机/开机时间后，系统自动应用电源计划。支持按需唤醒端口监听，可以通过局域网内任何设备发送 HTTP 请求来远程开机。所有日志保存在 ~/.mars-toolkit/logs/scheduled-power.log。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">设置定时开关机后，需要一直开机吗？</div>
+  <div class="faq-a">不需要。定时开机功能通过 macOS 的 Wake on Schedule 实现，即使 Mac 处于关机/休眠状态，到设定时间也会自动开机。定时关机则在到达设定时间时自动执行关机命令。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">每天开关机会不会伤硬件？</div>
+  <div class="faq-a">恰恰相反。24小时不间断运行才会加速硬件老化。合理的开关机周期让硬件得到休息，反而延长使用寿命。服务器不需要一直开着，用的时候开、不用的时候关，是最经济的方式。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">按需唤醒可以从外网使用吗？</div>
+  <div class="faq-a">默认只在局域网内生效。如果配合内网穿透工具（如 cpolar）或 VPN，也可以从外网发送唤醒请求。建议配合 Tunnel Guardian 一起使用，确保隧道链接稳定。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=scheduled-power">🛒 立即购买 ¥5</a>
+</div>
+</div>
+</body>
+</html>

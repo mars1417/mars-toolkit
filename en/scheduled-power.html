@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scheduled Power $0.7 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'\u2713';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/en/">← Back to Products</a>
+<h1>Scheduled Power <span class="tag">NEW 🔥</span></h1>
+<div class="price">$0.7 <span>one-time payment, lifetime use</span></div>
+<p class="desc">Your old Mac doesn't need to run 24/7. Set scheduled power on/off and on-demand wake. Auto-start when needed, auto-shutdown when idle. Save power, save hardware, save money.</p>
+
+<ul class="features">
+  <li>Scheduled Shutdown<span class="sub">Set automatic shutdown times — Mac turns off when not in use</span></li>
+  <li>Scheduled Startup<span class="sub">Set automatic wake-up times — Mac is ready when you arrive</span></li>
+  <li>On-Demand Wake Port<span class="sub">HTTP wake request — send a request to power on your Mac</span></li>
+  <li>Pure Local Operation<span class="sub">Based on macOS built-in pmset, no third-party dependencies</span></li>
+  <li>Flexible Configuration<span class="sub">Edit config file to change schedules, one command to apply</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 Technical Details</h3>
+<p>Scheduled Power uses macOS built-in pmset power management commands, managed through a launchd daemon. Users edit a config file to set shutdown/wake times, and the system automatically applies the power schedule. Supports on-demand wake port listening — any device on your LAN can send an HTTP request to wake the Mac remotely. All logs saved to ~/.mars-toolkit/logs/scheduled-power.log.</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ FAQ</h3>
+<div class="faq-item">
+  <div class="faq-q">Does scheduled startup work when the Mac is shut down?</div>
+  <div class="faq-a">Yes. macOS Wake on Schedule works even when the Mac is fully shut down or in deep sleep. The BIOS/RTC handles the wake signal. As long as the Mac is plugged in, the scheduled wake will work reliably.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Does daily power cycling damage the hardware?</div>
+  <div class="faq-a">On the contrary — running 24/7 accelerates hardware aging. A reasonable power cycle schedule gives components time to rest, actually extending the lifespan. Servers don't need to be on all the time; on when needed, off when idle is the most economical approach.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Can I wake the Mac remotely from outside my home?</div>
+  <div class="faq-a">By default it works on the local network. Combined with a tunnel tool (like cpolar) or VPN (like Ocean VPN), you can send wake requests from anywhere. We recommend pairing with Tunnel Guardian for stable tunnel connections.</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order-en.html?product=scheduled-power">🛒 Buy $0.7</a>
+</div>
+</div>
+</body>
+</html>

@@ -115,6 +115,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">¥5 <span>一次性</span></div>
     <ul><li>自定义温度阈值</li><li>负载高全力散热</li><li>平时安静低噪</li><li>保护硬件寿命</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('scheduled-power')" id="prod-scheduled-power" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>⏰ 定时调度</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>定时开关机设置</li><li>按需唤醒端口</li><li>纯本地运行</li><li>后台静默运行</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('real-dashboard')" id="prod-real-dashboard" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>📊 实机看板</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>CPU温度/负载实时展示</li><li>内存/磁盘/电池状态</li><li>手机也能看</li><li>零配置启动</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('wake-on-lan')" id="prod-wake-on-lan" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>🌐 网络唤醒</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>WOL网络唤醒</li><li>HTTP远程唤醒</li><li>自动配置MAC地址</li><li>安全密钥保护</li></ul>
+  </div>
   <div class="product featured" onclick="selectProduct('ocean-year')" id="prod-ocean-year" style="border-color:rgba(71,133,168,0.2);background:rgba(71,133,168,0.03)">
     <span class="tag tag-live">🎁 送工具</span>
     <h3>🌊 出海云 · 包年</h3>
@@ -201,6 +219,9 @@ let selected = null;
   else if(auto === 'lid-keep') { selectProduct('lid-keep'); }
   else if(auto === 'battery-care') { selectProduct('battery-care'); }
   else if(auto === 'fan-control') { selectProduct('fan-control'); }
+  else if(auto === 'scheduled-power') { selectProduct('scheduled-power'); }
+  else if(auto === 'real-dashboard') { selectProduct('real-dashboard'); }
+  else if(auto === 'wake-on-lan') { selectProduct('wake-on-lan'); }
   else if(auto === 'lite') { selectProduct('lite'); }
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
@@ -216,6 +237,9 @@ const PRODUCTS = {
   'lid-keep': {name: '🔒 盒盖不息', price: '¥5', priceVal: 5},
   'battery-care': {name: '🔋 电池阈值', price: '¥5', priceVal: 5},
   'fan-control': {name: '🌀 温控风扇', price: '¥5', priceVal: 5},
+  'scheduled-power': {name: '⏰ 定时调度', price: '¥5', priceVal: 5},
+  'real-dashboard': {name: '📊 实机看板', price: '¥5', priceVal: 5},
+  'wake-on-lan': {name: '🌐 网络唤醒', price: '¥5', priceVal: 5},
   lite: {name: 'Pro Lite', price: '¥49', priceVal: 49},
   plus: {name: 'Pro Max', price: '¥99', priceVal: 99}
 };

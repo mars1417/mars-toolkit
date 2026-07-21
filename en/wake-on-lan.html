@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wake-on-LAN $0.7 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'\u2713';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/en/">← Back to Products</a>
+<h1>Wake-on-LAN <span class="tag">NEW 🔥</span></h1>
+<div class="price">$0.7 <span>one-time payment, lifetime use</span></div>
+<p class="desc">Your Mac is asleep but you need remote access? Configure WOL network wake — send a command from your phone and power on your Mac remotely. One-click remote wake from anywhere.</p>
+
+<ul class="features">
+  <li>WOL Network Wake<span class="sub">Standard Wake-on-LAN protocol, send a Magic Packet to wake remotely</span></li>
+  <li>LAN HTTP Wake<span class="sub">Browser-based wake — works even without WOL tools</span></li>
+  <li>Auto MAC Detection<span class="sub">Reads your Mac's MAC address automatically during installation</span></li>
+  <li>Auto-Start Daemon<span class="sub">launchd service management — wake capability persists after reboot</span></li>
+  <li>Security Key Protection<span class="sub">Optional security key to prevent unauthorized wake requests</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 Technical Details</h3>
+<p>Wake-on-LAN uses macOS built-in WOL (womp) support, enabled via pmset. A launchd daemon runs in the background, listening for both WOL Magic Packets and HTTP wake requests. Network configuration is recorded for reference when sending wake commands from external devices. All logs saved to ~/.mars-toolkit/logs/wake-on-lan.log.</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ FAQ</h3>
+<div class="faq-item">
+  <div class="faq-q">Can it wake from full shutdown?</div>
+  <div class="faq-a">Yes. When the Mac is plugged in and connected via Ethernet or Wi-Fi, WOL can wake it from sleep, deep sleep, or even full shutdown (as long as the power adapter is connected and the network interface supports it). The script automatically enables this.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Can I wake from outside my home network?</div>
+  <div class="faq-a">You'll need a tunnel or VPN to your home network first. It works perfectly within the local network. For external access, pair with Ocean VPN or a cpolar tunnel + Tunnel Guardian to reach your LAN, then send the WOL packet.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">What devices can send wake commands?</div>
+  <div class="faq-a">Any device that can send UDP broadcast packets or HTTP requests: phones (iOS/Android via apps or SSH), another computer, your router, smart home hubs, etc. For phones, use SSH + an app like Termux, or simply visit the HTTP port in a browser.</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order-en.html?product=wake-on-lan">🛒 Buy $0.7</a>
+</div>
+</div>
+</body>
+</html>

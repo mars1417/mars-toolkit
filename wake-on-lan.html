@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络唤醒 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>网络唤醒 <span class="tag">今日上新 🔥</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">Mac休眠了但需要远程访问？配置WOL网络唤醒，手机发个指令就能远程开机。人在外面想用家里的Mac？手机一键唤醒。</p>
+
+<ul class="features">
+  <li>WOL网络唤醒<span class="sub">基于标准Wake-on-LAN协议，发送Magic Packet远程开机</span></li>
+  <li>局域网HTTP唤醒<span class="sub">不依赖WOL协议的工具也能用，浏览器访问端口即可唤醒</span></li>
+  <li>自动配置MAC地址<span class="sub">安装时自动读取本机MAC地址，无需手动查找</span></li>
+  <li>开机自启守护<span class="sub">launchd服务管理，Mac重启后自动恢复唤醒能力</span></li>
+  <li>安全密钥保护<span class="sub">可设置安全密钥，防止未授权唤醒</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>网络唤醒基于 macOS 内置的 Wake-on-LAN（womp）功能，通过 pmset 启用网络唤醒支持。配置 launchd 守护进程在后台监听 WOL Magic Packet 和 HTTP 唤醒请求。同时记录本机网络配置信息，方便从外网设备发送唤醒指令。日志保存在 ~/.mars-toolkit/logs/wake-on-lan.log。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">关机状态也能唤醒吗？</div>
+  <div class="faq-a">可以。只要Mac插着电源线、网线或Wi-Fi连接正常，WOL功能可以在Mac处于休眠或关机状态时将其唤醒。前提是启用了macOS的Wake on LAN功能（脚本会自动启用）。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">外网能用吗？</div>
+  <div class="faq-a">需要配合内网穿透工具。在局域网内直接可用。要从外网唤醒，建议配合VPN（如出海云）或内网穿透工具（如cpolar+Tunnel Guardian）连接到同一局域网后再发送WOL包。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">支持哪些设备发送唤醒指令？</div>
+  <div class="faq-a">支持任何可以发送UDP广播包或HTTP请求的设备：手机（iOS/Android）、另一台电脑、路由器、智能家居设备等。手机可以通过SSH或Termux发送WOL包，或者直接浏览器访问HTTP端口。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=wake-on-lan">🛒 立即购买 ¥5</a>
+</div>
+</div>
+</body>
+</html>

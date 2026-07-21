@@ -76,6 +76,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">$4.9 <span>one-time</span></div>
     <ul><li>V2Box auto subscription refresh</li><li>Fastest node auto-select</li><li>Auto-reconnect</li><li>One-click setup script</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('scheduled-power')" id="prod-scheduled-power">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>⏰ Scheduled Power</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Scheduled shutdown & startup</li><li>On-demand HTTP wake</li><li>Pure local operation</li><li>Background daemon</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('real-dashboard')" id="prod-real-dashboard">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>📊 Real Dashboard</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Real-time CPU/memory/disk</li><li>Viewable on phone</li><li>Auto-refresh every 30s</li><li>Zero-config setup</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('wake-on-lan')" id="prod-wake-on-lan">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🌐 Wake-on-LAN</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>WOL Magic Packet wake</li><li>HTTP remote wake</li><li>Auto MAC detection</li><li>Security key protection</li></ul>
+  </div>
   <div class="product" onclick="selectProduct('lite')" id="prod-lite">
     <span class="tag tag-soon">🔜 July</span>
     <h3>Pro Lite</h3>
@@ -135,6 +153,9 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
   var params = new URLSearchParams(window.location.search);
   var auto = params.get('product');
   if(auto === 'vpn') selectProduct('vpn');
+  else if(auto === 'scheduled-power') selectProduct('scheduled-power');
+  else if(auto === 'real-dashboard') selectProduct('real-dashboard');
+  else if(auto === 'wake-on-lan') selectProduct('wake-on-lan');
   else if(auto === 'lite') selectProduct('lite');
   else if(auto === 'plus') selectProduct('plus');
 })();
@@ -142,6 +163,9 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
 let selected = null;
 const PRODUCTS = {
   vpn: {name: 'VPN Auto-Pilot', price: '$4.9'},
+  'scheduled-power': {name: '⏰ Scheduled Power', price: '$0.7'},
+  'real-dashboard': {name: '📊 Real Dashboard', price: '$0.7'},
+  'wake-on-lan': {name: '🌐 Wake-on-LAN', price: '$0.7'},
   lite: {name: 'Pro Lite', price: '$24.9'},
   plus: {name: 'Pro Max', price: '$49'}
 };
