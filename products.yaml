@@ -213,7 +213,7 @@ products:
     emoji: "⚡"
     price: "¥5"
     category: "tool"
-    status: "待发布"
+    status: "已上线"
     tagline: "多场景电源方案一键切换，工作/娱乐/省电各一套"
     description: "工作时高性能、娱乐时平衡、挂机时省电。一键切换电源方案，不用每次手动调。"
     pitch: "每次调电源设置烦不烦？¥5设置多套电源方案，一键切换。"
@@ -224,12 +224,23 @@ products:
     emoji: "🔌"
     price: "¥5"
     category: "tool"
-    status: "待发布"
+    status: "已上线"
     tagline: "USB/蓝牙设备自动管理，省电又方便"
     description: "不用的外设自动断开、需要时自动连接。减少电池消耗，延长外设寿命。"
     pitch: "蓝牙鼠标键盘一直连着费电？¥5设置外设自动管理，用的时候连，不用的时候断。"
     specs: []
     target: ["笔记本用户"]
+
+  - name: "内存盘缓存"
+    emoji: "💾"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "浏览器缓存搬到内存，浏览加速30%，保护老化SSD"
+    description: "Chrome/Safari的缓存默认写在SSD上——既拖慢速度又缩短SSD寿命。把缓存移到内存盘，浏览速度明显提升，10年老SSD也能再战2年。支持128-256MB RAM Disk，含launchd plist开机自动加载。"
+    pitch: "老Mac最怕SSD写入太多。¥5把浏览器缓存搬到内存里，速度快了、SSD保住了、开机自动加载不用管。"
+    specs: []
+    target: ["老Mac用户", "SSD健康敏感用户"]
 
 # 组合推荐
 bundles:

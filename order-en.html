@@ -94,6 +94,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">$0.7 <span>one-time</span></div>
     <ul><li>WOL Magic Packet wake</li><li>HTTP remote wake</li><li>Auto MAC detection</li><li>Security key protection</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('power-plan')" id="prod-power-plan">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>⚡ Power Plan</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>One-click power scheme switch</li><li>Work/Entertainment/Saver presets</li><li>No manual tuning needed</li><li>Background daemon</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('peripheral-mgr')" id="prod-peripheral-mgr">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🔌 Peripheral Manager</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Auto USB/Bluetooth management</li><li>Disconnect when idle</li><li>Auto-connect when needed</li><li>Save power, extend life</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('ram-disk-cache')" id="prod-ram-disk-cache">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>💾 RAM Disk Cache</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Chrome/Safari cache in RAM</li><li>~30% browsing speed boost</li><li>Reduce SSD writes</li><li>Auto-load on boot</li></ul>
+  </div>
   <div class="product" onclick="selectProduct('lite')" id="prod-lite">
     <span class="tag tag-soon">🔜 July</span>
     <h3>Pro Lite</h3>
@@ -156,6 +174,9 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
   else if(auto === 'scheduled-power') selectProduct('scheduled-power');
   else if(auto === 'real-dashboard') selectProduct('real-dashboard');
   else if(auto === 'wake-on-lan') selectProduct('wake-on-lan');
+  else if(auto === 'power-plan') selectProduct('power-plan');
+  else if(auto === 'peripheral-mgr') selectProduct('peripheral-mgr');
+  else if(auto === 'ram-disk-cache') selectProduct('ram-disk-cache');
   else if(auto === 'lite') selectProduct('lite');
   else if(auto === 'plus') selectProduct('plus');
 })();
@@ -166,6 +187,9 @@ const PRODUCTS = {
   'scheduled-power': {name: '⏰ Scheduled Power', price: '$0.7'},
   'real-dashboard': {name: '📊 Real Dashboard', price: '$0.7'},
   'wake-on-lan': {name: '🌐 Wake-on-LAN', price: '$0.7'},
+  'power-plan': {name: '⚡ Power Plan', price: '$0.7'},
+  'peripheral-mgr': {name: '🔌 Peripheral Manager', price: '$0.7'},
+  'ram-disk-cache': {name: '💾 RAM Disk Cache', price: '$0.7'},
   lite: {name: 'Pro Lite', price: '$24.9'},
   plus: {name: 'Pro Max', price: '$49'}
 };

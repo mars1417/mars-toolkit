@@ -133,6 +133,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">¥5 <span>一次性</span></div>
     <ul><li>WOL网络唤醒</li><li>HTTP远程唤醒</li><li>自动配置MAC地址</li><li>安全密钥保护</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('power-plan')" id="prod-power-plan" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今晚上新 🔥</span>
+    <h3>⚡ 电源计划</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>多场景电源方案一键切换</li><li>工作/娱乐/省电各一套</li><li>不用每次手动调</li><li>后台静默运行</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('peripheral-mgr')" id="prod-peripheral-mgr" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今晚上新 🔥</span>
+    <h3>🔌 外设管理</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>USB/蓝牙设备自动管理</li><li>不用时自动断开</li><li>需要时自动连接</li><li>省电又方便</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('ram-disk-cache')" id="prod-ram-disk-cache" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今晚上新 🔥</span>
+    <h3>💾 内存盘缓存</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>Chrome/Safari缓存移到内存</li><li>浏览加速30%</li><li>保护老化SSD</li><li>开机自动加载</li></ul>
+  </div>
   <div class="product featured" onclick="selectProduct('ocean-year')" id="prod-ocean-year" style="border-color:rgba(71,133,168,0.2);background:rgba(71,133,168,0.03)">
     <span class="tag tag-live">🎁 送工具</span>
     <h3>🌊 出海云 · 包年</h3>
@@ -222,6 +240,9 @@ let selected = null;
   else if(auto === 'scheduled-power') { selectProduct('scheduled-power'); }
   else if(auto === 'real-dashboard') { selectProduct('real-dashboard'); }
   else if(auto === 'wake-on-lan') { selectProduct('wake-on-lan'); }
+  else if(auto === 'power-plan') { selectProduct('power-plan'); }
+  else if(auto === 'peripheral-mgr') { selectProduct('peripheral-mgr'); }
+  else if(auto === 'ram-disk-cache') { selectProduct('ram-disk-cache'); }
   else if(auto === 'lite') { selectProduct('lite'); }
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
@@ -240,6 +261,9 @@ const PRODUCTS = {
   'scheduled-power': {name: '⏰ 定时调度', price: '¥5', priceVal: 5},
   'real-dashboard': {name: '📊 实机看板', price: '¥5', priceVal: 5},
   'wake-on-lan': {name: '🌐 网络唤醒', price: '¥5', priceVal: 5},
+  'power-plan': {name: '⚡ 电源计划', price: '¥5', priceVal: 5},
+  'peripheral-mgr': {name: '🔌 外设管理', price: '¥5', priceVal: 5},
+  'ram-disk-cache': {name: '💾 内存盘缓存', price: '¥5', priceVal: 5},
   lite: {name: 'Pro Lite', price: '¥49', priceVal: 49},
   plus: {name: 'Pro Max', price: '¥99', priceVal: 99}
 };

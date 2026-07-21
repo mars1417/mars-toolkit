@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内存盘缓存 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>内存盘缓存 <span class="tag">今晚上新 🔥</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">Chrome/Safari的缓存默认写在SSD上——既拖慢速度又缩短SSD寿命。把缓存移到内存盘，浏览速度明显提升，10年老SSD也能再战2年。</p>
+
+<ul class="features">
+  <li>浏览器缓存搬进内存<span class="sub">Chrome/Safari缓存从SSD移到RAM Disk，读写速度提升10倍+</span></li>
+  <li>浏览加速约30%<span class="sub">内存盘随机读写远快于SSD，页面加载、标签切换明显变快</span></li>
+  <li>保护老化SSD<span class="sub">减少对SSD的频繁写入，10年老盘也能继续健康服役</span></li>
+  <li>128-256MB RAM Disk<span class="sub">占用少量内存，不影响日常使用，缓存量大时自动清理</span></li>
+  <li>开机自动加载<span class="sub">内含launchd plist，每次开机自动挂载内存盘并配置缓存路径</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>内存盘缓存通过创建 RAM Disk（内存盘）并修改 Chrome/Safari 的浏览器缓存路径来实现。使用 macOS 内置的 hdiutil 命令创建 128MB-256MB 内存盘，通过 shell 脚本和 launchd plist 实现开机自动挂载和缓存目录软链接。Chrome 通过 --disk-cache-dir 参数配置缓存路径，Safari 通过修改 plist 中的 WebKit 缓存目录。所有日志保存在 ~/.mars-toolkit/logs/ram-disk-cache.log。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">内存盘占了多少内存？会不会影响日常使用？</div>
+  <div class="faq-a">默认分配128MB，最多256MB。对于4GB以上的Mac完全不影响日常使用。而且内存盘只在有缓存数据时才会占用空间，平时几乎是空的。如果你的内存比较紧张（比如4GB机型），可以手动调整为64MB。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">重启后缓存会消失吗？浏览器不白缓存了吗？</div>
+  <div class="faq-a">会消失，但这是好事。浏览器缓存本身就是临时的——存的是图片、CSS、JS等静态资源。重启后重新加载一次，之后又恢复加速效果。相比SSD缓存带来的频繁写入损耗，重启后一次重新加载的成本可以忽略不计。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">支持哪些浏览器？</div>
+  <div class="faq-a">默认支持 Chrome 和 Safari。Chrome 通过启动参数 --disk-cache-dir 重定向缓存路径；Safari 通过修改 WebKit 偏好设置。Firefox 用户可以手动配置 about:config 中的 browser.cache.disk.parent_directory 参数。Edge/Chromium 内核浏览器同样支持。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=ram-disk-cache">🛒 立即购买 ¥5</a>
+</div>
+</div>
+</body>
+</html>

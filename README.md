@@ -33,6 +33,9 @@
 | ⏰ **Scheduled Power** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=scheduled-power) |
 | 📊 **Real Dashboard** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=dashboard) |
 | 🌐 **Wake-on-LAN** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=wake-on-lan) |
+| ⚡ **Power Plan** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=power-plan) |
+| 🔌 **Peripheral Manager** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=peripheral-mgr) |
+| 💾 **RAM Disk Cache** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=ram-disk-cache) |
 
 **购买流程：** 点链接 → 选产品 → 微信扫码付 → 自动开通。微信付款，自动发货，一次购买终身使用。
 
@@ -146,8 +149,8 @@ SSD类型:   ✅ 固态
 | 日期 | 内容 |
 |:----|:----|
 | 每天10:00 | 3个新品 → GP首页 + README同步 |
-| 当前 | 15/240 已上线 |
-| 待发布 | 定时调度 → 实机看板 → 网络唤醒 → 电源计划 → 外设管理 |
+| 当前 | 18/240 已上线 |
+| 今晚已发布 | ⚡电源计划 · 🔌外设管理 · 💾内存盘缓存 |
 
 ---
 
