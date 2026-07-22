@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💿 Disk Health $0.7 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(52,199,89,0.12);color:#34c759;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/en/">← Back to Products</a>
+<h1>💿 Disk Health <span class="tag">🟢 LIVE</span></h1>
+<div class="price">$0.7 <span>one-time payment, lifetime use</span></div>
+<p class="desc">Your SSD's health degrades silently over time and you won't know until it's too late. This tool monitors S.M.A.R.T. status, TRIM state, and estimated lifespan. Alerts you when disk space runs low — giving you time to back up.</p>
+
+<ul class="features">
+  <li>S.M.A.R.T. Health Monitoring<span class="sub">Real-time disk S.M.A.R.T. status — know immediately if health declines</span></li>
+  <li>TRIM Status Check<span class="sub">Verify TRIM is enabled — without it, SSD performance and lifespan suffer</span></li>
+  <li>Disk Space Alert<span class="sub">Auto-alert when usage exceeds 85% — clean up before it's full</span></li>
+  <li>Large File Scanner<span class="sub">Quickly find files over 100MB — see what's eating your space</span></li>
+  <li>Comprehensive Health Report<span class="sub">Auto-generated text report saved to ~/.mars-toolkit/logs/</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 Technical Details</h3>
+<p>Disk Health is a macOS background monitoring daemon. It reads S.M.A.R.T. status from all physical disks (via diskutil info), checks TRIM status (via system_profiler SPNVMeDataType), and monitors root partition disk usage. Checks run every 60 minutes by default, with warnings logged when usage exceeds 85%. Supports manual runs for full reports and large file scanning.</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ FAQ</h3>
+<div class="faq-item">
+  <div class="faq-q">My Mac has an HDD, not SSD. Does this work?</div>
+  <div class="faq-a">Yes. HDDs also have S.M.A.R.T. monitoring — only TRIM is SSD-specific. The tool auto-detects your disk type and shows relevant information.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">What is S.M.A.R.T.?</div>
+  <div class="faq-a">S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) is a built-in health detection system in hard drives. If S.M.A.R.T. shows "Failing", your drive could die at any moment — time to back up NOW. This tool saves you from having to check manually.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">What happens if TRIM is disabled?</div>
+  <div class="faq-a">TRIM is the SSD's garbage collection mechanism. Without it, deleted blocks aren't marked as reusable — write performance degrades over time and SSD lifespan shortens. This tool checks and reminds you to enable it.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">Does it consume many resources?</div>
+  <div class="faq-a">Barely any. The daemon doesn't run continuously — launchd triggers a check every 60 minutes. Each check takes under 1 second. Virtually zero CPU and memory usage.</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order-en.html?product=disk-health">Buy Now $0.7 →</a>
+</div>
+</div>
+</body>
+</html>

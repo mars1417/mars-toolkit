@@ -151,6 +151,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">¥5 <span>一次性</span></div>
     <ul><li>Chrome/Safari缓存移到内存</li><li>浏览加速30%</li><li>保护老化SSD</li><li>开机自动加载</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('clean-sweep')" id="prod-clean-sweep" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>🧹 系统清理</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>一键内存回收+purge释放</li><li>浏览器缓存清理</li><li>每天凌晨自动执行</li><li>后台静默运行</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('disk-health')" id="prod-disk-health" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>💿 磁盘健康</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>S.M.A.R.T.健康状态监控</li><li>TRIM开启状态检查</li><li>磁盘使用超85%预警</li><li>大文件扫描</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('privacy-eraser')" id="prod-privacy-eraser" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>🔐 隐私擦除</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>浏览器缓存+Cookie+历史</li><li>系统日志+诊断报告</li><li>最近文档+剪贴板</li><li>一键全部清空</li></ul>
+  </div>
   <div class="product featured" onclick="selectProduct('ocean-year')" id="prod-ocean-year" style="border-color:rgba(71,133,168,0.2);background:rgba(71,133,168,0.03)">
     <span class="tag tag-live">🎁 送工具</span>
     <h3>🌊 出海云 · 包年</h3>
@@ -243,6 +261,9 @@ let selected = null;
   else if(auto === 'power-plan') { selectProduct('power-plan'); }
   else if(auto === 'peripheral-mgr') { selectProduct('peripheral-mgr'); }
   else if(auto === 'ram-disk-cache') { selectProduct('ram-disk-cache'); }
+  else if(auto === 'clean-sweep') { selectProduct('clean-sweep'); }
+  else if(auto === 'disk-health') { selectProduct('disk-health'); }
+  else if(auto === 'privacy-eraser') { selectProduct('privacy-eraser'); }
   else if(auto === 'lite') { selectProduct('lite'); }
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
@@ -264,6 +285,9 @@ const PRODUCTS = {
   'power-plan': {name: '⚡ 电源计划', price: '¥5', priceVal: 5},
   'peripheral-mgr': {name: '🔌 外设管理', price: '¥5', priceVal: 5},
   'ram-disk-cache': {name: '💾 内存盘缓存', price: '¥5', priceVal: 5},
+  'clean-sweep': {name: '🧹 系统清理', price: '¥5', priceVal: 5},
+  'disk-health': {name: '💿 磁盘健康', price: '¥5', priceVal: 5},
+  'privacy-eraser': {name: '🔐 隐私擦除', price: '¥5', priceVal: 5},
   lite: {name: 'Pro Lite', price: '¥49', priceVal: 49},
   plus: {name: 'Pro Max', price: '¥99', priceVal: 99}
 };

@@ -112,6 +112,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">$0.7 <span>one-time</span></div>
     <ul><li>Chrome/Safari cache in RAM</li><li>~30% browsing speed boost</li><li>Reduce SSD writes</li><li>Auto-load on boot</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('clean-sweep')" id="prod-clean-sweep">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🧹 Clean Sweep</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Memory recovery + purge free</li><li>Browser cache cleaner</li><li>Daily auto-clean schedule</li><li>Background daemon</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('disk-health')" id="prod-disk-health">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>💿 Disk Health</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>S.M.A.R.T. health monitoring</li><li>TRIM status check</li><li>85% disk usage alert</li><li>Large file scanner</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('privacy-eraser')" id="prod-privacy-eraser">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🔐 Privacy Eraser</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Browser cache + cookies + history</li><li>System logs + diagnostics</li><li>Recent docs + clipboard</li><li>One-click wipe all</li></ul>
+  </div>
   <div class="product" onclick="selectProduct('lite')" id="prod-lite">
     <span class="tag tag-soon">🔜 July</span>
     <h3>Pro Lite</h3>
@@ -177,6 +195,9 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
   else if(auto === 'power-plan') selectProduct('power-plan');
   else if(auto === 'peripheral-mgr') selectProduct('peripheral-mgr');
   else if(auto === 'ram-disk-cache') selectProduct('ram-disk-cache');
+  else if(auto === 'clean-sweep') selectProduct('clean-sweep');
+  else if(auto === 'disk-health') selectProduct('disk-health');
+  else if(auto === 'privacy-eraser') selectProduct('privacy-eraser');
   else if(auto === 'lite') selectProduct('lite');
   else if(auto === 'plus') selectProduct('plus');
 })();
@@ -190,6 +211,9 @@ const PRODUCTS = {
   'power-plan': {name: '⚡ Power Plan', price: '$0.7'},
   'peripheral-mgr': {name: '🔌 Peripheral Manager', price: '$0.7'},
   'ram-disk-cache': {name: '💾 RAM Disk Cache', price: '$0.7'},
+  'clean-sweep': {name: '🧹 Clean Sweep', price: '$0.7'},
+  'disk-health': {name: '💿 Disk Health', price: '$0.7'},
+  'privacy-eraser': {name: '🔐 Privacy Eraser', price: '$0.7'},
   lite: {name: 'Pro Lite', price: '$24.9'},
   plus: {name: 'Pro Max', price: '$49'}
 };

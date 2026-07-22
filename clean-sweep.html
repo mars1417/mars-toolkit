@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧹 系统清理 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(52,199,89,0.12);color:#34c759;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>🧹 系统清理 <span class="tag">🟢 在售</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">Mac用久了内存越占越满，系统越来越卡。一键内存回收+缓存清理，4GB旧Mac也能流畅如初。后台守护自动执行，不用管。</p>
+
+<ul class="features">
+  <li>一键内存回收<span class="sub">自动关闭内存大户 → sudo purge → 释放Swap → 可用内存立增几百MB</span></li>
+  <li>浏览器缓存清理<span class="sub">Chrome/Safari 缓存一键清理，释放GB级磁盘空间</span></li>
+  <li>定时自动执行<span class="sub">每天凌晨2点自动清理，也可设置内存阈值低于512MB时触发</span></li>
+  <li>智能跳过保护<span class="sub">V2Box等服务运行时自动跳过，不影响正在跑的服务</span></li>
+  <li>后台静默运行<span class="sub">launchd 守护进程，无窗口无弹窗，不打扰你工作</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>系统清理是一个 macOS 后台守护进程，基于 launchd 实现定时 + 事件触发双模式。默认每天凌晨2点自动执行一轮清理：先关闭WPS/Stocks等内存大户，再关闭Chrome空闲窗口释放图形内存，最后调用 sudo purge 释放非活跃页面。浏览器缓存清理支持Chrome和Safari。全部操作记录日志到 ~/.mars-toolkit/logs/。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">会把我重要的浏览器数据删掉吗？</div>
+  <div class="faq-a">不会。只清理 Cache 和 Code Cache 目录，不影响书签、密码、扩展、历史记录。Safari 同理，只清缓存目录。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">sudo purge 安全吗？</div>
+  <div class="faq-a">非常安全。purge 是 macOS 内置命令，作用是强制释放非活跃内存页面。这些页面本来就是系统可以在需要时回收的，purge 只是让这个过程立即发生。不会导致任何程序崩溃或数据丢失。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">4GB内存的旧Mac效果明显吗？</div>
+  <div class="faq-a">非常明显。实测在2017款MacBook Air 4GB上，一轮清理可释放约600-800MB可用内存。Safari开10个标签页不卡了，App切换不再转彩虹圈。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">能自定义清理内容吗？</div>
+  <div class="faq-a">可以。配置文件 ~/.mars-toolkit/clean-sweep.conf 中可以设置定时时间、内存阈值、清理哪些浏览器缓存、是否清理系统日志和废纸篓。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=clean-sweep">立即购买 ¥5 →</a>
+</div>
+</div>
+</body>
+</html>

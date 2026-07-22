@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔐 隐私擦除 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(52,199,89,0.12);color:#34c759;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>🔐 隐私擦除 <span class="tag">🟢 在售</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">Mac用久了留下大量隐私痕迹——浏览历史、剪贴板、最近文档、系统日志。这个工具一键清理所有隐私数据，保护你的隐私安全。适合共享电脑、借电脑给别人、注重隐私的用户。</p>
+
+<ul class="features">
+  <li>浏览器隐私清理<span class="sub">Chrome/Safari 缓存、Cookie、LocalStorage 一键清除，不留浏览痕迹</span></li>
+  <li>最近文档清空<span class="sub">清空Finder最近文档、各应用的最近记录、最近文件夹</span></li>
+  <li>剪贴板清除<span class="sub">清空系统剪贴板，复制过的密码/链接全部消失</span></li>
+  <li>系统日志清理<span class="sub">清除用户日志和诊断报告，减少系统隐私泄露（默认关闭）</span></li>
+  <li>可配置清理项<span class="sub">配置文件选择每次清理哪些项目，不想清的关掉就行</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>隐私擦除通过 macOS 内置命令清理各类隐私痕迹。浏览器清理操作 Cache 和 Cookie 目录，不影响书签和密码。最近文档通过 defaults 命令清空系统级和应用级的最近记录列表。剪贴板通过 pbcopy 清除。系统日志清理通过 rm 命令删除用户日志目录。所有操作记录日志到 ~/.mars-toolkit/logs/。可通过配置文件 ~/.mars-toolkit/privacy-eraser.conf 自定义清理项目。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">会删掉我的书签/密码吗？</div>
+  <div class="faq-a">不会。浏览器清理只针对缓存、Cookie 和 LocalStorage 目录。书签、保存的密码、浏览历史记录不受影响。如果你担心，可以在配置文件中把浏览器清理关掉。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">借电脑给别人之前用这个够吗？</div>
+  <div class="faq-a">基本够了。浏览器缓存、最近文档、剪贴板这三大隐私重灾区都覆盖了。如果你还担心，可以在配置里开启系统日志和下载记录清理，做到无死角。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">能设置每天自动清理吗？</div>
+  <div class="faq-a">可以。安装脚本自带 launchd 服务，默认每天凌晨3点自动执行一次清理。你也可以手动运行一键清理。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">只清理我自己的用户目录对吧？</div>
+  <div class="faq-a">对，所有操作都在当前用户目录范围内，不影响其他用户的数据。系统级别的日志清理需要 sudo 权限，默认关闭。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=privacy-eraser">立即购买 ¥5 →</a>
+</div>
+</div>
+</body>
+</html>

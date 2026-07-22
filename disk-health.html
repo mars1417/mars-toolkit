@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💿 磁盘健康 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(52,199,89,0.12);color:#34c759;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>💿 磁盘健康 <span class="tag">🟢 在售</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">SSD用得久了健康状况在下降你也不知道。这个工具监控磁盘S.M.A.R.T.状态、TRIM开启情况、剩余寿命估算。磁盘空间快满时自动预警，让你来得及备份。</p>
+
+<ul class="features">
+  <li>S.M.A.R.T.健康监控<span class="sub">实时读取磁盘S.M.A.R.T.状态，健康下降第一时间知道</span></li>
+  <li>TRIM状态检查<span class="sub">确认TRIM是否开启——没开的话SSD性能会下降、寿命会缩短</span></li>
+  <li>磁盘空间预警<span class="sub">使用率超过85%自动提醒，让你在磁盘满之前来得及清理</span></li>
+  <li>大文件扫描<span class="sub">快速找出大于100MB的大文件，知道哪些文件占空间最多</span></li>
+  <li>综合健康报告<span class="sub">自动生成文本报告，保存在 ~/.mars-toolkit/logs/ 目录</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>磁盘健康是一个 macOS 后台监控守护进程。安装后自动读取所有物理磁盘的 S.M.A.R.T. 状态（通过 diskutil info），检查 TRIM 是否开启（通过 system_profiler SPNVMeDataType），监控根分区磁盘使用率。默认每60分钟检查一次，使用率超过85%时写入告警日志。支持手动运行查看完整报告和扫描大文件。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">我的Mac是HDD不是SSD，能用吗？</div>
+  <div class="faq-a">可以。HDD也有S.M.A.R.T.监控，只是TRIM功能仅对SSD有效。工具会自动检测磁盘类型并显示相关信息。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">什么是S.M.A.R.T.？</div>
+  <div class="faq-a">S.M.A.R.T.（自我监控、分析和报告技术）是硬盘内置的健康检测系统。如果S.M.A.R.T.状态显示"Failing"，说明硬盘随时可能报废，需要立即备份。这个工具让你不用手动去查。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">TRIM没开启会怎么样？</div>
+  <div class="faq-a">TRIM是SSD的垃圾回收机制。没开启的话，删除文件时SSD不知道那些区块可以回收，写入性能会逐渐下降，SSD寿命也会缩短。这个工具会检查并提醒你开启。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">占用资源多吗？</div>
+  <div class="faq-a">极低。后台守护进程不持续运行，通过launchd每60分钟触发一次检查，每次检查耗时不到1秒，几乎不占用任何CPU和内存。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=disk-health">立即购买 ¥5 →</a>
+</div>
+</div>
+</body>
+</html>
