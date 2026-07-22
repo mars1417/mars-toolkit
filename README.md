@@ -14,7 +14,11 @@
 
 ---
 
-## 🛒 How to Buy / 如何购买
+## 🛒 How to Buy / 如何购买  ![WeChat Pay](https://img.shields.io/badge/微信支付-WeChat_Pay-brightgreen)
+
+> **📱 微信扫码，立即购买，自动发货，终身使用。**
+>
+> <img src="https://mars1417.github.io/mars-toolkit/assets/qr-wechat.jpg" alt="微信收款码" width="150"/>
 
 | 产品 | 价格 | 立即购买 |
 |:----|:---:|:--------|
