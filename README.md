@@ -1,4 +1,4 @@
-# mars-toolkit: Turn your old Mac into a self-hosted production server
+# 🚀 mars-toolkit — Revive Your Old Mac
 
 > **Real data from a production 2017 MacBook Air (4GB RAM, 1.6GHz i5): 7+ services, 2+ years uptime, zero cloud cost, fully automated.**
 > **If this 4GB old Mac can do it, yours can do even better.**
@@ -6,199 +6,107 @@
 [![macOS](https://img.shields.io/badge/macOS-12.7.6-blue)]()
 [![selfhosted](https://img.shields.io/badge/selfhosted-ready-green)]()
 [![License](https://img.shields.io/badge/License-MIT-green)]()
-[![Stars](https://img.shields.io/github/stars/mars1417/mars-toolkit?style=social)]()
+[![Stars](https://img.shields.io/github/stars/mars1417/mars-toolkit?style=social)](https://github.com/mars1417/mars-toolkit)
+[![Release](https://img.shields.io/github/v/release/mars1417/mars-toolkit)]()
 [![Last commit](https://img.shields.io/github/last-commit/mars1417/mars-toolkit)]()
+[![macOS version](https://img.shields.io/badge/macOS-12%2B-brightgreen)]()
 
-**🌊 中文版 · 出海云 · 老旧Mac变废为宝** — macOS优化 / 科学上网 / AI Agent引擎 / 自托管服务器，¥0起让旧Mac再战5年。  
-**🌐 English website:** https://mars1417.github.io/mars-toolkit/en/
+**🌊 [中文版](https://mars1417.github.io/mars-toolkit/) · [English Website](https://mars1417.github.io/mars-toolkit/en/) · [📦 v0.1.1 Release](https://github.com/mars1417/mars-toolkit/releases/tag/v0.1.1)**
 
----
-
-## 🛒 How to Buy / 如何购买  ![WeChat Pay](https://img.shields.io/badge/微信支付-WeChat_Pay-brightgreen)
-
-> **📱 微信扫码，立即购买，自动发货，终身使用。**
->
-> <img src="https://mars1417.github.io/mars-toolkit/assets/qr-wechat.jpg" alt="微信收款码" width="150"/>
-
-| 产品 | 价格 | 立即购买 |
-|:----|:---:|:--------|
-| 🍎 **macOS Care Pack** | **¥0 免费** | [🆓 免费获取 →](https://mars1417.github.io/mars-toolkit/order.html?product=care-pack) |
-| 🌊 **Ocean VPN · 月度** | **¥9.9/月** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=ocean-month) |
-| 🌊 **Ocean VPN · 年度** | **¥150/年** (省50%) | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=ocean-year) |
-| 🔄 **VPN Auto-Pilot** | **¥9.9 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=vpn) |
-| 🛡️ **Tunnel Guardian** | **¥9.9 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=tunnel) |
-| 🌐 **Cloud Ladder Bundle** | **¥29.9 省50%** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=bundle) |
-| 🤖 **Agent · Lite** | **¥5/月** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=agent-basic) |
-| 🤖 **Agent · Standard** | **¥15/月** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=agent-standard) |
-| 🤖 **Agent · Pro** | **¥30/月** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=agent-pro) |
-| 🔒 **Lid Keep** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=lid-keep) |
-| 🔋 **Battery Care** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=battery) |
-| 🌀 **Fan Control** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=fan-control) |
-| ⏰ **Scheduled Power** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=scheduled-power) |
-| 📊 **Real Dashboard** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=dashboard) |
-| 🌐 **Wake-on-LAN** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=wake-on-lan) |
-| ⚡ **Power Plan** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=power-plan) |
-| 🔌 **Peripheral Manager** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=peripheral-mgr) |
-| 💾 **RAM Disk Cache** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=ram-disk-cache) |
-| 🧹 **Clean Sweep** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=clean-sweep) |
-| 💿 **Disk Health** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=disk-health) |
-| 🔐 **Privacy Eraser** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=privacy-eraser) |
-
-**购买流程：** 点链接 → 选产品 → 微信扫码付 → 自动开通。微信付款，自动发货，一次购买终身使用。
+> **If this helps you, please ⭐ [star the repo](https://github.com/mars1417/mars-toolkit)!** Every star helps more people find these tools.
 
 ---
 
-## 🔥 Why Choose Us?（为什么选择我们？）
+## 🔥 Why mars-toolkit?
 
-### 1️⃣ 实机验证，不是PPT产品
-所有产品都在 **2017 MacBook Air (4GB RAM)** 上真实跑着：
-- ✅ 2年+稳定运行 · 2,900+次自动执行 · **零人工干预**
-- ✅ 同时跑7+服务不崩：CRM/签到/网关/21个cron/AI代理
-- ✅ 实际数据，不是宣传话术
+**21 macOS optimization tools** — from battery care to fan control, wake-on-LAN to AI agent — all tested on real 4GB hardware. **80-90% cheaper than alternatives.**
 
-### 2️⃣ 比竞品便宜50~90%
+| Your Problem | Solution | Price |
+|:------------|:---------|:-----:|
+| 😤 MacBook sleeps when lid closed | 🔒 **Lid Keep** — stays awake on external display | **¥5** |
+| 🔋 Battery health dropping fast | 🔋 **Battery Care** — stop charging at 80% | **¥5** |
+| 🌪️ Fan noise driving you crazy | 🌀 **Fan Control** — smart auto strategy | **¥5** |
+| 🐌 Mac getting slower every day | 🧹 **Clean Sweep** — auto memory release | **¥5** |
+| 💀 Will my SSD die suddenly? | 💿 **Disk Health** — S.M.A.R.T monitoring | **¥5** |
+| 🔒 Privacy worries when sharing | 🔐 **Privacy Eraser** — one-click cleanup | **¥5** |
+| 🌐 Can't access overseas sites | 🌊 **Ocean VPN** — 50 nodes, unlimited traffic | **¥9.9/mo** |
+| 🤖 Want AI agent but too expensive | 🤖 **Agent Engine** — DeepSeek API proxy | **¥5/mo** |
 
-| 功能 | 竞品价格 | 我们的价格 | 你省 |
-|:----|:--------|:---------|:----|
-| VPN月付 | ¥30~¥80/月 | **¥9.9/月** | **省67~88%** |
-| VPN年付 | ¥300~¥800/年 | **¥150/年** | **省50~81%** |
-| 合盖运行 | ¥30~¥50 | **¥5** | **省83~90%** |
-| 远程唤醒 | ¥20~¥50 | **¥5** | **省75~90%** |
-| AI Agent | $20/月(Claude) | **¥5/月起** | **省96%+** |
-| 电池管理 | ¥30~¥50 | **¥5** | **省83~90%** |
-| 系统清理 | ¥30~¥68 | **¥5** | **省83~93%** |
-| 磁盘健康 | ¥30~¥50 | **¥5** | **省83~90%** |
-
-### 3️⃣ 微信付款 · 有人售后
-- ✅ 不绑信用卡，微信扫码就行
-- ✅ 付款后自动开通，24小时内响应
-- ✅ 有问题直接微信找我们，真人回复
+**👉 [Browse All 21 Products →](https://mars1417.github.io/mars-toolkit/)**
 
 ---
 
-## 📊 为什么你需要这个？（你的Mac正在浪费）
+## 🏆 Real Data from Real Hardware
 
-### 你的MacBook合盖就睡？
-**Lid Keep ¥5** → 合盖外接显示器也不休眠，持续跑服务。买这个就够了。
+All tools run 24/7 on a **2017 MacBook Air (4GB RAM, 1.6GHz i5)**:
 
-### 电池健康狂掉？
-**Battery Care ¥5** → 充到80%自动停，电池寿命延长2年。一块电池¥1,000，这个¥5。
-
-### 风扇吵死人？
-**Fan Control ¥5** → 编码时安静如鸡，打游戏时全速散热。自动策略。
-
-### Mac越来越卡？
-**Clean Sweep ¥5** → 每天自动释放几百MB内存，4GB旧Mac流畅如初。
-
-### 硬盘会不会突然挂掉？
-**Disk Health ¥5** → S.M.A.R.T.监控+TRIM检查，健康下降提前预警，来得及备份。
-
-### 借电脑给别人担心隐私？
-**Privacy Eraser ¥5** → 一键清除浏览器缓存/剪贴板/最近文档/系统日志，不留痕迹。
-
-### 想用AI Agent但不懂配置？
-**Agent引擎 ¥5/月起** → 配好的DeepSeek API Key，丢进config.yaml就能用。Hermes/Codex/Claude Code通用。
-
-### 墙内连不上外网？
-**Ocean VPN ¥9.9/月** → 50个Cloudflare优选VLESS节点，不限流量。¥9.9你看清个视频就赚回来了。
-
-### 担心服务半夜挂了没人管？
-**Tunnel Guardian ¥9.9** → cpolar隧道变了自动修，不用你自己盯着。
-
----
-
-## ⚡ vs 竞品：为什么我们更值
-
-| 维度 | 我们 | 竞品（Amphetamine等） |
-|:----|:---|:-------------------|
-| 合盖不休眠 | ✅ Lid Keep ¥5 | ✅ Amphetamine 免费，但无更新了 |
-| 电池保护 | ✅ Battery Care ¥5 | ❌ 需额外安装Aldente ¥30+ |
-| 智能温控 | ✅ Fan Control ¥5 | ✅ TG Pro ¥45 |
-| 远程关机/唤醒 | ✅ Wake-on-LAN ¥5 | ❌ 无免费方案 |
-| 网页监控看板 | ✅ Real Dashboard ¥5 | ❌ 需要自己搭 |
-| 定时开关机 | ✅ Scheduled Power ¥5 | ❌ 系统自带pmset不会配置 |
-| 系统清理 | ✅ Clean Sweep ¥5 | ❌ CleanMyMac ¥68/年 |
-| 磁盘健康 | ✅ Disk Health ¥5 | ❌ DriveDx ¥50 |
-| 隐私擦除 | ✅ Privacy Eraser ¥5 | ❌ 无独立平价方案 |
-| VPN | ✅ Ocean ¥9.9/月 | ✅ 其他VPN ¥30~80/月 |
-| AI Agent | ✅ Agent ¥5/月起 | ✅ Claude $20/月，ChatGPT $20/月 |
-| macOS Care Pack | ✅ 免费 ¥0 | ❌ 市面上没有类似方案 |
-| 组合折扣 | ✅ 套装省50% | ❌ 无 |
-
----
-
-## 🏆 真实运行数据（来自我们的4GB Mac）
-
-### 内存管理（自动看门狗）
 ```
-优化前: 内存压力 84%
-优化后: 内存压力 36%
-释放: ~674MB（≈6个Chrome标签）
-检查: 每5分钟自动，全自动
+📊 Memory: 84% → 36% after optimization (releases ~674MB per cycle)
+💾 SSD: S.M.A.R.T ✅ — 2+ years continuous use, still healthy
+🔄 Automated: 21 cron jobs, zero manual intervention
+⏱️ Uptime: 2+ years production, 7+ services running
+💰 Cost: ¥0 cloud — all self-hosted on one old Mac
 ```
 
-### SSD保护（10年老盘依然健康）
-```
-SMART状态: ✅ 已验证
-SSD类型:   ✅ 固态
-写入量:     2年+连续使用，仍在正常范围
-```
+---
 
-### 24/7 服务矩阵
-| 服务 | 端口 | 用途 |
-|:----|:----:|:----|
-| CRM管理 | :8501 | 订单与运营数据 |
-| 签到系统 | :5006 | 家长每日签到 |
-| 网关代理 | :18888 | API代理与加速 |
+## ⚡ vs Competitors — Why Pay More?
 
-**全部自动恢复，无需人工干预。**
-
-### 成本对比
-| 项目 | 买新Mac | 我们的方案 |
-|:-----|:------|:---------|
-| 投入 | ¥8,000~15,000 | **¥0~¥30** |
-| 结果 | 新电脑 | 旧Mac比新的还能干 |
-| 额外 | 正常使用 | 服务器+AI代理+VPN |
-| 维护 | — | 全自动 |
+| Feature | mars-toolkit | Competitors | You Save |
+|:--------|:------------|:------------|:---------|
+| Lid-closed operation | **¥5** | ¥30-50 | **83-90%** |
+| Battery health | **¥5** | ¥30-50 | **83-90%** |
+| Fan control | **¥5** | ¥45 (TG Pro) | **89%** |
+| Wake-on-LAN | **¥5** | ¥20-50 | **75-90%** |
+| System cleaning | **¥5** | ¥68/yr (CleanMyMac) | **93%** |
+| Disk health | **¥5** | ¥50 (DriveDx) | **90%** |
+| VPN monthly | **¥9.9/mo** | ¥30-80/mo | **67-88%** |
+| AI Agent | **¥5/mo** | $20/mo (Claude) | **96%+** |
 
 ---
 
-## 📅 发布计划
-
-**每天3个新品，直到240+产品全部上线。**
-
-| 日期 | 内容 |
-|:----|:----|
-| 每天10:00 | 3个新品 → GP首页 + README同步 |
-| 当前 | 21/240 已上线 |
-| 今日已上线 | 🧹系统清理 · 💿磁盘健康 · 🔐隐私擦除 |
-
----
-
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 1. 安装免费工具包 macOS Care Pack（免费！）
+# Try free tools instantly
 curl -sL https://mars1417.github.io/mars-toolkit/install.sh | bash
-
-# 2. 选购产品
-# 官网: https://mars1417.github.io/mars-toolkit/
 ```
 
----
-
-## ❤️ 关于我们
-
-我们是**2017款MacBook Air（4GB内存）** 的运维团队。  
-我们拒绝电子垃圾。我们相信每一台旧Mac都值得第二次生命。  
-所有产品都在这台4GB Mac上开发、测试、运行。  
-**我们能做的，你的Mac一定做得更好。**
+**Free macOS Care Pack** (¥0 — 8 tools included):
+🔧 Caretaker · 💾 SSD Protection · 🌐 Tunnel Self-Heal · 📡 Intranet Penetration · ⚡ Perf Booster · 🧹 Desktop Cleanup · 💽 RAM Disk Cache · 🚀 Startup Optimizer
 
 ---
 
-> **你的旧Mac不是电子垃圾。它只是还没遇到出海云。**  
-> GitHub: https://github.com/mars1417/mars-toolkit  
-> 🌊 官网: https://mars1417.github.io/mars-toolkit/  
-> 微信付款 · 自动发货 · 真人售后
+## 🛒 How to Buy
 
-[⬆ 回到顶部](#)
+> **📱 WeChat Pay — automatic delivery, lifetime use.**
+
+[🛒 **Visit the Store →**](https://mars1417.github.io/mars-toolkit/)
+
+**Process:** Click link → Select product → Scan WeChat QR → Auto-activated.
+
+---
+
+## 📅 Release Plan
+
+| Milestone | Status |
+|:----------|:-------|
+| Current | **21/240 products live** |
+| Daily 10:00 AM | 3 new products added |
+| Up next | Pro Lite (¥49.9) · Pro Max (¥99) |
+
+---
+
+## 💬 Get Involved
+
+- ⭐ **[Star this repo](https://github.com/mars1417/mars-toolkit)** — helps others find it
+- 💬 **[Discussions](https://github.com/mars1417/mars-toolkit/discussions)** — share your setup, request features
+- 🐛 **[Report issues](https://github.com/mars1417/mars-toolkit/issues)** — help us improve
+
+---
+
+> **Your old Mac isn't e-waste. It just hasn't met mars-toolkit yet.**  
+> 🌊 https://mars1417.github.io/mars-toolkit/  
+> WeChat Pay · Auto Delivery · Real Support
+
+[⬆ Back to top](#)
