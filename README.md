@@ -36,6 +36,9 @@
 | ⚡ **Power Plan** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=power-plan) |
 | 🔌 **Peripheral Manager** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=peripheral-mgr) |
 | 💾 **RAM Disk Cache** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=ram-disk-cache) |
+| 🧹 **Clean Sweep** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=clean-sweep) |
+| 💿 **Disk Health** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=disk-health) |
+| 🔐 **Privacy Eraser** | **¥5 一次** | [🛒 立即购买 →](https://mars1417.github.io/mars-toolkit/order.html?product=privacy-eraser) |
 
 **购买流程：** 点链接 → 选产品 → 微信扫码付 → 自动开通。微信付款，自动发货，一次购买终身使用。
 
@@ -59,6 +62,8 @@
 | 远程唤醒 | ¥20~¥50 | **¥5** | **省75~90%** |
 | AI Agent | $20/月(Claude) | **¥5/月起** | **省96%+** |
 | 电池管理 | ¥30~¥50 | **¥5** | **省83~90%** |
+| 系统清理 | ¥30~¥68 | **¥5** | **省83~93%** |
+| 磁盘健康 | ¥30~¥50 | **¥5** | **省83~90%** |
 
 ### 3️⃣ 微信付款 · 有人售后
 - ✅ 不绑信用卡，微信扫码就行
@@ -77,6 +82,15 @@
 
 ### 风扇吵死人？
 **Fan Control ¥5** → 编码时安静如鸡，打游戏时全速散热。自动策略。
+
+### Mac越来越卡？
+**Clean Sweep ¥5** → 每天自动释放几百MB内存，4GB旧Mac流畅如初。
+
+### 硬盘会不会突然挂掉？
+**Disk Health ¥5** → S.M.A.R.T.监控+TRIM检查，健康下降提前预警，来得及备份。
+
+### 借电脑给别人担心隐私？
+**Privacy Eraser ¥5** → 一键清除浏览器缓存/剪贴板/最近文档/系统日志，不留痕迹。
 
 ### 想用AI Agent但不懂配置？
 **Agent引擎 ¥5/月起** → 配好的DeepSeek API Key，丢进config.yaml就能用。Hermes/Codex/Claude Code通用。
@@ -99,6 +113,9 @@
 | 远程关机/唤醒 | ✅ Wake-on-LAN ¥5 | ❌ 无免费方案 |
 | 网页监控看板 | ✅ Real Dashboard ¥5 | ❌ 需要自己搭 |
 | 定时开关机 | ✅ Scheduled Power ¥5 | ❌ 系统自带pmset不会配置 |
+| 系统清理 | ✅ Clean Sweep ¥5 | ❌ CleanMyMac ¥68/年 |
+| 磁盘健康 | ✅ Disk Health ¥5 | ❌ DriveDx ¥50 |
+| 隐私擦除 | ✅ Privacy Eraser ¥5 | ❌ 无独立平价方案 |
 | VPN | ✅ Ocean ¥9.9/月 | ✅ 其他VPN ¥30~80/月 |
 | AI Agent | ✅ Agent ¥5/月起 | ✅ Claude $20/月，ChatGPT $20/月 |
 | macOS Care Pack | ✅ 免费 ¥0 | ❌ 市面上没有类似方案 |
@@ -149,8 +166,8 @@ SSD类型:   ✅ 固态
 | 日期 | 内容 |
 |:----|:----|
 | 每天10:00 | 3个新品 → GP首页 + README同步 |
-| 当前 | 18/240 已上线 |
-| 今晚已发布 | ⚡电源计划 · 🔌外设管理 · 💾内存盘缓存 |
+| 当前 | 21/240 已上线 |
+| 今日已上线 | 🧹系统清理 · 💿磁盘健康 · 🔐隐私擦除 |
 
 ---
 

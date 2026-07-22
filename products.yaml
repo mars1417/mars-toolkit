@@ -1,0 +1,304 @@
+# 出海云产品清单 - 源数据文件
+# 每次更新产品时改这个文件，然后运行 gen_handbook.py 自动更新手册
+# 周三/周五更新日必改
+
+products:
+  # ========== AI Agent引擎 ==========
+  - name: "Agent引擎 · 轻量版"
+    emoji: "🤖"
+    price: "¥5/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "DeepSeek V4 Flash API代理 · 旧Mac变AI Agent大脑"
+    description: "2M tokens/月，适合轻度Agent使用。配到Hermes/Codex/OpenCode直接用。"
+    pitch: "¥5/月让旧Mac装上AI大脑。OpenAI兼容API，一行配置就能用。比官方便宜，有售后。"
+    specs:
+      - ["模型", "DeepSeek V4 Flash"]
+      - ["Tokens", "2M/月"]
+      - ["API格式", "OpenAI兼容"]
+      - ["适用工具", "Hermes/Codex/OpenCode/Claude Code"]
+      - ["专属Key", "✅ 独一无二"]
+      - ["用量查看", "✅ 管理页面"]
+    target: ["AI Agent初学者", "轻度使用者"]
+
+  - name: "Agent引擎 · 标准版"
+    emoji: "🤖"
+    price: "¥15/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "8M tokens/月 · 适合日常重度使用"
+    description: "8M tokens/月，4倍轻量版容量。用量管理页面，支持多Agent工具。"
+    pitch: "日常用的最佳选择，8M tokens够跑大多数任务。微信售后指导。"
+    specs: []
+    target: ["日常重度使用者"]
+
+  - name: "Agent引擎 · 专业版"
+    emoji: "🤖"
+    price: "¥30/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "20M tokens/月 · 给旧Mac装上最强AI大脑"
+    description: "20M tokens/月，可生成3个独立子Key。完整用量报表+余额预警。"
+    pitch: "重度用户首选。3个独立Key团队可用，用量报表、余额预警、优先技术支持。"
+    specs: []
+    target: ["重度用户", "小团队"]
+    bonus: "3个独立子Key"
+
+  # ========== 订阅制 ==========
+  - name: "出海云·月付"
+    emoji: "🌊"
+    price: "¥9.9/月"
+    category: "subscription"
+    status: "已上线"
+    tagline: "一杯奶茶钱，50 条优选节点，不限流量"
+    description: "50 条优选节点，每月自动续期。适合轻度翻墙用户、不想花大价钱买机场的、免费节点总失效的"
+    pitch: "¥9.9 一个月，一杯奶茶钱。50 条节点自动更新，比那些便宜的共享机场稳太多了。"
+    specs:
+      - ["节点数", "50 条优选节点"]
+      - ["更新频率", "自动更新，始终可用"]
+      - ["速度", "实测 YouTube 4K 流畅"]
+      - ["选节点", "自动选最低延迟节点"]
+      - ["设备限制", "不限设备数"]
+    target: ["留学生", "外贸/跨境电商", "学生党"]
+
+  - name: "出海云·包年"
+    emoji: "🌊"
+    price: "¥150/年"
+    category: "subscription"
+    status: "已上线"
+    tagline: "包年送工具，折合 ¥12.5/月，比月付省 37%"
+    description: "送 VPN Auto-Pilot（价值 ¥9.9），折合 ¥12.5/月"
+    pitch: "打算长期用的直接上年付。送的 Auto-Pilot 工具单买也要 ¥9.9，等于节点才 ¥140/年，一个月 ¥11.6。"
+    specs: []
+    target: ["留学生", "外贸/跨境电商", "普通用户"]
+    bonus: "VPN Auto-Pilot（价值 ¥9.9）"
+
+  # ========== 免费工具 ==========
+  - name: "macOS Care Pack"
+    emoji: "🍎"
+    price: "¥0 免费"
+    category: "free"
+    status: "已上线"
+    tagline: "Mac 优化工具包，免费下载，买了就赚"
+    description: "Mac 用久了卡顿、磁盘空间不够。一键优化系统缓存、释放内存。适合所有 Mac 用户。"
+    pitch: "免费的东西谁不爱？关键是真的能用。零成本，不拿白不拿。"
+    specs: []
+    target: ["普通 Mac 用户"]
+
+  # ========== 买断工具 ==========
+  - name: "VPN Auto-Pilot"
+    emoji: "🔄"
+    price: "¥9.9"
+    category: "tool"
+    status: "已上线"
+    tagline: "V2Box 的自动驾驶，¥9.9 一劳永逸"
+    description: "V2Box 节点过期后需手动换订阅。Auto-Pilot 帮你自动轮换、自动连最快节点、断线自动重连。"
+    pitch: "¥9.9 买一次，以后再也不用手动换节点了。自动选最快的、断了自动重连，省心。"
+    specs: []
+    target: ["已用 V2Box 但懒得手动维护的"]
+
+  - name: "Tunnel Guardian"
+    emoji: "🛡️"
+    price: "¥9.9"
+    category: "tool"
+    status: "已上线"
+    tagline: "内网穿透不再掉线，¥9.9 买个安心"
+    description: "cpolar 隧道重启 URL 就变了，所有服务全断。Guardian 自动检测变化并修复。"
+    pitch: "用过 cpolar 的都懂——服务跑得好好的，一重启隧道链接变了全崩。¥9.9 买个省心。"
+    specs: []
+    target: ["用 cpolar 做内网穿透的技术用户"]
+
+  - name: "Cloud Ladder Pro Bundle"
+    emoji: "🌐"
+    price: "¥29.9"
+    category: "bundle"
+    status: "已上线"
+    tagline: "两个工具打包买，省 ¥0.9，一次配齐"
+    description: "包含 VPN Auto-Pilot（¥9.9）+ Tunnel Guardian（¥9.9）合体包"
+    pitch: ""
+    specs: []
+    target: ["技术宅"]
+
+  # ========== 预售 ==========
+  - name: "Pro Lite"
+    emoji: "💎"
+    price: "¥49.9"
+    category: "preorder"
+    status: "7月底"
+    tagline: "更高阶的工具套装"
+    description: ""
+    pitch: ""
+    specs: []
+    target: []
+
+  - name: "Pro Max"
+    emoji: "👑"
+    price: "¥99"
+    category: "preorder"
+    status: "8月"
+    tagline: "旗舰级全能工具包"
+    description: ""
+    pitch: ""
+    specs: []
+    target: []
+
+  # ========== 系统级功能(每日上新队列) ==========
+  - name: "盒盖不息"
+    emoji: "🔒"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "MacBook合盖后继续跑服务，不休眠不断连"
+    description: "笔记本一合盖就休眠？装了这个工具，合盖后服务照跑、下载照下、代码照编译。适合用旧Mac当服务器的用户。"
+    pitch: "合盖就休眠是笔记本的天性，但你的旧Mac是服务器。¥5买一个合盖不息，永远在线。"
+    specs: []
+    target: ["用旧Mac当服务器的用户"]
+
+  - name: "电池阈值"
+    emoji: "🔋"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "充电到80%自动停，低于20%自动充，延长电池寿命"
+    description: "长期插电使用会加速电池老化。这个工具自动管理充电阈值，让电池永远工作在最佳区间。"
+    pitch: "插电用Mac的都知道，电池健康掉得飞快。¥5买个电池管家，让电池多用两年。"
+    specs: []
+    target: ["长期插电使用的Mac用户"]
+
+  - name: "温控风扇"
+    emoji: "🌀"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "智能风扇策略，旧Mac不再发烧"
+    description: "旧Mac散热差、风扇吵？自定义温度阈值，让风扇在需要时全力转，平时安静如初。"
+    pitch: "旧Mac一跑服务就风扇狂转？¥5设置智能温控策略，温度降了、噪音小了、寿命长了。"
+    specs: []
+    target: ["旧Mac用户", "服务器用户"]
+
+  - name: "定时调度"
+    emoji: "⏰"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "定时开关机+按需唤醒，省电又省心"
+    description: "旧Mac不需要24小时开着。设置定时开关机、按需唤醒，用的时候自动开，不用的时候自动关。"
+    pitch: "服务器不需要24小时开着。¥5设置定时开关机，省电、省硬件、省心。"
+    specs: []
+    target: ["服务器用户", "省电用户"]
+
+  - name: "实机看板"
+    emoji: "📊"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "本机运行数据实时展示到网页，随时查看Mac状态"
+    description: "CPU温度、内存压力、磁盘健康、运行天数...所有数据实时展示到网页上，手机也能看。"
+    pitch: "想知道你的旧Mac现在跑得怎么样？¥5装个实机看板，手机打开网页就能看到所有数据。"
+    specs: []
+    target: ["所有用户"]
+
+  - name: "网络唤醒"
+    emoji: "🌐"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "远程唤醒休眠中的Mac，随时随地开机"
+    description: "Mac休眠了但需要远程访问？配置WOL网络唤醒，手机发个指令就能远程开机。"
+    pitch: "人在外面想用家里的Mac？¥5配置网络唤醒，手机一键远程开机。"
+    specs: []
+    target: ["远程办公用户"]
+
+  - name: "电源计划"
+    emoji: "⚡"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "多场景电源方案一键切换，工作/娱乐/省电各一套"
+    description: "工作时高性能、娱乐时平衡、挂机时省电。一键切换电源方案，不用每次手动调。"
+    pitch: "每次调电源设置烦不烦？¥5设置多套电源方案，一键切换。"
+    specs: []
+    target: ["所有Mac用户"]
+
+  - name: "外设管理"
+    emoji: "🔌"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "USB/蓝牙设备自动管理，省电又方便"
+    description: "不用的外设自动断开、需要时自动连接。减少电池消耗，延长外设寿命。"
+    pitch: "蓝牙鼠标键盘一直连着费电？¥5设置外设自动管理，用的时候连，不用的时候断。"
+    specs: []
+    target: ["笔记本用户"]
+
+  - name: "内存盘缓存"
+    emoji: "💾"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "浏览器缓存搬到内存，浏览加速30%，保护老化SSD"
+    description: "Chrome/Safari的缓存默认写在SSD上——既拖慢速度又缩短SSD寿命。把缓存移到内存盘，浏览速度明显提升，10年老SSD也能再战2年。支持128-256MB RAM Disk，含launchd plist开机自动加载。"
+    pitch: "老Mac最怕SSD写入太多。¥5把浏览器缓存搬到内存里，速度快了、SSD保住了、开机自动加载不用管。"
+    specs: []
+    target: ["老Mac用户", "SSD健康敏感用户"]
+
+  # ========== 今日上新队列 (2026-07-22) ==========
+  - name: "系统清理"
+    emoji: "🧹"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "一键内存回收+缓存清理，旧Mac不再卡顿"
+    description: "Mac用久了内存越占越满，系统越来越卡。这个工具自动关闭不用的内存大户、清理系统缓存、释放Swap空间。适合4GB/8GB内存的旧Mac用户。"
+    pitch: "旧Mac最怕内存不够。¥5装个自动清理工具，每天释放几百MB内存，系统流畅如初。"
+    specs:
+      - ["释放内存", "自动关闭内存大户+purge"]
+      - ["清理缓存", "系统缓存+日志+临时文件"]
+      - ["Swap优化", "释放不必要的虚拟内存占用"]
+      - ["运行方式", "后台守护，定时自动执行"]
+    target: ["低配Mac用户", "旧Mac服务器用户"]
+
+  - name: "磁盘健康"
+    emoji: "💿"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "SSD寿命监控+磁盘空间分析，硬盘状态一目了然"
+    description: "SSD用得久了健康状况在下降你也不知道。这个工具监控磁盘S.M.A.R.T.状态、TRIM开启情况、剩余寿命估算。磁盘空间快满时自动预警。"
+    pitch: "SSD写坏了数据全丢。¥5装个磁盘健康监控，健康下降提前预警，数据备份来得及。"
+    specs:
+      - ["S.M.A.R.T.监控", "磁盘健康状态实时检测"]
+      - ["TRIM检查", "确认TRIM是否开启"]
+      - ["空间预警", "磁盘使用超过85%自动提醒"]
+      - ["大文件扫描", "快速找出可清理的大文件"]
+    target: ["老Mac用户", "数据安全意识用户"]
+
+  - name: "隐私擦除"
+    emoji: "🔐"
+    price: "¥5"
+    category: "tool"
+    status: "已上线"
+    tagline: "一键清除浏览器缓存/剪贴板/最近文档/系统日志"
+    description: "Mac用久了留下大量隐私痕迹——浏览历史、剪贴板、最近文档、系统日志。这个工具一键清理所有隐私数据，保护你的隐私安全。适合共享电脑/注重隐私的用户。"
+    pitch: "借别人电脑总有隐私痕迹？¥5一键擦除所有隐私数据，剪贴板/历史记录/最近文档全部清空，不留痕迹。"
+    specs:
+      - ["浏览器缓存", "多浏览器缓存/Cookie/历史记录"]
+      - ["系统日志", "统一日志+诊断报告清理"]
+      - ["最近文档", "清空最近使用文件列表"]
+      - ["剪贴板", "清空系统剪贴板内容"]
+    target: ["共享Mac用户", "隐私敏感用户", "办公室用户"]
+
+# 组合推荐
+bundles:
+  - name: "入门（仅上网）"
+    items: "出海云月付 ¥9.9"
+    total: "¥9.9"
+  - name: "标准（上网+自动）"
+    items: "出海云包年 + Auto-Pilot（送）"
+    total: "¥150"
+  - name: "全都要（上网+隧道+自动）"
+    items: "出海云包年 + Guardian + Care Pack"
+    total: "¥159.9"
+  - name: "技术宅全家桶"
+    items: "Auto-Pilot + Guardian + Care Pack"
+    total: "¥19.8"
