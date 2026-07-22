@@ -346,7 +346,7 @@ function submitOrder() {
   var orderData = {product: product, wechat: wechat, email: email, txn: txn || ''};
 
   // 发送到CRM订单API
-  fetch('https://624a60f5.r18.vip.cpolar.cn/api/mars/order', {
+  fetch('https://3eecea20.r23.cpolar.top/api/mars/order', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(orderData)
