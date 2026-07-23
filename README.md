@@ -19,7 +19,7 @@
 
 ## 🔥 Why mars-toolkit?
 
-**21 macOS optimization tools** — from battery care to fan control, wake-on-LAN to AI agent — all tested on real 4GB hardware. **80-90% cheaper than alternatives.**
+**24 macOS optimization tools** — from battery care to fan control, wake-on-LAN to AI agent — all tested on real 4GB hardware. **80-90% cheaper than alternatives.**
 
 | Your Problem | Solution | Price |
 |:------------|:---------|:-----:|
@@ -29,10 +29,13 @@
 | 🐌 Mac getting slower every day | 🧹 **Clean Sweep** — auto memory release | **¥5** |
 | 💀 Will my SSD die suddenly? | 💿 **Disk Health** — S.M.A.R.T monitoring | **¥5** |
 | 🔒 Privacy worries when sharing | 🔐 **Privacy Eraser** — one-click cleanup | **¥5** |
+| 🚀 Mac boots too slowly | 🚀 **Startup Optimizer** — manage login items | **¥5** |
+| 📁 Desktop is a cluttered mess | 📁 **Desktop Organizer** — auto file sorting | **¥5** |
+| 🌐 VPN blocks local websites | 🌐 **VPN Split Routing** — domain-level split | **¥5** |
 | 🌐 Can't access overseas sites | 🌊 **Ocean VPN** — 50 nodes, unlimited traffic | **¥9.9/mo** |
 | 🤖 Want AI agent but too expensive | 🤖 **Agent Engine** — DeepSeek API proxy | **¥5/mo** |
 
-**👉 [Browse All 21 Products →](https://mars1417.github.io/mars-toolkit/)**
+**👉 [Browse All 24 Products →](https://mars1417.github.io/mars-toolkit/)**
 
 ---
 
@@ -91,7 +94,7 @@ curl -sL https://mars1417.github.io/mars-toolkit/install.sh | bash
 
 | Milestone | Status |
 |:----------|:-------|
-| Current | **21/240 products live** |
+| Current | **24/240 products live** |
 | Daily 10:00 AM | 3 new products added |
 | Up next | Pro Lite (¥49.9) · Pro Max (¥99) |
 

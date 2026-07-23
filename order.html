@@ -176,6 +176,25 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">¥5 <span>一次性</span></div>
     <ul><li>浏览器缓存+Cookie+历史</li><li>系统日志+诊断报告</li><li>最近文档+剪贴板</li><li>一键全部清空</li></ul>
   </div>
+  <!-- 7/23 今日3新品 -->
+  <div class="product" onclick="selectProduct('startup-optimizer')" id="prod-startup-optimizer" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>🚀 开机加速</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>登录项一键管理</li><li>Launch Agents智能分析</li><li>安全备份可恢复</li><li>纯本地运行</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('desktop-organizer')" id="prod-desktop-organizer" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>📁 桌面整理</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>文件按类型自动归类</li><li>8大智能分类文件夹</li><li>重复文件自动去重</li><li>系统文件自动保护</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('vpn-split-routing')" id="prod-vpn-split-routing" style="border-color:rgba(52,199,89,0.2)">
+    <span class="tag tag-live">今日上新 🔥</span>
+    <h3>🌐 VPN分流路由</h3>
+    <div class="price">¥5 <span>一次性</span></div>
+    <ul><li>API走VPN，国内网站直连</li><li>V2Box一键配置</li><li>连通性诊断测试</li><li>配置自动备份</li></ul>
+  </div>
   <div class="product featured" onclick="selectProduct('ocean-year')" id="prod-ocean-year" style="border-color:rgba(71,133,168,0.2);background:rgba(71,133,168,0.03)">
     <span class="tag tag-live">🎁 送工具</span>
     <h3>🌊 出海云 · 包年</h3>
@@ -271,6 +290,9 @@ let selected = null;
   else if(auto === 'clean-sweep') { selectProduct('clean-sweep'); }
   else if(auto === 'disk-health') { selectProduct('disk-health'); }
   else if(auto === 'privacy-eraser') { selectProduct('privacy-eraser'); }
+  else if(auto === 'startup-optimizer') { selectProduct('startup-optimizer'); }
+  else if(auto === 'desktop-organizer') { selectProduct('desktop-organizer'); }
+  else if(auto === 'vpn-split-routing') { selectProduct('vpn-split-routing'); }
   else if(auto === 'lite') { selectProduct('lite'); }
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
@@ -295,6 +317,9 @@ const PRODUCTS = {
   'clean-sweep': {name: '🧹 系统清理', price: '¥5', priceVal: 5},
   'disk-health': {name: '💿 磁盘健康', price: '¥5', priceVal: 5},
   'privacy-eraser': {name: '🔐 隐私擦除', price: '¥5', priceVal: 5},
+  'startup-optimizer': {name: '🚀 开机加速', price: '¥5', priceVal: 5},
+  'desktop-organizer': {name: '📁 桌面整理', price: '¥5', priceVal: 5},
+  'vpn-split-routing': {name: '🌐 VPN分流路由', price: '¥5', priceVal: 5},
   lite: {name: 'Pro Lite', price: '¥49', priceVal: 49},
   plus: {name: 'Pro Max', price: '¥99', priceVal: 99}
 };

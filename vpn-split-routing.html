@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPN分流路由 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>🌐 VPN分流路由 <span class="tag">🟢 在售</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">开VPN后国内网站打不开、境外API用不了？这个工具设置域名级分流规则，让开发API走VPN、国内网站自动直连，互不干扰。V2Box用户、技术开发者必备。</p>
+
+<ul class="features">
+  <li>域名级智能分流<span class="sub">按域名自动路由，境外API走VPN，国内网站直连</span></li>
+  <li>V2Box一键配置<span class="sub">自动检测并配置 V2Box leaf.conf 分流规则</span></li>
+  <li>连通性诊断<span class="sub">一键测试各域名可达性，快速定位问题</span></li>
+  <li>配置备份保障<span class="sub">修改前自动备份原始配置，随时可恢复</span></li>
+  <li>预设常用域名<span class="sub">内置常用境外API和国内网站域名列表，开箱即用</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>VPN分流路由是一个 macOS 网络流量管理工具。核心功能是通过配置 V2Box 的 leaf.conf 分流规则，实现域名级别的流量路由——开发相关的域名（DeepSeek、OpenRouter、GitHub API等）走VPN隧道，国内常用网站（百度、淘宝、微博等）直连。提供完整的连通性诊断、VPN接口检测、配置备份恢复功能。所有操作在本地完成，无需额外安装任何软件。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">只支持 V2Box 吗？</div>
+  <div class="faq-a">目前主要支持 V2Box。但连通性检测和VPN接口检测功能对所有VPN客户端都可用。如果你使用其他VPN客户端，可以手动参考输出的域名IP来配置分流。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">配置后需要重启电脑吗？</div>
+  <div class="faq-a">不需要。只需要重启 V2Box 客户端即可生效。脚本中已经给出了重启命令。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">配置会搞乱我的网络吗？</div>
+  <div class="faq-a">不会。配置前脚本会自动备份原始 leaf.conf 文件。如果配置后有问题，可以直接恢复备份文件。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=vpn-split-routing">🛒 立即购买 ¥5</a>
+</div>
+</div>
+</body>
+</html>

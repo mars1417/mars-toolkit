@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>乐吧公益中心 · 社区服务成果汇报</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --brand: #4785a8; --brand-l: #6fa8c9; --brand-d: #326a8a; }
+body { background: #ddd; font-family: 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
+.page { width: 1000px; min-height: 1400px; background: #fff; margin: 16px auto; padding: 55px 60px; position: relative; box-shadow: 0 8px 40px rgba(0,0,0,0.15); border-radius: 4px; overflow: hidden; }
+.h2 { font-size: 22px; font-weight: 700; color: var(--brand); margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 3px solid var(--brand); }
+.h3 { font-size: 17px; font-weight: 700; color: #333; margin: 16px 0 8px; }
+
+/* COVER */
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(150deg,#f8fafb 0%,#eef4f7 50%,#e3ecf0 100%); }
+.cover .bar { position: absolute; left: 0; right: 0; height: 8px; background: var(--brand); }
+.cover .bar-t { top: 0; } .cover .bar-b { bottom: 0; }
+.cover .icon { width: 64px; height: 64px; background: var(--brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.cover .icon span { color: #fff; font-size: 32px; line-height: 1; }
+.cover .badge { background: var(--brand); color: #fff; padding: 8px 28px; border-radius: 24px; font-size: 15px; font-weight: 500; letter-spacing: 4px; }
+.cover h1 { font-size: 36px; font-weight: 900; color: #1a1a1a; margin: 18px 0 4px; letter-spacing: 4px; }
+.cover .sub { font-size: 18px; color: #666; font-weight: 300; }
+.cover .line { width: 56px; height: 3px; background: var(--brand); margin: 14px auto; }
+.cover .to { font-size: 16px; color: var(--brand); font-weight: 500; letter-spacing: 2px; margin-bottom: 24px; }
+.cover .desc { font-size: 14px; color: #999; line-height: 2.2; }
+.cover .foot { position: absolute; bottom: 40px; text-align: center; font-size: 13px; color: #aaa; line-height: 2; }
+
+/* COMPARISON BOX */
+.comp-row { display: flex; gap: 14px; margin: 12px 0; }
+.comp-box { flex: 1; border-radius: 10px; padding: 14px 16px; position: relative; }
+.comp-box.then { background: #f5f5f5; border: 1px solid #ddd; }
+.comp-box.now { background: #f0f6f9; border: 1px solid var(--brand); }
+.comp-box .label { font-size: 12px; color: #888; margin-bottom: 4px; font-weight: 500; letter-spacing: 1px; }
+.comp-box.then .label { color: #999; }
+.comp-box.now .label { color: var(--brand); }
+.comp-box .big { font-size: 22px; font-weight: 700; }
+.comp-box.then .big { color: #999; }
+.comp-box.now .big { color: var(--brand); }
+.comp-box .items { font-size: 12.5px; color: #555; line-height: 1.8; margin-top: 4px; }
+.comp-box .arrow { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-size: 20px; color: var(--brand); }
+
+/* TIMELINE */
+.timeline { position: relative; margin: 14px 0; padding-left: 24px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--brand-l); }
+.tl-item { position: relative; margin: 14px 0; padding: 10px 14px; background: #f8fafb; border: 1px solid #e8edf0; border-radius: 8px; }
+.tl-item::before { content: ''; position: absolute; left: -20px; top: 16px; width: 10px; height: 10px; background: var(--brand); border-radius: 50%; border: 2px solid #fff; }
+.tl-item .time { font-size: 12px; color: var(--brand); font-weight: 700; }
+.tl-item .title { font-size: 14px; font-weight: 700; color: #333; margin: 2px 0; }
+.tl-item .desc { font-size: 12px; color: #666; line-height: 1.6; }
+
+/* DATA 4 */
+.data-4 { display: flex; gap: 12px; margin: 16px 0; }
+.data-4 .c { flex: 1; background: #f8fafb; border: 1px solid #e8edf0; border-radius: 10px; padding: 16px 8px; text-align: center; }
+.data-4 .c .n { font-size: 32px; font-weight: 700; color: var(--brand); line-height: 1.2; }
+.data-4 .c .n .s { font-size: 16px; font-weight: 400; }
+.data-4 .c .l { font-size: 13px; color: #888; margin-top: 4px; }
+
+/* SVC ROW */
+.svc-row { display: flex; gap: 10px; margin: 10px 0; }
+.svc-row .sc { flex: 1; background: #f8fafb; border: 1px solid #e8edf0; border-radius: 8px; padding: 12px 14px; }
+.svc-row .sc h4 { font-size: 13px; color: var(--brand); margin-bottom: 3px; }
+.svc-row .sc p { font-size: 11.5px; color: #555; line-height: 1.7; }
+.svc-row .sc .note { font-size: 10px; color: #aaa; margin-top: 2px; }
+
+/* PHOTO */
+.photo-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; justify-content: center; }
+.photo-grid img { border-radius: 8px; border: 1px solid #e0e0e0; object-fit: cover; }
+.photo-grid .pv { width: 165px; height: 220px; }
+.photo-grid .ph { width: 228px; height: 171px; }
+
+/* SATIS GRID */
+.satis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 10px 0; }
+.satis-grid .sg { display: flex; align-items: center; gap: 4px; font-size: 12px; padding: 3px 0; }
+.satis-grid .tag { padding: 1px 6px; border-radius: 3px; font-size: 10px; color: #fff; font-weight: 500; white-space: nowrap; }
+.tag-习惯 { background: #4785a8; } .tag-心理 { background: #27ae60; } .tag-生活 { background: #e67e22; } .tag-素质 { background: #8e44ad; } .tag-综合 { background: #c0392b; }
+.satis-grid .score { color: #e67e22; font-weight: 700; margin-left: auto; }
+
+/* DIM CARD */
+.dim-card { background: #f8fafb; border: 1px solid #e8edf0; border-radius: 8px; padding: 10px 14px; margin: 6px 0; }
+.dim-card .h { font-size: 13px; font-weight: 700; color: #333; margin-bottom: 2px; }
+.dim-card .bar { height: 5px; background: #e0e0e0; border-radius: 3px; margin: 4px 0; }
+.dim-card .fill { height: 5px; background: var(--brand); border-radius: 3px; }
+.dim-card .detail { font-size: 11.5px; color: #666; line-height: 1.6; margin: 1px 0; }
+.dim-card .detail strong { color: var(--brand); }
+.dim-card .quote { font-size: 11px; color: #999; font-style: italic; padding: 5px 10px; background: #fff; border-radius: 4px; border-left: 3px solid var(--brand-l); margin: 4px 0; }
+
+/* PLAN */
+.plan-box { background: #f0f6f9; border: 2px solid var(--brand); border-radius: 10px; padding: 16px 20px; margin: 10px 0; }
+.plan-box h4 { font-size: 15px; color: var(--brand); margin-bottom: 6px; }
+.plan-box p, .plan-box li { font-size: 12px; color: #555; line-height: 1.8; }
+.plan-box ul { list-style: none; margin: 4px 0; }
+.plan-box ul li { padding-left: 16px; position: relative; }
+.plan-box ul li::before { content: '▸'; position: absolute; left: 0; color: var(--brand); font-weight: 700; }
+
+.quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 10px 0; }
+.quad-item { background: #f8fafb; border: 1px solid #e8edf0; border-radius: 6px; padding: 10px 12px; }
+.quad-item h4 { font-size: 12.5px; color: #333; margin-bottom: 2px; }
+.quad-item p { font-size: 11px; color: #666; line-height: 1.5; }
+
+.step-row { display: flex; gap: 8px; margin: 4px 0; padding: 6px 10px; background: #f8fafb; border: 1px solid #e8edf0; border-radius: 6px; align-items: flex-start; }
+.step-row .num { min-width: 20px; height: 20px; background: var(--brand); color: #fff; border-radius: 50%; text-align: center; font-size: 11px; line-height: 20px; font-weight: 700; }
+.step-row .c { font-size: 12px; color: #444; line-height: 1.5; }
+.step-row .c strong { color: var(--brand); }
+
+.qa-item { margin: 4px 0; padding: 4px 0; }
+.qa-item .q { font-size: 12px; font-weight: 700; color: var(--brand); }
+.qa-item .a { font-size: 11.5px; color: #555; }
+
+.value-box { background: linear-gradient(135deg,#e8f5e9,#c8e6c9); border: 1px solid #a5d6a7; border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 13px; color: #2e7d32; line-height: 1.6; }
+.value-box strong { font-size: 14px; }
+
+/* BANNER */
+.banner-yellow { background: linear-gradient(135deg,#fff8e1,#fff3cd); border-left: 5px solid #ffa000; border-radius: 0 6px 6px 0; padding: 12px 16px; margin-bottom: 16px; font-size: 15px; font-weight: 700; color: #795548; line-height: 1.5; }
+.banner-yellow .sm { font-weight: 400; font-size: 12px; color: #8d6e63; margin-top: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ================================================================ -->
+<!-- P1: 封面 -->
+<!-- ================================================================ -->
+<div class="page cover">
+  <div class="bar bar-t"></div>
+  <div class="bar bar-b"></div>
+  <div class="icon"><span>♡</span></div>
+  <div class="badge">社 区 服 务 成 果 汇 报</div>
+  <h1>乐吧公益中心</h1>
+  <div class="line"></div>
+  <div class="sub">入驻金水新苑二期 · 社区服务成果汇报</div>
+  <div class="to">致：金水新苑二期居委会 · 陈书记</div>
+  <div class="desc">
+    <p>从开业到现在 · 我们做了什么 · 做到了什么 · 还能做什么</p>
+    <p style="font-size:13px; color:#aaa; margin-top:8px;">课后托管 · 作业辅导 · 心理辅导 · 生活实践 · 素质拓展 · 暑期早教 · AI自习室</p>
+  </div>
+  <div class="foot">
+    <p>上海奉贤 · 乐吧公益中心</p>
+    <p>2026年7月</p>
+  </div>
+</div>
+
+<!-- ================================================================ -->
+<!-- P2: 发展历程（主线） + 服务进化（对比） -->
+<!-- ================================================================ -->
+<div class="page">
+
+  <div class="banner-yellow">
+    🏠 金水新苑二期居民主动提出需求 · 希望乐吧服务引入社区
+    <div class="sm">"乐吧的孩子们每天都很开心，能不能也让我们小区的孩子享受到？" —— 居民代表</div>
+  </div>
+
+  <div class="h2">一、发展历程 · 从无到有</div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="time">📅 初期 · 入驻金水新苑二期</div>
+      <div class="title">从零起步 · 居民信任的种子</div>
+      <div class="desc">乐吧公益中心应居民呼声正式入驻金水新苑二期。最初仅有数户家庭尝试，以基础课后看护为主，家长观望为主。</div>
+    </div>
+    <div class="tl-item">
+      <div class="time">📅 稳步发展期</div>
+      <div class="title">口碑传播 · 服务初步成型</div>
+      <div class="desc">随着第一批家长的满意反馈，口碑开始传播。服务从单一托管扩展至作业辅导、心理辅导，覆盖家庭逐步增长至十余户。</div>
+    </div>
+    <div class="tl-item">
+      <div class="time">📅 服务完善期</div>
+      <div class="title">服务升级 · AI系统引入</div>
+      <div class="desc">引入AI作业批改系统，提升辅导效率。新增生活实践、素质拓展课程，形成六大服务体系。家长满意度持续攀升。</div>
+    </div>
+    <div class="tl-item">
+      <div class="time">📅 现在 · 稳定运营</div>
+      <div class="title">规模成熟 · 居民主动推荐</div>
+      <div class="desc"><strong style="color:var(--brand);">27名在册学生 · 22户家庭 · 满意度9.7 · 续费率100%</strong>。居民从"试试看"变成"主动推荐给邻居"。</div>
+    </div>
+  </div>
+
+  <div class="h2">二、服务进化 · 过去 vs 现在</div>
+  <p style="font-size:13px; color:#666; margin-bottom:8px;">对比开业初期与现在的服务能力，看乐吧的成长轨迹：</p>
+
+  <!-- 对比1: 规模 -->
+  <div class="h3" style="font-size:14px; margin:8px 0 4px;">📊 规模对比</div>
+  <div class="comp-row">
+    <div class="comp-box then">
+      <div class="label">◀ 开业初期</div>
+      <div class="big" style="color:#bbb;">数户家庭</div>
+      <div class="items">仅有基本课后看护<br>服务时间单一<br>家长抱着"试试看"心态</div>
+    </div>
+    <div class="comp-box now">
+      <div class="label">▶ 现在</div>
+      <div class="big">22户 · 27名学生</div>
+      <div class="items">六大服务体系全面覆盖<br>早晚错峰+暑期全天<br>居民自发推荐，100%续费</div>
+    </div>
+  </div>
+
+  <!-- 对比2: 服务 -->
+  <div class="h3" style="font-size:14px; margin:8px 0 4px;">📋 服务内容对比</div>
+  <div class="comp-row">
+    <div class="comp-box then">
+      <div class="label">◀ 开业初期</div>
+      <div class="items">✅ 课后看护（基础）<br>❌ 无作业辅导<br>❌ 无心理辅导<br>❌ 无素质课程<br>❌ 无AI工具</div>
+    </div>
+    <div class="comp-box now">
+      <div class="label">▶ 现在</div>
+      <div class="items">✅ 课后托管（安全签到）<br>✅ 作业辅导（AI批改）<br>✅ 心理辅导（每日记录）<br>✅ 生活实践（自理训练）<br>✅ 素质拓展（表达/社交）<br>✅ 暑期早教班</div>
+    </div>
+  </div>
+
+  <!-- 对比3: 管理 -->
+  <div class="h3" style="font-size:14px; margin:8px 0 4px;">⚙️ 管理模式对比</div>
+  <div class="comp-row">
+    <div class="comp-box then">
+      <div class="label">◀ 开业初期</div>
+      <div class="items">手工签到签退<br>家长当面沟通<br>无系统化记录</div>
+    </div>
+    <div class="comp-box now">
+      <div class="label">▶ 现在</div>
+      <div class="items">AI系统签到+家长端实时查看<br>每日心情记录+家长推送<br>完整成长档案+满意度追踪</div>
+    </div>
+  </div>
+
+  <!-- 核心数据 -->
+  <div class="data-4" style="margin-top:14px;">
+    <div class="c"><div class="n">27<span class="s">人</span></div><div class="l">在册学生</div></div>
+    <div class="c"><div class="n">22<span class="s">户</span></div><div class="l">覆盖家庭</div></div>
+    <div class="c"><div class="n">9.7</div><div class="l">家长满意度</div></div>
+    <div class="c"><div class="n">100<span class="s">%</span></div><div class="l">续费率</div></div>
+  </div>
+
+  <div class="value-box">
+    <strong>💡 从开业到现在：</strong>从数户家庭起步，到覆盖22户 · 从单一看护，到六大服务体系 · 从人工操作，到AI系统管理
+  </div>
+
+</div>
+
+<!-- ================================================================ -->
+<!-- P3: 现在能做到什么（六大服务）+ 照片 + 满意度 -->
+<!-- ================================================================ -->
+<div class="page">
+
+  <div class="h2">三、六大服务体系</div>
+  <p style="font-size:13px; color:#666; margin-bottom:6px;">经过逐步发展，乐吧目前已形成完整的六大服务矩阵：</p>
+
+  <div class="svc-row">
+    <div class="sc">
+      <h4>📚 课后托管</h4>
+      <p>每日放学后接至乐吧<br>安全签到签退 · 家长安心</p>
+    </div>
+    <div class="sc">
+      <h4>📝 作业辅导</h4>
+      <p>辅导暑假作业 · AI辅助批改</p>
+      <div class="note">※ 仅辅导假期作业，不涉及新学期课程</div>
+    </div>
+    <div class="sc">
+      <h4>🧠 心理辅导</h4>
+      <p>每日心情记录 · 沟通引导<br>自信心培养 · 情绪管理</p>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="sc">
+      <h4>🌱 生活实践</h4>
+      <p>自理能力训练 · 用餐礼仪<br>时间管理 · 安全意识</p>
+    </div>
+    <div class="sc">
+      <h4>🌟 素质拓展</h4>
+      <p>表达能力 · 团队合作<br>社交沟通 · 故事分享会</p>
+    </div>
+    <div class="sc">
+      <h4>🎨 暑期早教班</h4>
+      <p>暑假全天活动 · 参观游学<br>手工实践 · 户外探索</p>
+    </div>
+  </div>
+
+  <div class="h3" style="margin-top:4px;">📸 活动掠影（暑期活动记录）</div>
+  <div class="photo-grid">
+    <img class="pv" src="file:///Users/mars/.hermes/image_cache/img_e53efe579868.jpg">
+    <img class="ph" src="file:///Users/mars/.hermes/image_cache/img_d5a579a6b536.jpg">
+    <img class="pv" src="file:///Users/mars/.hermes/image_cache/img_dab4704f84d7.jpg">
+    <img class="pv" src="file:///Users/mars/.hermes/image_cache/img_3f3c1e1968e6.jpg">
+    <img class="ph" src="file:///Users/mars/.hermes/image_cache/img_6b7fc27c483c.jpg">
+    <img class="ph" src="file:///Users/mars/.hermes/image_cache/img_8236bd15eef2.jpg">
+  </div>
+
+  <div class="h3">⭐ 家长满意度调查结果（15项 · 平均9.7/10分）</div>
+  <div class="satis-grid">
+    <div class="sg"><span class="tag tag-习惯">习惯</span>作业完成度<span class="score">9.9</span></div>
+    <div class="sg"><span class="tag tag-心理">心理</span>情绪状态改善<span class="score">9.8</span></div>
+    <div class="sg"><span class="tag tag-生活">生活</span>生活自理能力<span class="score">9.7</span></div>
+    <div class="sg"><span class="tag tag-素质">素质</span>社交沟通能力<span class="score">9.6</span></div>
+    <div class="sg"><span class="tag tag-习惯">习惯</span>学习主动性<span class="score">9.7</span></div>
+    <div class="sg"><span class="tag tag-生活">生活</span>时间管理能力<span class="score">9.6</span></div>
+    <div class="sg"><span class="tag tag-心理">心理</span>自信心提升<span class="score">9.9</span></div>
+    <div class="sg"><span class="tag tag-习惯">习惯</span>阅读习惯培养<span class="score">9.5</span></div>
+    <div class="sg"><span class="tag tag-生活">生活</span>安全意识<span class="score">9.8</span></div>
+    <div class="sg"><span class="tag tag-素质">素质</span>团队合作能力<span class="score">9.6</span></div>
+    <div class="sg"><span class="tag tag-心理">心理</span>抗挫折能力<span class="score">9.7</span></div>
+    <div class="sg"><span class="tag tag-习惯">习惯</span>专注力提升<span class="score">9.5</span></div>
+    <div class="sg"><span class="tag tag-生活">生活</span>用餐礼仪<span class="score">9.8</span></div>
+    <div class="sg"><span class="tag tag-素质">素质</span>表达能力<span class="score">9.7</span></div>
+    <div class="sg"><span class="tag tag-综合">综合</span>整体满意度<span class="score">9.9</span></div>
+  </div>
+
+</div>
+
+<!-- ================================================================ -->
+<!-- P4: 居民怎么说（满意度深度） -->
+<!-- ================================================================ -->
+<div class="page">
+
+  <div class="h2">四、居民怎么说（满意度深度报告）</div>
+  <p style="font-size:13px; color:#888; margin-bottom:8px;">调查对象：22户在册家庭 · 方式：一对一访谈+问卷 · 覆盖5大维度 · 每项均附家长原声</p>
+
+  <div style="background:var(--brand); color:#fff; padding:6px 12px; border-radius:6px; font-size:13px; font-weight:700; margin:6px 0;">📖 维度一：暑假作业陪伴（平均 9.7 分）</div>
+  <div class="dim-card">
+    <div class="h">作业完成度 · 9.9</div>
+    <div class="bar"><div class="fill" style="width:99%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>是否按时完成暑假作业、正确率变化、是否需要家长再辅导</div>
+    <div class="detail"><strong>为什么满意：</strong>老师现场辅导+AI辅助批改，家长回家不用再盯作业，亲子关系明显改善</div>
+    <div class="detail"><strong>社区价值：</strong>双职工下班晚→作业在乐吧已完成→回家就是纯粹的亲子时间</div>
+    <div class="quote">"以前回家第一件事就是盯作业，现在吃完饭就是亲子时间了" —— 家长刘先生</div>
+  </div>
+  <div class="dim-card">
+    <div class="h">学习主动性 · 9.7</div>
+    <div class="bar"><div class="fill" style="width:97%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>孩子是否主动完成暑假作业、是否需要催促</div>
+    <div class="detail"><strong>为什么满意：</strong>积分激励机制+同伴氛围，孩子从"要我做"变成"我要做"</div>
+  </div>
+  <div class="dim-card">
+    <div class="h">专注力提升 · 9.5</div>
+    <div class="bar"><div class="fill" style="width:95%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>能持续专注完成作业的时间变化、分心频率</div>
+    <div class="detail"><strong>为什么满意：</strong>番茄钟+计时器+安静的环境+同伴效应</div>
+  </div>
+
+  <div style="background:var(--brand); color:#fff; padding:6px 12px; border-radius:6px; font-size:13px; font-weight:700; margin:6px 0;">🧠 维度二：心理辅导（平均 9.8 分）</div>
+  <div class="dim-card">
+    <div class="h">自信心提升 · 9.9</div>
+    <div class="bar"><div class="fill" style="width:99%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>孩子在班级发言、与人交流、展示自己的积极程度</div>
+    <div class="detail"><strong>为什么满意：</strong>每日"今日之星"评选+上台分享环节，每个孩子轮流当主角，获得同伴认可</div>
+    <div class="detail"><strong>社区价值：</strong>老人带娃偏向"吃饱穿暖不管心理"→乐吧填补孩子心理成长空白</div>
+    <div class="quote">"以前在班里不敢举手，现在回家抢着给我们表演今天学的" —— 家长王女士</div>
+  </div>
+  <div class="dim-card">
+    <div class="h">情绪状态改善 · 9.8</div>
+    <div class="bar"><div class="fill" style="width:98%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>孩子是否更开朗、发脾气频率是否减少、情绪表达是否更健康</div>
+    <div class="detail"><strong>为什么满意：</strong>老师每日记录心情+一对一沟通，及时识别和处理情绪问题</div>
+  </div>
+  <div class="dim-card">
+    <div class="h">抗挫折能力 · 9.7</div>
+    <div class="bar"><div class="fill" style="width:97%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>孩子遇到困难时是放弃还是想办法、输了游戏后的态度变化</div>
+    <div class="detail"><strong>为什么满意：</strong>游戏化PK机制让孩子自然学会面对输赢，老师引导正面看待失败</div>
+  </div>
+
+  <div style="background:var(--brand); color:#fff; padding:6px 12px; border-radius:6px; font-size:13px; font-weight:700; margin:6px 0;">🌱 维度三：生活实践（平均 9.7 分）</div>
+  <div class="dim-card">
+    <div class="h">生活自理能力 · 9.7</div>
+    <div class="bar"><div class="fill" style="width:97%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>自己整理书包、收拾餐具、穿衣系鞋带等日常自理能力</div>
+    <div class="detail"><strong>为什么满意：</strong>每日"自理小达人"评比+老师示范引导，从"老人代做"到"自己来做"</div>
+    <div class="detail"><strong>社区价值：</strong>老人带娃普遍"包办代替"→培养独立性，直接缓解祖辈带娃负担</div>
+    <div class="quote">"奶奶以前非要喂饭，现在孩子说'我自己来，老师在乐吧教过了'" —— 家长张女士</div>
+  </div>
+  <div class="dim-card"><div class="h">时间管理 · 9.6</div><div class="bar"><div class="fill" style="width:96%"></div></div><div class="detail"><strong>调查了什么：</strong>是否能按计划完成任务、不拖拉、合理安排时间</div></div>
+  <div class="dim-card"><div class="h">用餐礼仪 · 9.8</div><div class="bar"><div class="fill" style="width:98%"></div></div><div class="detail"><strong>调查了什么：</strong>餐桌礼仪、不挑食、主动收拾餐具</div></div>
+
+  <div style="background:var(--brand); color:#fff; padding:6px 12px; border-radius:6px; font-size:13px; font-weight:700; margin:6px 0;">🌟 维度四：素质拓展（平均 9.7 分）</div>
+  <div class="dim-card">
+    <div class="h">表达能力 · 9.7</div><div class="bar"><div class="fill" style="width:97%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>能不能清晰说一件事、敢于在人前表达观点</div>
+    <div class="detail"><strong>为什么满意：</strong>每日"故事分享会"轮流向大家讲故事、分享见闻</div>
+  </div>
+  <div class="dim-card"><div class="h">团队合作 · 9.6</div><div class="bar"><div class="fill" style="width:96%"></div></div><div class="detail"><strong>调查了什么：</strong>和小朋友一起完成任务时的配合度、分享意识</div></div>
+  <div class="dim-card">
+    <div class="h">社交沟通 · 9.6</div><div class="bar"><div class="fill" style="width:96%"></div></div>
+    <div class="detail"><strong>调查了什么：</strong>主动交朋友、解决同伴矛盾的能力</div>
+    <div class="detail"><strong>社区价值：</strong>独生子女+隔代带娃导致社交缺失→集体环境让孩子学会社交、交朋友</div>
+    <div class="quote">"我儿子以前只跟电脑玩，现在交了好几个朋友，周末还约着出去玩" —— 家长陈先生</div>
+  </div>
+
+</div>
+
+<!-- ================================================================ -->
+<!-- P5: 未来规划（还能做什么）+ 对比收尾 -->
+<!-- ================================================================ -->
+<div class="page">
+
+  <div class="h2">五、未来规划 · 从现在的成绩出发，还能做什么</div>
+  <p style="font-size:13px; color:#666; margin-bottom:6px;">在现有22户家庭、六大服务体系的基础上，乐吧已具备进一步扩大服务的能力：</p>
+
+  <!-- 现状 vs 展望 -->
+  <div class="h3" style="font-size:14px; margin:8px 0 4px;">🔭 现状 → 展望</div>
+  <div class="comp-row">
+    <div class="comp-box then">
+      <div class="label">◀ 现在已做到</div>
+      <div class="items">✅ 22户家庭稳定运营<br>✅ 六大服务体系成熟<br>✅ AI系统辅助管理<br>✅ 满意度9.7<br>✅ 续费率100%</div>
+    </div>
+    <div class="comp-box now">
+      <div class="label">▶ 还可以做到</div>
+      <div class="items">→ 覆盖40~50户家庭<br>→ AI自习室（一房两用）<br>→ 早教班扩大招生<br>→ 老年智能手机课堂<br>→ 错峰利用社区空间</div>
+    </div>
+  </div>
+
+  <div class="h2">🤖 AI自习室 · 一房两用方案</div>
+  <div class="plan-box">
+    <h4>将社区空置房间改造为多功能自主学习空间</h4>
+    <ul>
+      <li><strong>硬件配置：</strong>2~3台电脑 + 4~6个独立工位 + 高速网络</li>
+      <li><strong>AI辅助工具：</strong>AI作业批改、AI口语陪练、AI编程入门、AI知识问答</li>
+      <li><strong>老师角色：</strong>从"辅导作业"转为"陪伴练习"，管理秩序+解答个性化问题</li>
+      <li><strong>时间规划：</strong>上午早教班 → 下午/晚上AI自习室 → 周末老年智能手机课堂</li>
+      <li><strong>运营模式：</strong>公益低偿服务，仅收基本运维费，不增加家庭负担</li>
+    </ul>
+  </div>
+
+  <div style="display:flex; gap:12px; margin:10px 0;">
+    <div style="flex:1; background:#f0f6f9; border-radius:8px; padding:12px 14px;">
+      <h4 style="font-size:14px; color:var(--brand);">👶 早教班扩大招生</h4>
+      <p style="font-size:12px; color:#555; margin-top:3px;">覆盖更多低龄儿童，解决双职工家庭"入托难"问题</p>
+    </div>
+    <div style="flex:1; background:#f0f6f9; border-radius:8px; padding:12px 14px;">
+      <h4 style="font-size:14px; color:var(--brand);">👴 老年智能手机课堂</h4>
+      <p style="font-size:12px; color:#555; margin-top:3px;">帮助社区老人学会使用智能手机，跨越数字鸿沟</p>
+    </div>
+  </div>
+
+  <div class="h2">六、居委立场分析</div>
+  <div class="quad-grid">
+    <div class="quad-item"><h4>🏆 政绩线</h4><p>社区创新治理案例，"一小"服务亮点，可申报优秀社区服务项目，为居委增加工作亮点</p></div>
+    <div class="quad-item"><h4>🛡️ 风险线</h4><p>零预算零风险，乐吧全责运营管理，居委只需审批场地使用，无需承担任何运营风险</p></div>
+    <div class="quad-item"><h4>👥 民意线</h4><p>居民主动提出需求，非机构推广，已有真实数据支撑，解决社区双职工家庭实际痛点</p></div>
+    <div class="quad-item"><h4>💰 资源线</h4><p>不占用居委经费，充分利用空置房间资源，将闲置空间变为惠民服务空间</p></div>
+  </div>
+
+  <div class="h2">🎤 汇报流程</div>
+  <div class="step-row"><div class="num">1</div><div class="c"><strong>开场致谢：</strong>"陈书记，感谢您在百忙之中听取我们的汇报……"</div></div>
+  <div class="step-row"><div class="num">2</div><div class="c"><strong>破冰引入：</strong>"最近有几位居民主动找到我们，希望乐吧服务能引进金水新苑二期……"</div></div>
+  <div class="step-row"><div class="num">3</div><div class="c"><strong>讲发展历程：</strong>"我们从入驻到现在，一步步走过来……" 展示时间线+P2对比</div></div>
+  <div class="step-row"><div class="num">4</div><div class="c"><strong>晒成果：</strong>27名学生 · 22户家庭 · 9.7分满意度 · 100%续费率</div></div>
+  <div class="step-row"><div class="num">5</div><div class="c"><strong>亮方案：</strong>空置房间 → 一房两用 → 早教班+AI自习室+老年课堂</div></div>
+  <div class="step-row"><div class="num">6</div><div class="c"><strong>谈价值：</strong>解双职工接娃难 + 解老龄化带娃累 + 零经费 + 为居委创服务亮点</div></div>
+  <div class="step-row"><div class="num">7</div><div class="c"><strong>恳请审批：</strong>"恳请陈书记批准我们在金水新苑二期继续深化服务"</div></div>
+  <div class="step-row"><div class="num">8</div><div class="c"><strong>承诺收尾：</strong>全责运营管理，不给居委添麻烦，定期汇报进展</div></div>
+
+  <div class="h2">💬 陈书记可能关心的5个问题</div>
+  <div class="qa-item"><div class="q">Q：你们有资质吗？安全怎么保证？</div><div class="a">A：公益中心注册正在办理中，健康证须持证上岗，场地计划安装监控设备，购买意外保险。各项资质将逐步落实到位，绝不无证运营。</div></div>
+  <div class="qa-item"><div class="q">Q：你们教新课吗？合规吗？</div><div class="a">A：只辅导暑假作业，不教任何新学期课程，完全符合双减政策要求</div></div>
+  <div class="qa-item"><div class="q">Q：AI自习室具体怎么操作？</div><div class="a">A：学生用AI工具自主学习，老师陪伴管理，电脑有内容过滤+时间管控</div></div>
+  <div class="qa-item"><div class="q">Q：会不会影响其他居民？</div><div class="a">A：严格控制人数，错峰使用，不扰民，正式引入前做居民意见征询</div></div>
+  <div class="qa-item"><div class="q">Q：居委会要不要投钱？</div><div class="a">A：零预算！乐吧自筹所有经费，只需批准场地使用，不给财政添负担</div></div>
+
+  <div style="margin-top:20px; padding-top:14px; border-top:2px solid var(--brand); text-align:center;">
+    <div style="font-size:20px; font-weight:700; color:var(--brand); letter-spacing:4px;">感谢陈书记审阅</div>
+    <div style="font-size:13px; color:#999; margin-top:6px; line-height:1.8;">
+      乐吧公益中心 · 全心全意为社区服务<br>
+      上海奉贤 · 金水新苑二期 · 2026年7月
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

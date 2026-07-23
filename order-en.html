@@ -130,6 +130,24 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">$0.7 <span>one-time</span></div>
     <ul><li>Browser cache + cookies + history</li><li>System logs + diagnostics</li><li>Recent docs + clipboard</li><li>One-click wipe all</li></ul>
   </div>
+  <div class="product" onclick="selectProduct('startup-optimizer')" id="prod-startup-optimizer">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🚀 Startup Optimizer</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>One-click login item management</li><li>Smart Launch Agent analysis</li><li>Safe backup & restore</li><li>100% local operation</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('desktop-organizer')" id="prod-desktop-organizer">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>📁 Desktop Organizer</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>Files sorted by type automatically</li><li>8 smart category folders</li><li>Duplicate file detection</li><li>System file protection</li></ul>
+  </div>
+  <div class="product" onclick="selectProduct('vpn-split-routing')" id="prod-vpn-split-routing">
+    <span class="tag tag-live">🟢 NEW 🔥</span>
+    <h3>🌐 VPN Split Routing</h3>
+    <div class="price">$0.7 <span>one-time</span></div>
+    <ul><li>API via VPN, domestic direct</li><li>One-click V2Box config</li><li>Connectivity diagnostics</li><li>Auto config backup</li></ul>
+  </div>
   <div class="product" onclick="selectProduct('lite')" id="prod-lite">
     <span class="tag tag-soon">🔜 July</span>
     <h3>Pro Lite</h3>
@@ -198,6 +216,9 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
   else if(auto === 'clean-sweep') selectProduct('clean-sweep');
   else if(auto === 'disk-health') selectProduct('disk-health');
   else if(auto === 'privacy-eraser') selectProduct('privacy-eraser');
+  else if(auto === 'startup-optimizer') selectProduct('startup-optimizer');
+  else if(auto === 'desktop-organizer') selectProduct('desktop-organizer');
+  else if(auto === 'vpn-split-routing') selectProduct('vpn-split-routing');
   else if(auto === 'lite') selectProduct('lite');
   else if(auto === 'plus') selectProduct('plus');
 })();
@@ -214,6 +235,9 @@ const PRODUCTS = {
   'clean-sweep': {name: '🧹 Clean Sweep', price: '$0.7'},
   'disk-health': {name: '💿 Disk Health', price: '$0.7'},
   'privacy-eraser': {name: '🔐 Privacy Eraser', price: '$0.7'},
+  'startup-optimizer': {name: '🚀 Startup Optimizer', price: '$0.7'},
+  'desktop-organizer': {name: '📁 Desktop Organizer', price: '$0.7'},
+  'vpn-split-routing': {name: '🌐 VPN Split Routing', price: '$0.7'},
   lite: {name: 'Pro Lite', price: '$24.9'},
   plus: {name: 'Pro Max', price: '$49'}
 };

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开机加速 ¥5 — Mars Toolkit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',Roboto,sans-serif;background:linear-gradient(160deg,#0d0f1a 0%,#1a1d2e 100%);color:#e8e8f0;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:40px 24px}
+.back-link{display:inline-block;color:rgba(255,255,255,0.3);text-decoration:none;font-size:14px;margin-bottom:24px}
+.back-link:hover{color:#4785a8}
+h1{font-size:32px;font-weight:800;margin-bottom:6px}
+h1 .tag{font-size:12px;background:rgba(255,159,67,0.12);color:#ff9f43;padding:3px 10px;border-radius:8px;vertical-align:middle;margin-left:8px;font-weight:600}
+.price{font-size:42px;font-weight:800;color:#4785a8;margin:16px 0 4px}
+.price span{font-size:16px;color:rgba(255,255,255,0.3);font-weight:400}
+.desc{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.7;margin:12px 0 24px}
+.features{list-style:none;margin:20px 0 28px}
+.features li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:10px;font-size:15px}
+.features li::before{content:'✓';color:#34c759;font-weight:700;font-size:18px}
+.features li .sub{color:rgba(255,255,255,0.3);font-size:13px;display:block;margin-left:28px;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;transition:all .25s}
+.btn-primary{background:linear-gradient(135deg,#4785a8,#5a9bbf);color:#fff}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(71,133,168,0.25)}
+.btn-outline{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.05)}
+.cta-wrap{text-align:center;margin:28px 0}
+.tech-detail{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;padding:24px;margin:24px 0}
+.tech-detail h3{font-size:15px;font-weight:700;margin-bottom:12px;color:#4785a8}
+.tech-detail p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.faq{margin:24px 0}
+.faq-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:4px;color:#fff}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back-link" href="/mars-toolkit/">← 返回产品列表</a>
+<h1>🚀 开机加速 <span class="tag">🟢 在售</span></h1>
+<div class="price">¥5 <span>一次性付费，永久使用</span></div>
+<p class="desc">管理登录启动项和Launch Agents，禁用不必要的后台服务，Mac开机速度提升50%。专为越用越慢的旧Mac设计，从根源解决开机慢的问题。</p>
+
+<ul class="features">
+  <li>登录项一键管理<span class="sub">查看系统登录项，一键禁用非必要启动程序</span></li>
+  <li>Launch Agents 智能分析<span class="sub">自动识别可安全禁用的非关键后台服务</span></li>
+  <li>安全备份保障<span class="sub">禁用前自动备份配置，随时可恢复</span></li>
+  <li>开机速度提升50%<span class="sub">清理不必要的启动项后，开机速度显著提升</span></li>
+  <li>纯本地运行<span class="sub">无需联网，所有操作在本地完成，隐私安全</span></li>
+</ul>
+
+<div class="tech-detail">
+<h3>🔧 技术说明</h3>
+<p>开机加速是一个 macOS 启动项管理工具，通过系统命令 osascript 管理 Login Items，通过 launchctl 管理 Launch Agents。它会自动分析当前所有开机启动项，识别已知可安全禁用的非关键服务（如 Spotify 自动更新、Adobe 后台进程等），并在禁用前自动备份原始配置。支持查看报告、执行优化、分析 LaunchAgents 三种工作模式。</p>
+</div>
+
+<div class="faq">
+<h3 style="margin-bottom:12px">❓ 常见问题</h3>
+<div class="faq-item">
+  <div class="faq-q">禁用启动项后会影响正常使用吗？</div>
+  <div class="faq-a">不会。工具只建议禁用非关键服务（如自动更新器、非必需后台进程），V2Box、smcFanControl 等基础设施不会被禁用。禁用前也会自动备份，随时可恢复。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">跟 macOS 自带的登录项管理有什么区别？</div>
+  <div class="faq-a">macOS 自带的管理只能看到少量用户登录项，但 Launch Agents（后台服务）是隐藏的。这个工具同时管理登录项和 Launch Agents，并且自动分析哪些可以安全禁用。</div>
+</div>
+<div class="faq-item">
+  <div class="faq-q">需要关闭系统保护吗？</div>
+  <div class="faq-a">不需要。工具只操作当前用户的登录项和 Launch Agents，不需要关闭 SIP 或获取 root 权限。</div>
+</div>
+</div>
+
+<div class="cta-wrap">
+  <a class="btn btn-primary" href="/mars-toolkit/order.html?product=startup-optimizer">🛒 立即购买 ¥5</a>
+</div>
+</div>
+</body>
+</html>
