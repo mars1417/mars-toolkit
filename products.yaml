@@ -3,6 +3,26 @@
 # 周三/周五更新日必改
 
 products:
+  - name: "天霸AI团队"
+    emoji: "🚀"
+    price: "¥9.9"
+    category: "tool"
+    status: "已上线"
+    tagline: "16个AI员工，月薪9.9元。一台8年前的旧电脑就能跑。"
+    description: "【天霸AI团队】用你的旧电脑养16个AI员工。CRM客户管理、GPS+人脸签到、家长通知、OCR批改。月成本¥7(约$1)，年省¥19,000+。对比传统方案$220/月，节省99.8%。无需新设备，2017年MacBook Air即可。"
+    pitch: "16个AI员工，月薪¥9.9。一台8年前的MacBook Air(4GB)就能跑。年省¥19,000+，省下的钱够给团队每人发台新电脑。"
+    specs:
+      - ["AI员工数", "16人"]
+      - ["月成本", "¥7 ($1)"]
+      - ["传统方案对比", "月$220 → 省99.8%"]
+      - ["设备要求", "2017 MacBook Air (4GB)"]
+      - ["功能", "CRM/签到/通知/OCR"]
+      - ["部署方式", "本地运行，数据不外传"]
+    target:
+      - "托管机构主理人"
+      - "独立开发者 / Indie Hackers"
+      - "小团队管理者"
+      - "旧Mac用户"
   - name: "Agent引擎 · 轻量版"
     emoji: "🤖"
     price: "¥5/月"
@@ -2511,3 +2531,11 @@ products:
     tagline: "一键脚本: Vision Watchdog"
     description: "vision-watchdog.py - 自动化脚本"
     pitch: "一键运行，无需配置"
+  - name: "天霸AI团队"
+    emoji: "🏢"
+    price: "¥9.9"
+    category: "tool"
+    status: "待发布"
+    tagline: "一台8年前的旧电脑，跑了一个16人的AI公司 · 月成本$1 vs 传统$220"
+    description: "8年旧MacBook Air 4GB内存，零融资零服务器，靠免费API跑16个AI员工。CRM签到/GPS打卡/OCR批改/家长通知全自动。传统方案$220/月，天霸方案$1/月。"
+    pitch: "这不止是代码，这是一个真实故事——一台比你桌子还老的电脑，跑着一个16人的AI公司。开源核心免费，完整调度脚本+自愈系统仅¥9.9。"

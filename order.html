@@ -213,6 +213,12 @@ h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#4785a8,#6da
     <div class="price">¥49 <span>一次性</span></div>
     <ul><li>Web Dashboard访问</li><li>基础监控面板</li><li>微信告警通知</li><li>30天更新</li></ul>
   </div>
+  <div class="product featured" onclick="selectProduct('tianba-ai-team')" id="prod-tianba-ai-team" style="border-color:#7c3aed;background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(91,33,182,0.04))">
+    <span class="tag tag-live" style="background:#7c3aed;color:#fff">🔥 爆款新品</span>
+    <h3>🚀 天霸AI团队 · 16人AI员工</h3>
+    <div class="price">¥9.9 <span>/月</span></div>
+    <ul><li>16个AI员工 · CRM/签到/通知/OCR全自动</li><li>年成本$12 vs 传统$2,640 · 省99.8%</li><li>8年前MacBook Air 4GB就能跑</li><li>数据本地存储 · 不外传</li><li>已支撑真实机构运营</li></ul>
+  </div>
   <div class="product" onclick="selectProduct('plus')" id="prod-plus">
     <span class="tag tag-soon">🔜 8月</span>
     <h3>Pro Max</h3>
@@ -294,6 +300,7 @@ let selected = null;
   else if(auto === 'desktop-organizer') { selectProduct('desktop-organizer'); }
   else if(auto === 'vpn-split-routing') { selectProduct('vpn-split-routing'); }
   else if(auto === 'lite') { selectProduct('lite'); }
+  else if(auto === 'tianba-ai-team') { selectProduct('tianba-ai-team'); }
   else if(auto === 'plus') { selectProduct('plus'); }
 })();
 
@@ -321,7 +328,8 @@ const PRODUCTS = {
   'desktop-organizer': {name: '📁 桌面整理', price: '¥5', priceVal: 5},
   'vpn-split-routing': {name: '🌐 VPN分流路由', price: '¥5', priceVal: 5},
   lite: {name: 'Pro Lite', price: '¥49', priceVal: 49},
-  plus: {name: 'Pro Max', price: '¥99', priceVal: 99}
+  plus: {name: 'Pro Max', price: '¥99', priceVal: 99},
+  'tianba-ai-team': {name: '🚀 天霸AI团队 · 16人AI员工', price: '¥9.9/月', priceVal: 9.9}
 };
 
 function selectProduct(type) {
