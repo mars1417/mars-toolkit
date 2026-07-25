@@ -3,116 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tianba AI Team · 16 AI Employees for $1.5/mo — Mars Toolkit</title>
-<meta name="description" content="A 2018 MacBook Air (4GB RAM) runs 16 AI employees. 24/7 non-stop, $1 monthly power bill. CRM·Check-in·Notifications·OCR. Fully automated.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Tianba AI Team — 8-Year-Old Mac Runs a 16-Person AI Company | ¥9.9</title>
+<meta name="description" content="An 8-year-old MacBook Air (4GB RAM) runs a 16-person AI company. Zero funding, zero server clusters, just $1/month cost. CRM/GPS Check-in/Parent Notifications/OCR Grading.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:linear-gradient(160deg,#0d0d1a 0%,#1a1a2e 50%,#0f1a30 100%);color:#e8e8f0;line-height:1.7;min-height:100vh}
-.container{max-width:960px;margin:0 auto;padding:40px 24px}
-
-/* Language bar */
-.lang-bar{text-align:right;padding:10px 24px;font-size:13px;color:rgba(255,255,255,0.3)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#07070d;color:#e8e8f0;line-height:1.7;min-height:100vh;overflow-x:hidden}
+.lang-bar{text-align:right;padding:10px 24px;font-size:13px;color:rgba(255,255,255,0.3);background:#07070d;position:relative;z-index:10}
 .lang-bar a{color:rgba(71,133,168,0.7);text-decoration:none;margin:0 6px;transition:color .2s}
 .lang-bar a:hover,.lang-bar .active{color:#4785a8}
-
-/* Nav */
-.nav-bar{text-align:center;padding:8px 0 16px;border-bottom:1px solid rgba(255,255,255,0.03);margin-bottom:0}
+.nav-bar{text-align:center;padding:8px 0 16px;border-bottom:1px solid rgba(255,255,255,0.03);margin-bottom:0;background:#07070d;position:relative;z-index:10}
 .nav-bar a{display:inline-block;color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;padding:6px 14px;margin:2px 2px;border-radius:8px;transition:all .2s}
 .nav-bar a:hover{color:#fff;background:rgba(71,133,168,0.1)}
-.nav-bar a.active{color:#4785a8;background:rgba(71,133,168,0.08)}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
 
-/* ===== HERO ===== */
-.hero{text-align:center;padding:60px 20px 40px;background:linear-gradient(180deg,#0f0a1e 0%,#0d0d1a 100%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 50%,rgba(124,58,237,.06) 0%,transparent 60%);pointer-events:none}
-.hero h1{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:800;line-height:1.3;margin-bottom:16px}
-.hero h1 .brand-highlight{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero .sub{font-size:clamp(0.95rem,2.5vw,1.15rem);color:rgba(255,255,255,0.5);margin-bottom:24px;font-weight:500}
-.hero .quote{font-size:1.2em;color:#a78bfa;font-weight:600;margin:20px 0;font-style:italic}
-.hero .price-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;padding:16px 40px;border-radius:14px;font-size:1.15em;font-weight:700;margin:16px 0;text-decoration:none;transition:all .25s cubic-bezier(0.34,1.56,0.64,1)}
-.hero .price-btn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(124,58,237,.35)}
-.hero .price-btn .small{font-size:0.7em;font-weight:400;opacity:0.8}
+/* Hero */
+.hero{position:relative;width:100%;min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;overflow:hidden}
+.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(0.25) saturate(1.2);transform:scale(1.02)}
+.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(7,7,13,0.3) 0%,rgba(7,7,13,0.85) 60%,#07070d 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.2);color:#a78bfa;padding:6px 20px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:0.5px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#a78bfa;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(124,58,237,0.4)}50%{opacity:0.8;box-shadow:0 0 0 6px rgba(124,58,237,0)}}
+.hero h1{font-size:50px;font-weight:900;letter-spacing:-1px;line-height:1.15;margin-bottom:20px;color:#fff}
+.hero h1 .highlight-purple{background:linear-gradient(135deg,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .highlight-gold{background:linear-gradient(135deg,#ffd700,#ff9f43);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:20px;color:rgba(255,255,255,0.5);margin-bottom:32px;font-weight:300;letter-spacing:0.3px}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;padding:16px 40px;border-radius:14px;text-decoration:none;font-size:18px;font-weight:700;transition:all .3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 24px rgba(124,58,237,0.3)}
+.hero-cta:hover{transform:scale(1.06);box-shadow:0 8px 40px rgba(124,58,237,0.45)}
+.hero-quote{position:relative;z-index:2;margin-top:48px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.04);width:100%;max-width:600px}
+.hero-quote p{font-size:15px;color:rgba(255,255,255,0.2);font-style:italic}
+.hero-quote .tags{margin-top:8px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hero-quote .tags span{font-size:11px;color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.06);padding:3px 12px;border-radius:999px}
 
 /* Stats */
-.stats-row{display:flex;justify-content:center;gap:20px;margin:30px 0;flex-wrap:wrap}
-.stat-item{text-align:center;padding:12px 20px;min-width:100px}
-.stat-value{font-size:32px;font-weight:700;color:#fff}
-.stat-value .purple{color:#a78bfa}
-.stat-value .green{color:#34c759}
-.stat-value .gold{color:#ffd700}
-.stat-label{font-size:12px;color:rgba(255,255,255,0.35);margin-top:2px;letter-spacing:1px}
-
-.hero-img{width:100%;max-width:720px;border-radius:16px;margin:30px auto;display:block;box-shadow:0 4px 40px rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.1)}
-
-/* ===== Sections ===== */
-.section{padding:50px 0}
-.section-title{font-size:clamp(1.2rem,3vw,1.7rem);font-weight:700;margin-bottom:28px;text-align:center}
-.section-title .highlight{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stats-section{background:linear-gradient(180deg,#07070d 0%,#0d0d1a 100%);padding:60px 0;position:relative}
+.stats-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,0.3),transparent)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:800px;margin:0 auto;padding:0 24px}
+.stat-card{text-align:center;padding:28px 16px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:16px;transition:all .3s}
+.stat-card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.04);border-color:rgba(124,58,237,0.1)}
+.stat-number{font-size:48px;font-weight:900;letter-spacing:-2px;color:#fff;line-height:1}
+.stat-number .purple{color:#a78bfa}
+.stat-number .gold{color:#ffd700}
+.stat-number .green{color:#34c759}
+.stat-label{font-size:13px;color:rgba(255,255,255,0.35);margin-top:8px;letter-spacing:0.5px}
+.stat-sub{font-size:11px;color:rgba(255,255,255,0.15);margin-top:4px}
 
 /* Story */
-.story-card{background:rgba(255,255,255,0.02);border:1px solid rgba(124,58,237,0.08);border-radius:18px;padding:36px 32px;margin:20px 0}
-.story-card p{color:rgba(255,255,255,0.55);margin-bottom:16px;font-size:1.02em;line-height:1.8}
-.story-card p strong{color:#e8e8f0}
-.story-card .gold-line{color:#ffd700;font-weight:700;font-size:1.05em}
+.story-section{background:#07070d;padding:80px 0}
+.section-title{text-align:center;margin-bottom:48px}
+.section-title h2{font-size:32px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.5px}
+.section-title .sub{font-size:15px;color:rgba(255,255,255,0.3)}
+.section-divider{width:40px;height:3px;background:linear-gradient(90deg,#7c3aed,#a78bfa);border-radius:2px;margin:16px auto}
+.story-content{max-width:680px;margin:0 auto;padding:0 24px}
+.story-content p{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:20px;line-height:1.8}
+.story-content .highlight-box{background:rgba(124,58,237,0.06);border-left:3px solid #7c3aed;border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;font-size:15px;color:rgba(255,255,255,0.5)}
+.story-content .highlight-box strong{color:#a78bfa}
 
-/* Comparison table */
-.comparison-wrap{background:rgba(255,255,255,0.02);border:1px solid rgba(124,58,237,0.08);border-radius:18px;padding:28px;margin:24px 0;overflow-x:auto}
-.comparison-img{width:100%;max-width:700px;border-radius:14px;margin:0 auto 28px;display:block;box-shadow:0 4px 20px rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.08)}
-table{width:100%;border-collapse:collapse;font-size:0.92em}
-th,td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.05)}
-th{background:rgba(124,58,237,0.08);color:#a78bfa;font-weight:700;font-size:0.92em}
-td{color:rgba(255,255,255,0.55)}
-td:first-child{color:rgba(255,255,255,0.4);font-weight:600}
-td.highlight{color:#34c759;font-weight:700}
-.saving-badge{text-align:center;padding:16px 0 0;font-size:1.1em;color:#34c759;font-weight:700}
+/* Cost */
+.cost-section{background:linear-gradient(180deg,#0d0d1a 0%,#07070d 100%);padding:80px 24px}
+.cost-table-wrap{max-width:720px;margin:0 auto;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:20px;padding:32px;overflow:hidden}
+.cost-table{width:100%;border-collapse:collapse;font-size:14px}
+.cost-table th{text-align:left;padding:14px 16px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.25)}
+.cost-table td{padding:16px;border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top}
+.cost-table tr:last-child td{border-bottom:none}
+.cost-table td:first-child{color:rgba(255,255,255,0.3);width:25%;font-size:13px}
+.cost-table td:nth-child(2){color:rgba(255,255,255,0.35);width:37%}
+.cost-table td:last-child{color:#34c759;width:38%;font-weight:600}
+.cost-table .old-price{text-decoration:line-through;color:rgba(255,255,255,0.15);font-weight:400}
+.cost-table .big-number{font-size:20px;font-weight:800;color:#fff}
+.cost-table .big-number .green{color:#34c759}
+.cost-save-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(52,199,89,0.08);border:1px solid rgba(52,199,89,0.12);border-radius:999px;padding:6px 16px;font-size:20px;font-weight:800;color:#34c759;margin:24px auto 0;justify-content:center;width:fit-content}
 
-/* Feature cards */
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:24px 0}
-.feature-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:28px 24px;transition:all .3s ease;position:relative;overflow:hidden}
-.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7c3aed,#a78bfa,#60a5fa);opacity:0;transition:opacity .3s}
-.feature-card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.04);border-color:rgba(124,58,237,0.15)}
+/* Features */
+.features-section{background:#07070d;padding:80px 0}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:800px;margin:0 auto;padding:0 24px}
+.feature-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:18px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#7c3aed,transparent);opacity:0;transition:opacity .3s}
+.feature-card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.04);border-color:rgba(124,58,237,0.08)}
 .feature-card:hover::before{opacity:1}
-.feature-card .f-icon{font-size:2em;color:#a78bfa;margin-bottom:12px}
-.feature-card h3{font-size:1.05em;font-weight:700;color:#fff;margin-bottom:8px}
-.feature-card h3 .tag{display:inline-block;font-size:11px;background:rgba(52,199,89,0.12);color:#34c759;padding:2px 10px;border-radius:8px;font-weight:600;vertical-align:middle;margin-left:6px}
-.feature-card p{font-size:0.9em;color:rgba(255,255,255,0.45);line-height:1.7}
-.feature-card .metric{display:inline-block;margin-top:12px;font-size:0.83em;color:#a78bfa;background:rgba(124,58,237,0.08);padding:4px 12px;border-radius:8px}
+.feature-icon{font-size:32px;margin-bottom:12px}
+.feature-card h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px}
+.feature-card p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7}
+.feature-stat{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:#a78bfa;background:rgba(124,58,237,0.08);padding:4px 12px;border-radius:999px}
+
+/* Image */
+.img-section{background:#0d0d1a;padding:60px 24px}
+.img-wrap{max-width:800px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.img-wrap img{width:100%;height:auto;display:block}
+.img-caption{text-align:center;margin-top:12px;font-size:13px;color:rgba(255,255,255,0.2)}
 
 /* FAQ */
-.faq-wrap{display:grid;gap:14px;margin:24px 0}
-.faq-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:22px 24px;transition:all .2s}
-.faq-item:hover{border-color:rgba(124,58,237,0.1)}
-.faq-item h4{font-size:0.95em;font-weight:700;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.faq-item h4 .q-icon{color:#a78bfa}
-.faq-item p{font-size:0.9em;color:rgba(255,255,255,0.45);line-height:1.7}
+.faq-section{background:#07070d;padding:80px 0}
+.faq-list{max-width:680px;margin:0 auto;padding:0 24px}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.03);padding:20px 0}
+.faq-q{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.faq-q::before{content:'Q';display:inline-flex;width:24px;height:24px;border-radius:50%;background:rgba(124,58,237,0.12);color:#a78bfa;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+.faq-a{font-size:14px;color:rgba(255,255,255,0.4);margin-left:34px;line-height:1.8}
 
 /* CTA */
-.cta-section{text-align:center;padding:60px 20px;background:linear-gradient(180deg,rgba(15,10,30,0.5),rgba(22,22,42,0.5));border:1px solid rgba(124,58,237,0.08);border-radius:20px;margin:30px 0}
-.cta-section h2{font-size:clamp(1.2rem,3vw,1.7rem);margin-bottom:12px}
-.cta-section p{color:rgba(255,255,255,0.45);margin-bottom:24px;font-size:1em}
-.cta-section .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;padding:18px 48px;border-radius:14px;font-size:1.15em;font-weight:700;text-decoration:none;transition:all .25s cubic-bezier(0.34,1.56,0.64,1)}
-.cta-section .btn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(124,58,237,.35)}
-.cta-section .btn .fa{font-size:1.1em}
+.cta-section{background:linear-gradient(180deg,#07070d 0%,#0d0d1a 50%,#07070d 100%);padding:80px 24px;text-align:center;position:relative}
+.cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,0.3),transparent)}
+.cta-section h2{font-size:36px;font-weight:900;color:#fff;margin-bottom:12px;letter-spacing:-0.5px}
+.cta-section p{font-size:16px;color:rgba(255,255,255,0.35);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-section .gold-quote{font-size:28px;font-weight:800;background:linear-gradient(135deg,#ffd700,#ff9f43);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:32px;letter-spacing:0.5px}
 
 /* Footer */
-footer{text-align:center;padding:40px 0;color:rgba(255,255,255,0.12);font-size:12px;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
-footer a{color:rgba(71,133,168,0.5);text-decoration:none}
+footer{text-align:center;padding:40px 24px;color:rgba(255,255,255,0.12);font-size:12px;border-top:1px solid rgba(255,255,255,0.02);background:#07070d}
+footer a{color:rgba(71,133,168,0.4);text-decoration:none}
 footer a:hover{color:#4785a8}
-footer .tags{color:rgba(255,255,255,0.08);margin-top:8px;font-size:11px}
 
-/* Responsive */
-@media(max-width:600px){
-  .hero{padding:40px 16px 30px}
-  .hero h1{font-size:1.4rem}
-  .stats-row{gap:8px}
-  .stat-item{padding:8px 12px;min-width:70px}
-  .stat-value{font-size:24px}
-  .story-card{padding:24px 18px}
-  .comparison-wrap{padding:18px}
-  th,td{padding:10px 12px;font-size:0.8em}
+@media(max-width:768px){
+  .hero h1{font-size:30px}
+  .hero-sub{font-size:16px}
+  .stat-number{font-size:36px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .features-grid{grid-template-columns:1fr}
-  .faq-item{padding:16px}
+  .cost-table-wrap{padding:20px;overflow-x:auto}
+  .cost-table{font-size:13px}
+  .cost-table td{padding:12px 10px}
+  .hero{padding:40px 20px;min-height:70vh}
+  .cta-section h2{font-size:26px}
+  .cta-section .gold-quote{font-size:22px}
+  .section-title h2{font-size:26px}
+}
+@media(max-width:480px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .stat-card{padding:20px 12px}
+  .cost-table-wrap{padding:16px}
+  .hero-cta{padding:14px 28px;font-size:16px}
 }
 </style>
 </head>
@@ -122,164 +141,226 @@ footer .tags{color:rgba(255,255,255,0.08);margin-top:8px;font-size:11px}
   <a href="/mars-toolkit/tianba-ai-team.html" data-lang="zh">🇨🇳 中文</a>
   <a href="/mars-toolkit/en/tianba-ai-team.html" class="active" data-lang="en">🇬🇧 English</a>
 </div>
-
 <div class="nav-bar">
-  <a href="/mars-toolkit/en/">🐄 Old Mac Revival</a>
+  <a href="/mars-toolkit/en/">🐄 Home</a>
   <a href="/mars-toolkit/en/#pricing">💎 All Products</a>
-  <a href="/mars-toolkit/en/tianba-ai-team.html" class="active">🤖 Tianba AI Team</a>
-  <a href="/mars-toolkit/order-en.html">🛒 Order</a>
+  <a href="/mars-toolkit/order-en.html">🛒 Buy</a>
 </div>
-
 <script>
 (function(){
   var prefer = localStorage.getItem('mars-toolkit-lang');
   var path = window.location.pathname;
-  if(prefer === 'en' && !path.includes('/en/')) {
-    window.location.href = '/mars-toolkit/en/tianba-ai-team.html';
-  }
-  if(prefer === 'zh' && path.includes('/en/')) {
-    window.location.href = '/mars-toolkit/tianba-ai-team.html';
-  }
+  if(prefer === 'en' && !path.includes('/en/')) { window.location.href = '/mars-toolkit/en/tianba-ai-team.html'; }
+  if(prefer === 'zh' && path.includes('/en/')) { window.location.href = '/mars-toolkit/tianba-ai-team.html'; }
   document.querySelectorAll('[data-lang]').forEach(function(a){
-    a.addEventListener('click', function(){
-      localStorage.setItem('mars-toolkit-lang', this.getAttribute('data-lang'));
-    });
+    a.addEventListener('click', function(){ localStorage.setItem('mars-toolkit-lang', this.getAttribute('data-lang')); });
   });
 })();
 </script>
 
-<!-- ===== HERO ===== -->
-<div class="hero">
-  <h1>This Computer is Older Than Your Desk.<br><span class="brand-highlight">It Runs a Business for 16 People.</span></h1>
-  <p class="sub">2018 MacBook Air · 4GB RAM · 16 AI Employees · 24/7 Non-Stop<br>No Funding, No Server Clusters. Just Lines of Code, and a $1 Monthly Power Bill.</p>
-
-  <img src="../assets/tianba-old-mac-new.jpg" alt="Old MacBook running 16-person AI company" class="hero-img" loading="lazy">
-
-  <p class="quote">"The bottleneck isn't your hardware — it's your thinking."</p>
-
-  <a href="../order-en.html?product=tianba-ai-team" class="price-btn">
-    <i class="fas fa-rocket"></i> $1.50/mo — Join Tianba AI Team
-  </a>
-
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-value"><span class="purple">8</span> yrs</div><div class="stat-label">Device Age</div></div>
-    <div class="stat-item"><div class="stat-value"><span class="purple">16</span></div><div class="stat-label">AI Team Size</div></div>
-    <div class="stat-item"><div class="stat-value"><span class="green">$1</span></div><div class="stat-label">Monthly Cost</div></div>
-    <div class="stat-item"><div class="stat-value"><span class="gold">99.8</span>%</div><div class="stat-label">Cost Savings</div></div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="../assets/tianba-old-mac-new.jpg" alt="8-year-old MacBook Air running an AI company" loading="lazy">
   </div>
-</div>
-
-<div class="container">
-
-<!-- ===== STORY ===== -->
-<div class="section">
-  <h2 class="section-title"><span class="highlight">One Old Laptop, 16 AI Employees</span></h2>
-  <div class="story-card">
-    <p>A 2018 MacBook Air with 4GB of RAM. On the second-hand market, you couldn't get $80 for it. Nobody would look twice.</p>
-    <p>But this machine is running <strong>16 AI employees</strong> — 24/7, no sick days, no coffee breaks, no resignations. Monthly cost: <strong>$1 in electricity</strong>.</p>
-    <p>The traditional approach for the same workload: <strong>$220/month</strong>. Outsourcing a project: <strong>$10,000 to $50,000</strong>.</p>
-    <p class="gold-line">👇 What did Tianba AI Team actually achieve?</p>
-    <p>Cut grading time from <strong>2 hours</strong> to <strong>25 minutes</strong>. Pushed notification delivery from <strong>60%</strong> to <strong>98%</strong>. Slashed fake check-ins from <strong>1 in 3</strong> to <strong>less than 1 in 10</strong>.</p>
-    <p style="font-size:1.15em;text-align:center;color:#a78bfa;font-weight:700;margin-top:20px">Hardware is not the bottleneck — your thinking is.</p>
-  </div>
-</div>
-
-<!-- ===== COST COMPARISON ===== -->
-<div class="section">
-  <h2 class="section-title"><span class="highlight">Cost Comparison: Traditional vs Tianba AI</span></h2>
-
-  <img src="../assets/tianba-comparison-new.jpg" alt="Cost comparison chart" class="comparison-img" loading="lazy">
-
-  <div class="comparison-wrap">
-    <table>
-      <tr><th>Item</th><th>Traditional</th><th>Tianba AI Team</th></tr>
-      <tr><td>Monthly Ops</td><td>$220/month</td><td class="highlight">$1/month</td></tr>
-      <tr><td>Yearly Ops</td><td>$2,640</td><td class="highlight">$12</td></tr>
-      <tr><td>Custom Development</td><td>$10K–$50K/project</td><td class="highlight">$15/3 years</td></tr>
-      <tr><td>Hardware</td><td>Servers — thousands of $</td><td class="highlight">8-year-old laptop</td></tr>
-      <tr><td>Deployment</td><td>1–3 months</td><td class="highlight">1 day</td></tr>
-      <tr><td>Maintenance</td><td>Dedicated IT staff</td><td class="highlight">Zero (self-sustaining)</td></tr>
-    </table>
-    <div class="saving-badge">
-      <i class="fas fa-check-circle"></i> Save $2,628+/year · 99.8% savings rate
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🤖 Tianba AI Team · ¥9.9 one-time</div>
+    <h1>"This computer is <span class="highlight-gold">older than your desk</span>. <br>It runs a <span class="highlight-purple">16-person</span> company."</h1>
+    <p class="hero-sub">Zero funding. Zero server clusters. Just code, and <span style="color:#ffd700">$1</span> worth of electricity.</p>
+    <a class="hero-cta" href="../order-en.html?product=tianba-ai-team">🚀 Buy Now · ¥9.9</a>
+    <div class="hero-quote">
+      <p>"The bottleneck isn't the hardware. It's the mindset."</p>
+      <div class="tags">
+        <span>#OldMacRunningTeam</span>
+        <span>#IndieDevs</span>
+        <span>#CostOptimization</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ===== 4 CORE FEATURES ===== -->
-<div class="section">
-  <h2 class="section-title"><span class="highlight">4 Core Capabilities</span></h2>
+<!-- Stats -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">8<span class="purple">yr</span></div>
+      <div class="stat-label">Device Age</div>
+      <div class="stat-sub">2017 MacBook Air 4GB</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">16</div>
+      <div class="stat-label">Team Size</div>
+      <div class="stat-sub">AI employees</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number"><span class="green">$1</span></div>
+      <div class="stat-label">Monthly Cost</div>
+      <div class="stat-sub">Domain + electricity only</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number"><span class="green">99.8</span>%</div>
+      <div class="stat-label">Cost Savings</div>
+      <div class="stat-sub">vs traditional AI setup</div>
+    </div>
+  </div>
+</section>
 
+<!-- Story -->
+<section class="story-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>How does an 8-year-old Mac run a 16-person company?</h2>
+      <div class="section-divider"></div>
+      <p class="sub">This isn't a concept demo. This is real.</p>
+    </div>
+    <div class="story-content">
+      <p>In 2024, a 2017 MacBook Air (4GB RAM, i5-1.6GHz, battery showing "Service Recommended") started running a full after-school tutoring center management system.</p>
+      <p>No GPU. No server clusters. No cloud bills. This computer's resale value is under ¥1,000 — yet it simultaneously runs a CRM system, GPS check-in, gateway proxy, intranet tunnel, DeepSeek API proxy, memory watchdog, and 21 cron jobs.</p>
+      <p>Two years of uninterrupted operation. Zero downtime incidents.</p>
+      <div class="highlight-box">
+        <strong>Key insight:</strong> 16 AI agents (each mapped to a real business role) don't need a GPU. CRM runs on SQLite, check-in on lightweight Flask, notifications via Telegram Bot API, grading with open-source OCR. All fitting in 4GB of RAM.
+      </div>
+      <p>Traditional solutions cost $220/month (ChatGPT Pro $200 + Claude Pro $20), not counting cloud servers and developer time. Tianba costs just <span style="color:#34c759;font-weight:700">$1/month</span> — with all data stored locally and never transmitted.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cost -->
+<section class="cost-section">
+  <div class="section-title">
+    <h2>💰 $220/month vs $1/month</h2>
+    <div class="section-divider"></div>
+    <p class="sub">It's not magic. It's architecture.</p>
+  </div>
+  <div class="cost-table-wrap">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Traditional</th>
+          <th>Tianba</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monthly cost</td>
+          <td><span class="old-price">ChatGPT Pro $200</span><br><span class="old-price">Claude Pro $20</span></td>
+          <td><span class="big-number green">$1</span>/mo</td>
+        </tr>
+        <tr>
+          <td>Yearly cost</td>
+          <td><span style="color:rgba(255,255,255,0.3)">$2,640</span>/year</td>
+          <td><span class="big-number green">$12</span>/year</td>
+        </tr>
+        <tr>
+          <td>Outsourcing</td>
+          <td><span style="color:rgba(255,255,255,0.3)">$10k–$50k</span>/project</td>
+          <td><span class="big-number green">$15</span>/3yr</td>
+        </tr>
+        <tr>
+          <td>Maintenance</td>
+          <td><span style="color:rgba(255,255,255,0.3)">Ongoing fees</span></td>
+          <td><span class="big-number green">~$0</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cost-save-badge">▼ Save 99.8%</div>
+</section>
+
+<!-- Features -->
+<section class="features-section">
+  <div class="section-title">
+    <h2>🤖 16 AI Employees, 4 Core Modules</h2>
+    <div class="section-divider"></div>
+    <p class="sub">Every single one is a real business tool, not a demo.</p>
+  </div>
   <div class="features-grid">
     <div class="feature-card">
-      <div class="f-icon"><i class="fas fa-comments"></i></div>
-      <h3>Chat-to-CRM <span class="tag">Zero Manual Entry</span></h3>
-      <p>Conversations auto-classified, tagged, and timeline-built. Sales chat transcripts turn into structured CRM data — no manual input required.</p>
-      <div class="metric"><i class="fas fa-bolt"></i> Labor cost → $0</div>
+      <div class="feature-icon">📞</div>
+      <h3>CRM · Client Management</h3>
+      <p>Create client records via chat. Auto-link communication history, contracts, orders. Search, tag, and auto-generate client profiles.</p>
+      <span class="feature-stat">24/7 auto response</span>
     </div>
     <div class="feature-card">
-      <div class="f-icon"><i class="fas fa-map-marker-alt"></i></div>
-      <h3>GPS + Facial Check-In <span class="tag">Fake Check-Ins -70%</span></h3>
-      <p>Geo-fencing + live detection double verification. Fake check-ins drop from 1 in 3 to fewer than 1 in 10. Field management runs on tech, not trust.</p>
-      <div class="metric"><i class="fas fa-chart-line"></i> Fraud reduction: 70%</div>
+      <div class="feature-icon">📍</div>
+      <h3>Smart Check-in · GPS+Face</h3>
+      <p>Dual verification with GPS location and face matching. Reduces fake check-ins by 70%. Real-time sync with auto report generation.</p>
+      <span class="feature-stat">70% fewer fake check-ins</span>
     </div>
     <div class="feature-card">
-      <div class="f-icon"><i class="fas fa-bell"></i></div>
-      <h3>Smart Notifications <span class="tag">60%→98%</span></h3>
-      <p>AI prioritizes urgency and auto-selects the channel (SMS/WeChat/In-App). Delivery rate jumps from 60% to 98%. No more "I didn't get it."</p>
-      <div class="metric"><i class="fas fa-arrow-up"></i> Delivery +38%</div>
+      <div class="feature-icon">📲</div>
+      <h3>Parent Notifications · Auto</h3>
+      <p>Auto-generated notifications via WeChat/SMS/Telegram. Delivery rate jumps from 60% to 98%. Supports scheduled and instant sending.</p>
+      <span class="feature-stat">60% → 98% delivery rate</span>
     </div>
     <div class="feature-card">
-      <div class="f-icon"><i class="fas fa-file-alt"></i></div>
-      <h3>OCR Grading <span class="tag">2hrs→25min</span></h3>
-      <p>Snap a photo → AI reads handwritten answers → grades them → generates a learning report. A 2-hour marking session compresses to 25 minutes.</p>
-      <div class="metric"><i class="fas fa-hourglass-half"></i> Efficiency +79%</div>
+      <div class="feature-icon">📝</div>
+      <h3>OCR Grading · Auto Marking</h3>
+      <p>Take a photo of handwritten homework, OCR auto-grades and categorizes mistakes. 50 assignments: 2 hours → 25 minutes. Permanent grading records.</p>
+      <span class="feature-stat">2 hours → 25 minutes</span>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ===== FAQ ===== -->
-<div class="section">
-  <h2 class="section-title"><span class="highlight">Frequently Asked Questions</span></h2>
+<!-- Comparison Image -->
+<section class="img-section">
+  <div class="section-title">
+    <h2>📊 Cost Comparison at a Glance</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="img-wrap">
+    <img src="../assets/tianba-comparison-new.jpg" alt="Cost comparison: Traditional vs Tianba AI Team" loading="lazy">
+  </div>
+  <p class="img-caption">Traditional vs Tianba · Annual cost comparison</p>
+</section>
 
-  <div class="faq-wrap">
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-title">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="faq-list">
     <div class="faq-item">
-      <h4><span class="q-icon"><i class="fas fa-question-circle"></i></span> Q1: Is it really just $1/month in electricity? No hidden fees?</h4>
-      <p>None. The $1 is an estimated electricity cost. Tianba AI Team itself has zero subscription fees — you only pay for your device's power. No call limits, no feature gates, no per-AI-employee charges.</p>
+      <div class="faq-q">Is 4GB of RAM really enough?</div>
+      <div class="faq-a">Yes. Our actual machine is a 2017 MacBook Air with 4GB RAM, simultaneously running CRM, check-in, gateway, intranet tunnel, DeepSeek API proxy, and 10 other services. Memory pressure sits around 67% with 2GB swap available. 8GB+ is better, but 4GB works.</div>
     </div>
     <div class="faq-item">
-      <h4><span class="q-icon"><i class="fas fa-question-circle"></i></span> Q2: Won't an 8-year-old laptop freeze running 16 AIs?</h4>
-      <p>We tested it: 90 consecutive days without a reboot. Tianba uses ruthlessly optimized lightweight models and intelligent scheduling. 4GB RAM is enough. And your laptop is probably newer than our test machine.</p>
+      <div class="faq-q">Is ¥9.9 a one-time or monthly fee?</div>
+      <div class="faq-a">One-time. ¥9.9 buys permanent access. No subscription, no hidden fees. Your only ongoing cost is your domain (~$1/month) and electricity (negligible).</div>
     </div>
     <div class="faq-item">
-      <h4><span class="q-icon"><i class="fas fa-question-circle"></i></span> Q3: How do you handle data security?</h4>
-      <p>All inference runs locally — no raw data is ever uploaded. Tianba is not SaaS; we turn your own device into an AI workstation. Data sovereignty stays entirely in your hands.</p>
+      <div class="faq-q">Do I need to configure anything?</div>
+      <div class="faq-a">One-command deploy. After payment, you'll receive a script. Run it once in Terminal and all services start automatically. No technical knowledge required.</div>
     </div>
     <div class="faq-item">
-      <h4><span class="q-icon"><i class="fas fa-question-circle"></i></span> Q4: What are the 16 AI roles exactly?</h4>
-      <p>Sales follow-up, student operations, check-in verification, notification distribution, homework grading, and 11 more specialized positions — covering the entire operational workflow of an education/training institution. Each AI has a defined role and works collaboratively.</p>
+      <div class="faq-q">Is my data secure?</div>
+      <div class="faq-a">All data is stored on your own computer. Nothing is uploaded to any cloud. Close the laptop and the data stays on the hard drive. No internet required for local access.</div>
     </div>
     <div class="faq-item">
-      <h4><span class="q-icon"><i class="fas fa-question-circle"></i></span> Q5: I have zero coding experience. Can I deploy this?</h4>
-      <p>Absolutely. We provide a one-click startup script and a graphical configuration interface. All you need is a Mac. Follow the on-screen wizard — zero lines of code required.</p>
+      <div class="faq-q">Which operating systems are supported?</div>
+      <div class="faq-a">Currently macOS (10.15+ recommended). Windows and Linux versions are in development. Works on any Mac from 2016 onwards.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I get support?</div>
+      <div class="faq-a">After purchase, contact us via WeChat for one-on-one setup guidance. Response time under 2 hours on business days. Real human answers.</div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ===== CTA ===== -->
-<div class="cta-section">
-  <h2>🚀 One Old Laptop Away From Your Own AI Company</h2>
-  <p>$1.50/month = less than a coffee = 16 AI employees working for you</p>
-  <a href="../order-en.html?product=tianba-ai-team" class="btn">
-    <i class="fas fa-rocket"></i> Join Tianba AI Team — $1.50/mo
-  </a>
-</div>
-
-</div>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Your Old Mac is More Powerful Than You Think</h2>
+  <p>Don't give up just because your hardware is old. This 8-year-old machine proved it can run an entire company.</p>
+  <a class="hero-cta" href="../order-en.html?product=tianba-ai-team">🚀 Buy Now · ¥9.9</a>
+  <div class="gold-quote">"The bottleneck isn't the hardware. It's the mindset."</div>
+</section>
 
 <footer>
-  <p>© Mars Toolkit · <a href="/mars-toolkit/en/">Old Mac Revival</a> · <a href="/mars-toolkit/order-en.html">Order</a></p>
-  <p class="tags">#OldMac #AITeam #CostRevolution #TianbaAI</p>
+  <p>🤖 Tianba AI Team · 8yr old Mac runs 16-person AI company · ¥9.9 one-time</p>
+  <p style="margin-top:6px"><a href="https://github.com/mars1417/mars-toolkit" target="_blank">GitHub</a> · Real-machine verified · Every old Mac deserves respect</p>
 </footer>
 
 </body>

@@ -11,18 +11,6 @@ products:
     tagline: "16个AI员工，月薪9.9元。一台8年前的旧电脑就能跑。"
     description: "【天霸AI团队】用你的旧电脑养16个AI员工。CRM客户管理、GPS+人脸签到、家长通知、OCR批改。月成本¥7(约$1)，年省¥19,000+。对比传统方案$220/月，节省99.8%。无需新设备，2017年MacBook Air即可。"
     pitch: "16个AI员工，月薪¥9.9。一台8年前的MacBook Air(4GB)就能跑。年省¥19,000+，省下的钱够给团队每人发台新电脑。"
-    specs:
-      - ["AI员工数", "16人"]
-      - ["月成本", "¥7 ($1)"]
-      - ["传统方案对比", "月$220 → 省99.8%"]
-      - ["设备要求", "2017 MacBook Air (4GB)"]
-      - ["功能", "CRM/签到/通知/OCR"]
-      - ["部署方式", "本地运行，数据不外传"]
-    target:
-      - "托管机构主理人"
-      - "独立开发者 / Indie Hackers"
-      - "小团队管理者"
-      - "旧Mac用户"
   - name: "Agent引擎 · 轻量版"
     emoji: "🤖"
     price: "¥5/月"
@@ -311,7 +299,7 @@ products:
     emoji: "🔧"
     price: "¥5"
     category: "tool"
-    status: "待发布"
+    status: "已上线"
     tagline: "【乐吧全链路运维看门狗】自动检测并修复cpolar隧道、网关、CRM2、server.py服务，内存"
     description: "【乐吧全链路运维看门狗】自动检测并修复cpolar隧道、网关、CRM2、server.py服务，内存压力分级清理，URL变化自动更新GitHub Pages短链"
     pitch: "leba-pipeline-watchdog - 一键安装，开箱即用"
@@ -319,7 +307,7 @@ products:
     emoji: "🔧"
     price: "¥5"
     category: "tool"
-    status: "待发布"
+    status: "已上线"
     tagline: "【内存压力监控】当需要监控4GB Mac内存健康、设置预警阈值时使用。配合cron每日报告内存状态"
     description: "【内存压力监控】当需要监控4GB Mac内存健康、设置预警阈值时使用。配合cron每日报告内存状态"
     pitch: "memory-pressure-monitoring - 一键安装，开箱即用"
@@ -327,7 +315,7 @@ products:
     emoji: "🔧"
     price: "¥5"
     category: "tool"
-    status: "待发布"
+    status: "已上线"
     tagline: "【SaaS多门户系统架构】当需要将单一后台扩展为多角色门户系统（登录页+管理员端+客户/家长端）时使"
     description: "【SaaS多门户系统架构】当需要将单一后台扩展为多角色门户系统（登录页+管理员端+客户/家长端）时使用。涵盖双通道路由设计、登录认证流程、客户手机号注册、数据隔"
     pitch: "saas-multi-portal - 一键安装，开箱即用"
